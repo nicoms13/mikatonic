@@ -1,7 +1,7 @@
 # django
-Nicolás Moreno Sánchez
+> Nicolás Moreno Sánchez
 
-	● INTRODUCCIÓN
+	## INTRODUCCIÓN
 	Mi aplicación consistirá en una **plataforma online de vídeo** para reproducir vídeos y series, de forma similar a otras
 	aplicaciones como Netflix o Prime Video. El nombre de la aplicación será **Django**, y tendrá un estilo y temática similar 
 	a Netflix. Las funcionalidades que quiero que tenga la aplicación son:
@@ -20,7 +20,7 @@ Nicolás Moreno Sánchez
 		● Sistema de búsqueda desarrollado, para que el usuario pueda buscar con facilidad los títulos que desea tanto por su
 		nombre como por su director.
 
-	● TECNOLOGÍA
+	## TECNOLOGÍA
 	En un principio, el proyecto seráconstruido mediante:
 
 		● **Laravel**, para el backend y el scaffolding.
@@ -34,17 +34,17 @@ Nicolás Moreno Sánchez
 		* Durante mi periodo de prácticas estaré usando el framework de JS **Angular**, por lo que podría decidir en un
 		futuro usarlo en el proyecto.
 
-	● SCAFFOLDING
+	## SCAFFOLDING
 	La web contará con páginas ocultas solo accesibles para los administradores, además de una página inicial que será
 	accesible para todos los usuarios. Para poder usar la web con normalidad será necesario la creación de una cuenta
 	por parte del usuario. Tendrá varias páginas disponibles; menú inicial, menú de busqueda, listas creadas, directores,
 	etc.
 
-	● SISTEMA DE DISEÑO
+	## SISTEMA DE DISEÑO
 	Mi objetivo es crear un **sistema de diseño** mediante CSS con clases predefinifas para facilitarme en un futuro la creación
 	del estilo de la web. Crear mi propio 'TailwindCSS'.
 
-	● BASE DE DATOS
+	## BASE DE DATOS
 	Las tablas que formarán la base de datos serán Usuarios, Películas, Series, Categorías y Favoritas (tabla donde se
 	almacenará el ID del usuario y el ID de la serie o película que quiera guardar).
 

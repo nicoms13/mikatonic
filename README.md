@@ -9,7 +9,9 @@
 
 		● Sistema de login y registro, diferenciando entre administradores, usuarios registrados y usuarios no registrados.
 		
-		● Reproducción de las películas y series en un reproductor personalizado.
+		● Reproducción de las películas y series en un reproductor personalizado. Cada película o serie registrada tendrá
+		asociado su vídeo, imágenes e información en general. Muy probablemente se reproducirá el tráiler por tema de
+		ahorro de espacio.
 		
 		● Posiblidad de que el usuario guarde en una lista de favoritos sus películas favoritas y aquellas que quiera guardar
 		para ver más tarde. La lista funcionará a forma de CRUD, en la que el usuario podrá añadir, actualizar, ver y eliminar.

@@ -12,13 +12,13 @@
 		● Sistema de administración en el que se pueda subir nuevo contenido, además de modificar y eliminar el existente.
 		
 		● Reproducción de las películas y series en un reproductor creado por mí. Cada película o serie registrada tendrá
-		asociado su vídeo, imágenes e información en general. Muy probablemente se reproducirá el tráiler por tema de
+		asociado su vídeo, imágenes e información general. Muy probablemente se reproducirá el tráiler por tema de
 		ahorro de espacio.
 		
 		● Posiblidad de que el usuario guarde en una lista de favoritos sus películas favoritas y aquellas que quiera guardar
 		para ver más tarde. La lista funcionará a forma de CRUD, en la que el usuario podrá añadir, actualizar, ver y eliminar.
 		
-		● Un menú personalizable con los gustos del usuario, en el que le recomiende películas o series en función de sus
+		● Un menú personalizado con los gustos del usuario, en el que le recomiende películas o series en función de sus
 		gustos personales. Contendrá secciones que faciliten el uso de la web, como sliders con los títulos más 
 		recientes, tops con los más vistos, etc.
 		

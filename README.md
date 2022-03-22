@@ -2,27 +2,33 @@
 Nicolás Moreno Sánchez
 
 	● INTRODUCCIÓN
-	Mi aplicación consistirá en una plataforma online de vídeo para reproducir vídeos y series, de forma similar a otras
-	aplicaciones como Netflix o Prime Video. El nombre de la aplicación será Django, y tendrá un estilo y temática similar 
+	Mi aplicación consistirá en una **plataforma online de vídeo** para reproducir vídeos y series, de forma similar a otras
+	aplicaciones como Netflix o Prime Video. El nombre de la aplicación será **Django**, y tendrá un estilo y temática similar 
 	a Netflix. Las funcionalidades que quiero que tenga la aplicación son:
 
 		● Sistema de login y registro, diferenciando entre administradores, usuarios registrados y usuarios no registrados.
+		
 		● Reproducción de las películas y series en un reproductor personalizado.
-		● Posiblidad de que el usuario guarde en una listade favoritos sus películas favoritas y aquellas que quiera guardar
-		para ver más tarde.
+		
+		● Posiblidad de que el usuario guarde en una lista de favoritos sus películas favoritas y aquellas que quiera guardar
+		para ver más tarde. La lista funcionará a forma de CRUD, en la que el usuario podrá añadir, actualizar, ver y eliminar.
+		
 		● Un menú personalizable con los gustos del usuario, en el que le recomiende películas o series en función de sus
-		gustos personales.
+		gustos personales. Contendrá secciones que faciliten el uso de la web, como sliders con los títulos más 
+		recientes, tops con los más vistos, etc.
+		
 		● Sistema de búsqueda desarrollado, para que el usuario pueda buscar con facilidad los títulos que desea tanto por su
 		nombre como por su director.
 
 	● TECNOLOGÍA
 	En un principio, el proyecto seráconstruido mediante:
 
-		● Laravel, para el backend y el scaffolding.
-		● JavaScript y CSS para el frontend.
-		● MySQL para las bases de datos.
+		● **Laravel**, para el backend y el scaffolding.
+		● **JavaScript** y **CSS** para el frontend.
+		● **Jquery** para manipular ciertos elementos del DOM.
+		● **MySQL** para las bases de datos.
 		
-		* Durante mi periodo de prácticas estaré usando el framework de JS Angular, por lo que podría decidir en un
+		* Durante mi periodo de prácticas estaré usando el framework de JS **Angular**, por lo que podría decidir en un
 		futuro usarlo en el proyecto.
 
 	● SCAFFOLDING
@@ -32,7 +38,7 @@ Nicolás Moreno Sánchez
 	etc.
 
 	● SISTEMA DE DISEÑO
-	Mi objetivo es crear un sistema de diseño mediante CSS con clases predefinifas para facilitarme en un futuro la creación
+	Mi objetivo es crear un **sistema de diseño** mediante CSS con clases predefinifas para facilitarme en un futuro la creación
 	del estilo de la web. Crear mi propio 'TailwindCSS'.
 
 	● BASE DE DATOS

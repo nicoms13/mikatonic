@@ -28,7 +28,7 @@
 		● La aplicación será completamente responsive, y contará con una versión para pantallas móviles.
 
 ### TECNOLOGÍA
-	En un principio, el proyecto seráconstruido mediante:
+	En un principio, el proyecto será construido mediante:
 
 		● **Laravel**, para el backend y el scaffolding.
 		

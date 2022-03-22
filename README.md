@@ -47,6 +47,10 @@
 
 ### BASE DE DATOS
 	Las tablas que formarán la base de datos serán Usuarios, Películas, Series, Categorías y Favoritas (tabla donde se
-	almacenará el ID del usuario y el ID de la serie o película que quiera guardar).
+	almacenará el ID del usuario y el ID de la serie o película que quiera guardar). En la tabla usuarios se almacenará además el tipo 
+	de perfil del usuario, para diferenciar entre administradores y usuarios normales. Las tablas Películas y Series heredarán 
+	dos claves foráneas cada una, el ID del director y los IDs de las categorías. Por otro lado, la tabla favoritas almacenará un
+	boolean para saber si se trata de una película o una serie, la clave foránea del ID del usuaro y la de la película o serie 
+	según corresponda.
 
 > Esquema entidad/relación: https://gyazo.com/0e87e29b9c93448671c11dd879c0b2d2

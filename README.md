@@ -1,5 +1,6 @@
 # django
 > Nicolás Moreno Sánchez
+![Imagen presentacion](https://i.imgur.com/aUzttJS.jpg)
 
 ### INTRODUCCIÓN
 	Mi aplicación consistirá en una **plataforma online de vídeo** para reproducir vídeos y series, de forma similar a otras

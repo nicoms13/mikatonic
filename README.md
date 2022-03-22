@@ -24,8 +24,11 @@ Nicolás Moreno Sánchez
 	En un principio, el proyecto seráconstruido mediante:
 
 		● **Laravel**, para el backend y el scaffolding.
+		
 		● **JavaScript** y **CSS** para el frontend.
+		
 		● **Jquery** para manipular ciertos elementos del DOM.
+		
 		● **MySQL** para las bases de datos.
 		
 		* Durante mi periodo de prácticas estaré usando el framework de JS **Angular**, por lo que podría decidir en un

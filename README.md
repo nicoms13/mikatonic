@@ -11,7 +11,7 @@
 		
 		● Sistema de administración en el que se pueda subir nuevo contenido, además de modificar y eliminar el existente.
 		
-		● Reproducción de las películas y series en un reproductor personalizado. Cada película o serie registrada tendrá
+		● Reproducción de las películas y series en un reproductor creado por mí. Cada película o serie registrada tendrá
 		asociado su vídeo, imágenes e información en general. Muy probablemente se reproducirá el tráiler por tema de
 		ahorro de espacio.
 		

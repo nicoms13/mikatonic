@@ -24,6 +24,8 @@
 		
 		● Sistema de búsqueda desarrollado, para que el usuario pueda buscar con facilidad los títulos que desea tanto por su
 		nombre como por su director.
+		
+		● La aplicación será completamente responsive, y contará con una versión para pantallas móviles.
 
 ### TECNOLOGÍA
 	En un principio, el proyecto seráconstruido mediante:

@@ -1,2 +1,41 @@
 # django
-proyecto fin de grado
+Nicolás Moreno Sánchez
+
+	● INTRODUCCIÓN
+	Mi aplicación consistirá en una plataforma online de vídeo para reproducir vídeos y series, de forma similar a otras
+	aplicaciones como Netflix o Prime Video. El nombre de la aplicación será Django, y tendrá un estilo y temática similar a Netflix. Las funcionalidades que quiero que tenga la aplicación son:
+
+		● Sistema de login y registro, diferenciando entre administradores, usuarios registrados y usuarios no registrados.
+		● Reproducción de las películas y series en un reproductor personalizado.
+		● Posiblidad de que el usuario guarde en una listade favoritos sus películas favoritas y aquellas que quiera guardar
+		para ver más tarde.
+		● Un menú personalizable con los gustos del usuario, en el que le recomiende películas o series en función de sus
+		gustos personales.
+		● Sistema de búsqueda desarrollado, para que el usuario pueda buscar con facilidad los títulos que desea tanto por su
+		nombre como por su director.
+
+	● TECNOLOGÍA
+	En un principio, el proyecto seráconstruido mediante:
+
+		● Laravel, para el backend y el scaffolding.
+		● JavaScript y CSS para el frontend.
+		● MySQL para las bases de datos.
+		
+		* Durante mi periodo de prácticas estaré usando el framework de JS Angular, por lo que podría decidir en un
+		futuro usarlo en el proyecto.
+
+	● SCAFFOLDING
+	La web contará con páginas ocultas solo accesibles para los administradores, además de una página inicial que será
+	accesible para todos los usuarios. Para poder usar la web con normalidad será necesario la creación de una cuenta
+	por parte del usuario. Tendrá varias páginas disponibles; menú inicial, menú de busqueda, listas creadas, directores,
+	etc.
+
+	● SISTEMA DE DISEÑO
+	Mi objetivo es crear un sistema de diseño mediante CSS con clases predefinifas para facilitarme en un futuro la creación
+	del estilo de la web. Crear mi propio 'TailwindCSS'.
+
+	● BASE DE DATOS
+	Las tablas que formarán la base de datos serán Usuarios, Películas, Series, Categorías y Favoritas (tabla donde se
+	almacenará el ID del usuario y el ID de la serie o película que quiera guardar).
+
+	Esquema entidad/relación: https://gyazo.com/0e87e29b9c93448671c11dd879c0b2d2

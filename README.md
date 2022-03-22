@@ -41,11 +41,12 @@
 	La web contará con páginas ocultas solo accesibles para los administradores, además de una página inicial que será
 	accesible para todos los usuarios. Para poder usar la web con normalidad será necesario la creación de una cuenta
 	por parte del usuario. Tendrá varias páginas disponibles; menú inicial, menú de busqueda, listas creadas, directores,
-	etc.
+	etc. La estructura de la web será similar a la de cualquier otra platafoma de las mismas características.
 
 ### SISTEMA DE DISEÑO
 	Mi objetivo es crear un **sistema de diseño** mediante CSS con clases predefinifas para facilitarme en un futuro la creación
-	del estilo de la web. Crear mi propio 'TailwindCSS'.
+	del estilo de la web. Crear mi propio 'TailwindCSS'. Tendré un estilo predefinido desde el principio para crear una web
+	compacta y cohesionada. Tipografía, colores, espaciado y todo lo demás será claramente definidio desde primer momento.
 
 ### BASE DE DATOS
 	Las tablas que formarán la base de datos serán Usuarios, Películas, Series, Categorías y Favoritas (tabla donde se

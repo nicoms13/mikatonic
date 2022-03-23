@@ -52,7 +52,7 @@
 	del estilo de la web. Crear mi propio 'TailwindCSS'. Tendré un estilo predefinido desde el principio para crear una web
 	compacta y cohesionada. Tipografía, colores, espaciado y todo lo demás será claramente definidio desde primer momento.
 	
-> Puedes consultar la evolución del sistema ed diseño en: https://github.com/nicoms13/django-designsystem.git
+> Puedes consultar la evolución del sistema de diseño en: https://github.com/nicoms13/django-designsystem.git
 
 ### BASE DE DATOS
 	Las tablas que formarán la base de datos serán Usuarios, Películas, Series, Categorías y Favoritas (tabla donde se

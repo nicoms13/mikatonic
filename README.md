@@ -71,12 +71,13 @@
 
 	Las tablas que formarán la base de datos serán Usuario, Película (la cual tendrá un campo para diferenciar
 	entre películas y series), Categoría, películaCategoría (tabla intermedia) Director y Lista (tabla donde 
-	se almacenará el ID del usuario y el ID de la serie o película que quiera guardar). En la tabla usuarios se 
-	almacenará además el tipo de perfil del usuario, para diferenciar entre administradores y usuarios 
-	normales. La tabla Película heredará dos claves foráneas, el ID del director y los IDs de las  categorías. Por 
-	otro lado, la tabla Lista almacenará un boolean para saber si se trata de una película o una serie, la clave
-	foránea del ID del usuario y la de la película o serie según corresponda. He decidido no crear una tabla 
-	intermedia entre la relación Lista y Usuario porque el usuario tendrá únicamente una Lista en la que añadirá
-	los títulos favoritos, por lo que me parecía redundante crear una tabla intermedia.
+	se almacenará el ID del usuario y el ID de la serie o película que quiera guardar). En la tabla usuarios
+	se almacenará además el tipo de perfil del usuario, para diferenciar entre administradores y usuarios 
+	normales. La tabla Película heredará dos claves foráneas, el ID del director y los IDs de las 
+	categorías. Por otro lado, la tabla Lista almacenará un boolean para saber si se trata de una película o
+	una serie, la clave foránea del ID del usuario y la de la película o serie según corresponda. He decidido
+	no crear una tabla intermedia entre la relación Lista y Usuario porque el usuario tendrá únicamente 
+	una Lista en la que añadirá los títulos favoritos, por lo que me parecía redundante crear una 
+	tabla intermedia.
 
 > Esquema entidad/relación: https://gyazo.com/37914ff8eab60a633a3cb9144714ef28

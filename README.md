@@ -62,4 +62,4 @@
 	boolean para saber si se trata de una película o una serie, la clave foránea del ID del usuario y la de la película o serie 
 	según corresponda.
 
-> Esquema entidad/relación: https://gyazo.com/0e87e29b9c93448671c11dd879c0b2d2
+> Esquema entidad/relación: https://gyazo.com/37914ff8eab60a633a3cb9144714ef28

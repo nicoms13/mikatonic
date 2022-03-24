@@ -50,7 +50,7 @@
 
 	La web contará con páginas ocultas solo accesibles para los administradores, además de una página inicial que será
 	accesible para todos los usuarios. Para poder usar la web con normalidad será necesario la creación de una cuenta
-	por parte del usuario. Tendrá varias páginas disponibles; menú inicial, menú de busqueda, listas creadas, directores,
+	por parte del usuario. Tendrá varias páginas disponibles; menú inicial, menú de busqueda, listas, directores,
 	etc. La estructura de la web será similar a la de cualquier otra platafoma de las mismas características.
 
 ### SISTEMA DE DISEÑO

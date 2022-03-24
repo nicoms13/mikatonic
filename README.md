@@ -55,11 +55,13 @@
 > Puedes consultar la evolución del sistema de diseño en: https://github.com/nicoms13/django-designsystem.git
 
 ### BASE DE DATOS
-	Las tablas que formarán la base de datos serán Usuarios, Películas, Series, Categorías y Favoritas (tabla donde se
-	almacenará el ID del usuario y el ID de la serie o película que quiera guardar). En la tabla usuarios se almacenará además el tipo 
-	de perfil del usuario, para diferenciar entre administradores y usuarios normales. Las tablas Películas y Series heredarán 
-	dos claves foráneas cada una, el ID del director y los IDs de las categorías. Por otro lado, la tabla favoritas almacenará un
-	boolean para saber si se trata de una película o una serie, la clave foránea del ID del usuario y la de la película o serie 
-	según corresponda.
+	Las tablas que formarán la base de datos serán Usuarios, Películas (la cual tendrá un campo para diferenciar entre películas y
+	series), Categorías y Lista (tabla donde se almacenará el ID del usuario y el ID de la serie o película que quiera guardar). En
+	la tabla usuarios se almacenará además el tipo de perfil del usuario, para diferenciar entre administradores y usuarios 
+	normales. Las tablas Películas y Series heredarán dos claves foráneas cada una, el ID del director y los IDs de las 
+	categorías. Por otro lado, la tabla Lista almacenará un boolean para saber si se trata de una película o una serie, la clave 
+	foránea del ID del usuario y la de la película o serie según corresponda. He decidido no crear una tabla intermedia entre la 
+	relación Lista y Usuario porque el usuario tendrá únicamente una Lista en la que añadirá los títulos favoritos, por lo que me 
+	parecía redundante crear una tabla intermedia.
 
 > Esquema entidad/relación: https://gyazo.com/37914ff8eab60a633a3cb9144714ef28

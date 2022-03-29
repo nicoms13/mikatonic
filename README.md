@@ -4,8 +4,8 @@
 
 ### INTRODUCCIÓN
 
-Mi aplicación consistirá en una **plataforma online de vídeo** para reproducir vídeos y series, de forma
-similar a otras aplicaciones como Netflix o Prime Video. El nombre de la aplicación será **Django**, y 
+Mi aplicación consistirá en una **plataforma online de vídeo** por suscripción en la que los usuarios 
+puedan reproducir películas y series. El nombre de la aplicación será **Django**, y 
 tendrá un estilo y temática similar a Netflix. Las funcionalidades que quiero que tenga la aplicación son:
 
 	● Sistema de login y registro, diferenciando entre administradores, usuarios registrados y 

@@ -4,36 +4,29 @@
 
 ### INTRODUCCIÓN
 
-Mi aplicación consistirá en una **plataforma online de vídeo** por suscripción en la que los usuarios 
-puedan reproducir películas y series. El nombre de la aplicación será **Django**, y 
-tendrá un estilo y temática similar a Netflix. Las funcionalidades que quiero que tenga la aplicación son:
+Miskatonik es una biblioteca online que contedrá información, obras y biografías sobre el escritor H.P. Lovecraft y sus 
+allegados. Las funciones de la web serán:
 
-	● Sistema de login y registro, diferenciando entre administradores, usuarios registrados y 
-	usuarios no registrados.
+	● Sistema de login. Se diferenciará entre al menos dos tipos de usuarios (administrador y suscriptor). No se
+	permitirá el acceso más allá de la página de inicio a aquellos que no tengan cuenta en la web.
 		
-	● Sistema de administración en el que se pueda subir nuevo contenido, además de modificar 
+	● Sistema de administración. Se podrá subir nuevo contenido, además de modificar 
 	y eliminar el existente.
 		
-	● Reproducción de las películas y series en un reproductor creado por mí. Cada película o 
-	serie registrada tendráasociado su vídeo, imágenes e información general. Muy probablemente 
-	se reproducirá el tráiler por tema de ahorro de espacio.
+	● Lector de PDFs. Mediante la librería PDF.js crearéun reproductor personalizado en el que el usuario podrá
+	leer los libros que desee.
+	
+	● Marcapáginas. El usuario podrá seguir de forma automática por la última página que haya leido al abrir de nuevo
+	el libro.
 		
-	● Página de inicio para cada película o serie. El usuario además de reproducir el título 
-	podrá acceder a una página de información dónde ver todos los detalles.
+	● Colores. El usuario podrá cambiar los colores del reproductor para leer de forma cómoda, en principio podrá elegir
+	entre día, noche y sepia.
 		
-	● Posiblidad de que el usuario guarde en una lista sus películas favoritas y aquellas que
-	quiera guardar para ver más tarde. La lista funcionará a forma de CRUD, en la que el usuario 
-	podrá añadir, actualizar, ver y eliminar.
+	● Favoritos. El usuario podrá guardar en favoritos aquellos libros que desee.
 		
-	● Una página inicial accesible e intuitiva, en la que el usuario podrá rápidamente ver los 
-	títulos de la web de una forma cómoda. Contendrá secciones que faciliten el uso de la web, 
-	como sliders, galerías, listas y elementos similares.
+	● Sistema de búsqueda. A través de una barra de búsqueda el usuario podrá buscar el contenido.
 		
-	● Sistema de búsqueda desarrollado, para que el usuario pueda buscar con facilidad los 
-	títulos que desee tanto por su nombre como por su director.
-		
-	● La aplicación será completamente responsive, y contará con una versión para pantallas
-	móviles.
+	● Responsive. La aplicación estará adaptada a pantallas web y móviles.
 
 ### TECNOLOGÍA
 
@@ -46,16 +39,13 @@ En un principio, el proyecto será construido mediante:
 	● **Jquery** para manipular ciertos elementos del DOM.
 
 	● **MySQL** para las bases de datos.
-		
-* Durante mi periodo de prácticas estaré usando el framework de JS **Angular**, por 
-lo que podría decidir en un futuro usarlo en el proyecto.
 
 ### SCAFFOLDING
 
 La web contará con páginas ocultas solo accesibles para los administradores, además de una 
 página inicial que será accesible para todos los usuarios. Para poder usar la web con normalidad 
 será necesario la creación de una cuenta por parte del usuario. Tendrá varias páginas disponibles; 
-menú inicial, menú de busqueda, listas, directores, etc. La estructura de la web será similar a la de 
+menú inicial, menú de busqueda, listas, autores, etc. La estructura de la web será similar a la de 
 cualquier otra platafoma de las mismas características.
 
 ### SISTEMA DE DISEÑO
@@ -66,18 +56,20 @@ desde el principio para crear una web compacta y cohesionada. Tipografía, color
 similares serán claramente definidos desde primer momento.
 	
 > Puedes consultar la evolución del sistema de diseño en: https://github.com/nicoms13/django-designsystem.git
+El sistema de diseño tiene la temática similar a NEtflix porque en un principio iba a ser una aplicación de esas
+características, tan solo me quedaría adaptar los elementos a los nuevos colores.
 
 ### BASE DE DATOS
 
-Las tablas que formarán la base de datos serán Usuario, Película (la cual tendrá un campo para diferenciar
-entre películas y series), Categoría, películaCategoría (tabla intermedia) Director y Lista (tabla donde 
-se almacenará el ID del usuario y el ID de la serie o película que quiera guardar). En la tabla usuarios
-se almacenará además el tipo de perfil del usuario, para diferenciar entre administradores y usuarios 
-normales. La tabla Película heredará dos claves foráneas, el ID del director y los IDs de las 
-categorías. Por otro lado, la tabla Lista almacenará un boolean para saber si se trata de una película o
-una serie, la clave foránea del ID del usuario y la de la película o serie según corresponda. He decidido
-no crear una tabla intermedia entre la relación Lista y Usuario porque el usuario tendrá únicamente 
-una Lista en la que añadirá los títulos favoritos, por lo que me parecía redundante crear una 
-tabla intermedia.
+Las tablas que formarán la base de datos serán Usuario, Libro (la cual tendrá un campo para diferenciar
+entre películas y series), Categoría, libroCategoría (tabla intermedia) Autor y Lista (tabla donde 
+se almacenará el ID del usuario y el ID del libro que quiera guardar).
 
-> Esquema entidad/relación: https://gyazo.com/37914ff8eab60a633a3cb9144714ef28
+En la tabla usuarios se almacenará además el tipo de perfil del usuario, para diferenciar entre 
+administradores y usuarios normales. La tabla Libro heredará una clave foránea, el ID del 
+autor. He decidido no crear una tabla intermedia entre la relación Lista y Usuario porque el
+usuario tendrá únicamente una Lista en la que añadirá los títulos favoritos, por lo que me 
+parecía redundante crear una tabla intermedia. Entre libro y autor será necesario una tabla 
+intermedia porque ciertos libros están escritos por más de un autor.
+
+![Imagen bd](https://user-images.githubusercontent.com/91120049/161501089-adc8b8b1-5887-4330-b88e-c63ab7e34abd.png)

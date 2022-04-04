@@ -56,7 +56,8 @@ desde el principio para crear una web compacta y cohesionada. Tipografía, color
 similares serán claramente definidos desde primer momento.
 	
 > Puedes consultar la evolución del sistema de diseño en: https://github.com/nicoms13/django-designsystem.git
-El sistema de diseño no está aún actualizado a la temática porque he decido cambiarla recientemente.
+El sistema de diseño no está aún actualizado a la temática porque he decido cambiarla recientemente (por eso
+el nombre es django).
 
 ### BASE DE DATOS
 

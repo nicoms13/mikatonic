@@ -14,8 +14,8 @@ y sus allegados. Las funciones de la web serán:
 	● Sistema de administración. Se podrá subir nuevo contenido, además de modificar 
 	y eliminar el existente.
 		
-	● Lector de PDFs. Mediante la librería PDF.js crearéun reproductor personalizado en el que
-	el usuario podrá leer los libros que desee.
+	● Lector de PDFs. Mediante la librería PDF.js crearé un reproductor personalizado en el 
+	que el usuario podrá leer los libros que desee.
 	
 	● Marcapáginas. El usuario podrá seguir de forma automática por la última página que haya 
 	leido al abrir de nuevo el libro.

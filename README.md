@@ -64,8 +64,8 @@ el nombre es django).
 ### BASE DE DATOS
 
 Las tablas que formarán la base de datos serán Usuario, Libro (la cual tendrá un campo para diferenciar
-entre películas y series), Categoría, libroCategoría (tabla intermedia) Autor y Lista (tabla donde 
-se almacenará el ID del usuario y el ID del libro que quiera guardar).
+entre películas y series), Categoría, libroCategoría (tabla intermedia), Autor, libroAutor(tabla 
+intermedia) y Lista (tabla donde se almacenará el ID del usuario y el ID del libro que quiera guardar).
 
 En la tabla usuarios se almacenará además el tipo de perfil del usuario, para diferenciar entre 
 administradores y usuarios normales. La tabla Libro heredará una clave foránea, el ID del 

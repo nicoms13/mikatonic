@@ -4,27 +4,29 @@
 
 ### INTRODUCCIÓN
 
-**Miskatonik** es una biblioteca online que contedrá información, obras y biografías sobre el escritor **H.P. Lovecraft** y sus 
-allegados. Las funciones de la web serán:
+**Miskatonik** es una biblioteca online que contedrá información, obras y biografías sobre el escritor **H.P. Lovecraft**
+y sus allegados. Las funciones de la web serán:
 
-	● Sistema de login. Se diferenciará entre al menos dos tipos de usuarios (administrador y suscriptor). No se
-	permitirá el acceso más allá de la página de inicio a aquellos que no tengan cuenta en la web.
+	● Sistema de login. Se diferenciará entre al menos dos tipos de usuarios (administrador y 
+	suscriptor). No se permitirá el acceso más allá de la página de inicio a aquellos que no
+	tengan cuenta en la web.
 		
 	● Sistema de administración. Se podrá subir nuevo contenido, además de modificar 
 	y eliminar el existente.
 		
-	● Lector de PDFs. Mediante la librería PDF.js crearéun reproductor personalizado en el que el usuario podrá
-	leer los libros que desee.
+	● Lector de PDFs. Mediante la librería PDF.js crearéun reproductor personalizado en el que
+	el usuario podrá leer los libros que desee.
 	
-	● Marcapáginas. El usuario podrá seguir de forma automática por la última página que haya leido al abrir de nuevo
-	el libro.
+	● Marcapáginas. El usuario podrá seguir de forma automática por la última página que haya 
+	leido al abrir de nuevo el libro.
 		
-	● Colores. El usuario podrá cambiar los colores del reproductor para leer de forma cómoda, en principio podrá elegir
-	entre día, noche y sepia.
+	● Colores. El usuario podrá cambiar los colores del reproductor para leer de forma cómoda, 
+	en principio podrá elegir entre día, noche y sepia.
 		
 	● Favoritos. El usuario podrá guardar en favoritos aquellos libros que desee.
 		
-	● Sistema de búsqueda. A través de una barra de búsqueda el usuario podrá buscar el contenido.
+	● Sistema de búsqueda. A través de una barra de búsqueda el usuario podrá buscar el 
+	contenido.
 		
 	● Responsive. La aplicación estará adaptada a pantallas web y móviles.
 

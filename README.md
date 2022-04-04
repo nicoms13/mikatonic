@@ -1,6 +1,6 @@
-# django
+# Miskatonic
 > Nicolás Moreno Sánchez
-![Imagen presentacion](https://i.imgur.com/aUzttJS.jpg)
+![Imagen presentacion](![image](https://user-images.githubusercontent.com/91120049/161498683-57323a1b-316b-4078-8ec0-7c7caa3ee5ed.png))
 
 ### INTRODUCCIÓN
 

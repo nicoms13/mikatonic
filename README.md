@@ -77,3 +77,4 @@ parecía redundante crear una tabla intermedia. Entre libro y autor será necesa
 intermedia porque ciertos libros están escritos por más de un autor.
 
 ![Imagen bd](https://user-images.githubusercontent.com/91120049/161501089-adc8b8b1-5887-4330-b88e-c63ab7e34abd.png)
+> Click en la imagen para verla a mejor resolución

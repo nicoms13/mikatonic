@@ -4,7 +4,7 @@
 
 ### INTRODUCCIÓN
 
-Miskatonik es una biblioteca online que contedrá información, obras y biografías sobre el escritor H.P. Lovecraft y sus 
+**Miskatonik** es una biblioteca online que contedrá información, obras y biografías sobre el escritor **H.P. Lovecraft** y sus 
 allegados. Las funciones de la web serán:
 
 	● Sistema de login. Se diferenciará entre al menos dos tipos de usuarios (administrador y suscriptor). No se
@@ -32,13 +32,13 @@ allegados. Las funciones de la web serán:
 
 En un principio, el proyecto será construido mediante:
 
-	● **Laravel**, para el backend y el scaffolding.
+	● Laravel, para el backend y el scaffolding.
 
-	● **JavaScript** y **CSS** para el frontend.
+	● JavaScript y CSS para el frontend.
 
-	● **Jquery** para manipular ciertos elementos del DOM.
+	● Jquery para manipular ciertos elementos del DOM.
 
-	● **MySQL** para las bases de datos.
+	● MySQL para las bases de datos.
 
 ### SCAFFOLDING
 
@@ -56,8 +56,7 @@ desde el principio para crear una web compacta y cohesionada. Tipografía, color
 similares serán claramente definidos desde primer momento.
 	
 > Puedes consultar la evolución del sistema de diseño en: https://github.com/nicoms13/django-designsystem.git
-El sistema de diseño tiene la temática similar a NEtflix porque en un principio iba a ser una aplicación de esas
-características, tan solo me quedaría adaptar los elementos a los nuevos colores.
+El sistema de diseño no está aún actualizado a la temática porque he decido cambiarla recientemente.
 
 ### BASE DE DATOS
 

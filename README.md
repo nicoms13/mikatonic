@@ -61,6 +61,8 @@ similares serán claramente definidos desde primer momento.
 El sistema de diseño no está aún actualizado a la temática porque he decido cambiarla recientemente (por eso
 el nombre es django).
 
+![Imagen home](https://user-images.githubusercontent.com/91120049/161532329-62c0a453-20f5-40bc-b405-582abe931059.png)
+
 ### BASE DE DATOS
 
 Las tablas que formarán la base de datos serán Usuario, Libro (la cual tendrá un campo para diferenciar

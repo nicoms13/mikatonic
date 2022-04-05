@@ -76,5 +76,5 @@ usuario tendrá únicamente una Lista en la que añadirá los títulos favoritos
 parecía redundante crear una tabla intermedia. Entre libro y autor será necesario una tabla 
 intermedia porque ciertos libros están escritos por más de un autor.
 
-![Imagen bd](https://user-images.githubusercontent.com/91120049/161501089-adc8b8b1-5887-4330-b88e-c63ab7e34abd.png)
+![Imagen bd](https://user-images.githubusercontent.com/91120049/161692122-9c2df334-bdf9-4d82-b6b8-959b5622d01f.png)
 > Click en la imagen para verla a mejor resolución

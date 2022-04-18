@@ -2,6 +2,12 @@
 > Nicolás Moreno Sánchez
 ![Imagen presentacion](https://user-images.githubusercontent.com/91120049/161498683-57323a1b-316b-4078-8ec0-7c7caa3ee5ed.png)
 
+### Semana 1
+
+Creación del proyecto con Laravel. He estado realizando el sistema de clases de CSS para facilitarme el diseño en el futuro
+(\resources\css\styles.css). He comenzado la creación de la vista de la página de inicio (para aquellos usuarios no
+registrados), es completamente estática, no tiene conexión con el backend por ahora.
+
 ### INTRODUCCIÓN
 
 **Miskatonik** es una biblioteca online que contedrá información, obras y biografías sobre el escritor **H.P. Lovecraft**

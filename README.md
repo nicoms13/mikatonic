@@ -84,3 +84,11 @@ intermedia porque ciertos libros están escritos por más de un autor.
 
 ![Imagen bd](https://user-images.githubusercontent.com/91120049/161692122-9c2df334-bdf9-4d82-b6b8-959b5622d01f.png)
 > Click en la imagen para verla a mejor resolución
+
+### DESPLIEGUE
+
+La aplicación será desplegada en un hosting gratuito, posiblemente InfinityFree o Heroku. Por lo tanto el nombre
+de dominio tendrá publicidad del host utilizado. En cuanto a la base de datos, se que si finalmente uso
+InfinityFree, el host te provee automáticamente un servidor diferente para almacenar la base de 
+datos. Desconozco si Heroku también lo permite, en caso de que sí, no tendré ningún problema en dividir
+aplicación y base de datos.

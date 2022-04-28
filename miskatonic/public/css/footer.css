@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+	
+.footer-container {
+	margin: auto;
+	font-family: Poppins;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-col ul {
+	list-style: none;
+}
+
+.footer {
+	background-color: #0a0a0a;
+	padding: 70px 0;
+}
+
+.footer-col {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.footer-col h4 {
+	font-size: 1.3em;
+	color: #fff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	background-color: #11998E;
+	height: 2px;
+	box-sizing: border-box;
+	width: 80px;
+}
+
+.footer-col ul li a {
+	font-size: 1.0em;
+	text-transform: capitalize;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+	color: #fff;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a {
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #fff;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a i {
+	margin-top: 10px;
+}
+
+.footer-col .social-links a:hover {
+	color: #11998E;
+	background-color: #fff;
+}
+
+@media (max-width: 1500px) {
+	.footer-col {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}

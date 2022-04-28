@@ -24,3 +24,37 @@ for(let i=0; i<toggles.length; i++){
         }
     });
 }
+
+const carousel = document.querySelector('.carousel-items');
+const carousel2 = document.querySelector('.carousel-items-two');
+
+var intervale = null;
+var maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+var maxScrollLeft2 = carousel2.scrollWidth - carousel2.clientWidth;
+var step = 1;
+var step2 = 1;
+
+    const start = () => {
+        intervalo = setInterval(function () {
+            carousel.scrollLeft = carousel.scrollLeft + step;
+            if (carousel.scrollLeft == maxScrollLeft) {
+                step = -1;
+            } else if (carousel.scrollLeft == 0) {
+                step = 1;
+            }
+        }, 30);
+    };
+
+    const start2 = () => {
+        intervalo = setInterval(function () {
+            carousel2.scrollLeft = carousel2.scrollLeft + step2;
+            if (carousel2.scrollLeft == maxScrollLeft2) {
+                step2 = -1;
+            } else if (carousel2.scrollLeft == 0) {
+                step2 = 1;
+            }
+        }, 50);
+    };
+
+    start();
+    start2();

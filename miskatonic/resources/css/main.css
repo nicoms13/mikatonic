@@ -2,6 +2,7 @@
  * Custom properties
 *******************/
 @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Gentium+Basic:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
 :root {
 
@@ -25,6 +26,7 @@
 	/* font-families */
 	--ff-title: "Gentium Basic", serif;
 	--ff-sans: "Arapey", sans-serif;
+	--ff-poppins: "Poppins", sans-serif;
 }
 
 /**
@@ -169,6 +171,10 @@ a {
 .ff-title { 
 	font-family: var(--ff-title);
 	font-weight: 700; 
+} 
+
+.ff-poppins { 
+	font-family: var(--ff-poppins); 
 } 
 
 .ff-arial {

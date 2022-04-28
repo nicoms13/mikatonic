@@ -10,6 +10,7 @@
 body {
 	background-color: #fff;
 	color: #000;
+	width: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -25,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav {
-	background-color: rgba(0, 0, 0, 1.0);
+	background-color: #222;
 	z-index: 2;
 	position: fixed;
 	display: flex;
@@ -66,7 +67,7 @@ nav a {
 }
 
 nav .navigation-items a:hover {
-	background-color: #242424;
+	background-color: #3A3A3A;
 	color: white;
 	box-shadow: 5px 10px 30px rgba(53, 53, 53, 0.1);
 	transition: all ease 0.2s;
@@ -196,7 +197,7 @@ nav .navigation-items a:hover {
 	max-width: 350px;
 	min-width: 350px;
 	height: 200px;
-	margin: 25px;
+	margin: 15px;
 }
 
 .carousel-img img {
@@ -211,10 +212,10 @@ nav .navigation-items a:hover {
 }
 
 .carousel-img-two {
-	max-width: 200px;
-	min-width: 200px;
-	height: 300px;
-	margin: 20px;
+	max-width: 350px;
+	min-width: 350px;
+	height: 200px;
+	margin: 15px;
 }
 
 .carousel-img-two img {
@@ -252,11 +253,12 @@ nav .navigation-items a:hover {
 	justify-content: center;
 	align-items: flex-start;
 	grid-template-columns: repeat(12, 1fr);
+	width: 100%;
 }
 
 .mainsection .info-item {
 	padding: 25px;
-	grid-column: span 3;
+	grid-column: span 4;
 }
 
 .mainsection .info-item i {
@@ -302,22 +304,24 @@ nav .navigation-items a:hover {
 
 .advert {
 	width: 100%;
-	height: 500px;
+	height: 400px;
 	overflow: hidden;
 	box-sizing: border-box;
-	background-image: url(../images/lovecraft_background.jpg);
+	background-image: url(../images/lovecraft_background.png);
   	background-position: center;
   	background-size: cover;
+  	pointer-events: none;
 }
 
 .advert-two {
 	width: 100%;
-	height: 500px;
+	height: 400px;
 	overflow: hidden;
 	box-sizing: border-box;
-	background-image: url(../images/wendigo_background.jpg);
+	background-image: url(../images/galaxy_background.png);
   	background-position: center;
   	background-size: cover;
+  	pointer-events: none;
 }
 
 .mainsection .background {
@@ -438,7 +442,7 @@ nav .navigation-items a:hover {
 
 .faq h3 {
 	font-size: 2.0rem;
-	margin-top: 100px;
+	margin-top: 50px;
 	margin-bottom: 25px;
 }
 
@@ -553,6 +557,10 @@ nav .navigation-items a:hover {
 	border-radius: 50%;
 	color: #fff;
 	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a i {
+	margin-top: 10px;
 }
 
 .footer-col .social-links a:hover {

@@ -82,6 +82,7 @@ body {
 img,
 picture {
 	max-width: 100%;
+	width: 100%;
 	display: block;
 }
 
@@ -96,6 +97,11 @@ select {
 
 li {
 	list-style: noen;
+}
+
+section {
+	padding: 0 0 2rem;
+	margin: 0 6rem 0 6rem;
 }
 
 /* links set up */
@@ -114,6 +120,8 @@ a {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: smooth !important;
 		scroll-padding-top: 2rem;
+		padding: 0;
+		margin: 0;
 	}
 }
 

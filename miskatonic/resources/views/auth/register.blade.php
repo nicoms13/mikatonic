@@ -52,19 +52,20 @@
             </div>
          </div>
          <div class="form-outer">
-            <form action="#">
+            <form method="POST" action="{{ route('register') }}">
+            @csrf
                <div class="page slide-page">
                   <div class="field">
                      <div class="label">
                         First Name
                      </div>
-                     <input type="text">
+                     <input id="firstName" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required>
                   </div>
                   <div class="field">
                      <div class="label">
                         Last Name
                      </div>
-                     <input type="text">
+                     <input id="lastName" type="text" class="form-control @error('name') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}" required>
                   </div>
                   <div class="field">
                      <button class="firstNext next">Next</button>
@@ -75,15 +76,15 @@
                      <div class="label">
                         Email
                      </div>
-                     <input type="text">
+                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                   </div>
                   <div class="field">
                      <div class="label">
                         Plan
                      </div>
-                     <select>
-                      <option value="mercedes">Month -- €8.99 / month</option>
-                      <option value="audi">Year -- €69.99 / year</option>
+                     <select id="paymentType" name="paymentType" required>
+                      <option value="month">Month -- €8.99 / month</option>
+                      <option value="year">Year -- €69.99 / year</option>
                      </select>
                   </div>
                   <div class="field btns">
@@ -96,11 +97,11 @@
                      <div class="label">
                         Credit Card
                      </div>
-                     <input type="text" placeholder="XXXX XXXX XXXX">
+                     <input id="cardNumber" type="text" class="form-control @error('cardNumber') is-invalid @enderror" name="cardNumber" required placeholder="XXXX XXXX XXXX">
                   </div>
                   <div class="field">
-                     <input style="margin-right: 10px;" placeholder="** / **" type="text">
-                     <input style="margin-left: 10px;" placeholder="CVC" type="text">
+                     <input style="margin-right: 10px;" id="cardExpirity" type="text" class="form-control @error('cardExpirity') is-invalid @enderror" name="cardExpirity" required placeholder="** / **">
+                     <input style="margin-left: 10px;" id="cvc" type="text" class="form-control @error('cvc') is-invalid @enderror" name="cvc" required placeholder="CVC">
                   </div>
 
                   <div class="field btns">
@@ -113,13 +114,13 @@
                      <div class="label">
                         Username
                      </div>
-                     <input type="text">
+                     <input id="username" type="text" class="form-control @error('name') is-invalid @enderror" name="username" value="{{ old('username') }}" required>
                   </div>
                   <div class="field">
                      <div class="label">
                         Password
                      </div>
-                     <input type="password">
+                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
                   </div>
                   <div class="field btns">
                      <button class="prev-3 prev">Previous</button>

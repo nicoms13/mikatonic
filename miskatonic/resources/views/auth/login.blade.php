@@ -14,20 +14,31 @@
       <div class="container">
          <header>Sign in</header>
          <div class="form-outer">
-            <form action="#">
+            <form method="POST" action="{{ route('login') }}">
+            @csrf
                <div class="page slide-page">
                   <div class="field">
                      <div class="label">
                         Email
                      </div>
-                     <input type="text">
+                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                   </div>
+                     @error('email')
+                     <span style="margin-top: -40px;" class="invalid-feedback" role="alert">
+                        <strong>*{{ $message }}</strong>
+                     </span>
+                     @enderror
                   <div class="field">
                      <div class="label">
                         Password
                      </div>
-                     <input type="password">
+                     <input type="password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                   </div>
+                     @error('password')
+                     <span class="invalid-feedback" role="alert">
+                        <strong>*{{ $message }}</strong>
+                     </span>
+                     @enderror
                   <div class="field btns">
                      <button class="back"><a href="/">Back</a></button>
                      <button class="submit">Sign in</button>

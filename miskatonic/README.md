@@ -16,10 +16,9 @@ de login y registro.
 
 ### Semana 3 (Viernes 29 de abril)
 
-He comenzado a dividir el diseño en módulos para facilitar su uso (nav, content, footer, etc). También, he creado las
-migraciones de la base de datos, y finalmente he creado una tabla más de las que tenía previstas (bookmark), para
-almacenar la última página leída de cada libro que comienze a leer el usuario (es una nueva tabla intermedia entre
-usuario y libro).
+He comenzado a dividir el diseño en módulos para facilitar su uso (nav, content, footer, etc). También, he creado las migraciones de la base de datos, y finalmente he creado una tabla más de las que tenía previstas (bookmark), para almacenar la última página leída de cada libro que comienze a leer el usuario (es una nueva tabla intermedia entre usuario y libro).
+
+### Semana 4 (Viernes 06 de mayo)
 
 ### INTRODUCCIÓN
 

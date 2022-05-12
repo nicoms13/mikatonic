@@ -24,7 +24,7 @@ Creación de los sliders en la página de home (no están conectados a la base d
 trabajando en el sistema de autenticación; los usuarios ya pueden registrarse e iniciar sesión. Hay correción de errores
 únicamente en el login por ahora. Aún no se distingue entre usuarios normales y administradores.
 
-### Semana 5 - Revisión (Viernes 13 de mayo)
+### Semana 5 - Revisión (Viernes 13 de mayo) - *Vídeo adjuntado en la carpeta raíz*
 
 Al ser la semana de la revisión, eplicaré un poco por encima todo lo hecho hasta ahora. En tema de CSS he creado ya todos los
 elementos y componentes que pienso usar en la aplicación. La mayoría de páginas disponibles para el usuario están todas

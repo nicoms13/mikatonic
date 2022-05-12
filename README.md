@@ -30,11 +30,11 @@ Al ser la semana de la revisión, eplicaré un poco por encima todo lo hecho has
 elementos y componentes que pienso usar en la aplicación. La mayoría de páginas disponibles para el usuario están todas
 disponibles (tan solo me queda conectarlas con el backend). En cuanto a JS, el visualizador de PDFs es ya 
 funcional, tan solo me queda conectarlo con el backend para que lleguen los archivos. Además, he cread varios sliders a lo
-largo de la páagina. Actualmente estoy trabajando con Laravel. La base de datos ya ha sido creada, el sistema de login
+largo de la página. Actualmente estoy trabajando con Laravel. La base de datos ya ha sido creada y el sistema de login
 ya funciona, tan solo me queda añadir validación en el formulario de registro. Estoy realizando el CRUD que estará
-disponible para los administradores para que puedan poblar la base de datos, la mayoría de las tablas que quiero que tengan
-un CRUD ya lo tienen. Para ciertas tablas es posible que las gestione con Ajax Jquery en vez de los controladores porque
-necesito que los datos se manejen en tiempo real.
+disponible para los administradores (ya se difenrencia entre los ds tipos de usuarois) para que puedan poblar la base 
+de datos, la mayoría de las tablas que quiero que tengan un CRUD ya lo tienen. Para ciertas tablas es posible que las
+gestione con Ajax Jquery en vez de los controladores porque necesito que los datos se manejen en tiempo real.
 
 ### INTRODUCCIÓN
 

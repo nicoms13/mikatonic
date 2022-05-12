@@ -23,7 +23,7 @@
 
             <div class="container-btn">
               <div class="button-user btn-admin">
-                <div class="user-icon" onclick="location.href=''">
+                <div class="user-icon" onclick="location.href='{{ route('bookAdmin') }}'">
                   <i class="fa-solid fa-book-open"></i>
                 </div>
               </div>

@@ -62,12 +62,12 @@
                     <span class="nav-link-title">Bookshelf</span>
                 </a>
 
-                {{-- @if(@Auth::user()->hasRole('Admin')) --}}
+                @if(@Auth::user()->hasRole('Admin'))
                 <a href="{{ route('admin') }}" class="nav-link flex">
                     <i class="fa-solid fa-wrench"></i>
                     <span class="nav-link-title">Manage</span>
                 </a>
-                {{-- @endif --}}
+                @endif
 
             </div>
         </div>

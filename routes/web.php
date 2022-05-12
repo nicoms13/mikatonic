@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,5 +71,16 @@ Route::get('/admin', function () {
     Route::post('/updateGenre', [GenreController::class, 'genreUpdate']);
 
     Route::post('/deleteGenre', [GenreController::class, 'genreDelete']);
+
+    //Book - admin
+    Route::get('/admin/book', [BookController::class, 'index'])->name('bookAdmin');
+
+    Route::get('/admin/book/new', [BookController::class, 'bookAdminCreate'])->name('bookAdminCreate');
+    Route::post('/createBook', [BookController::class, 'bookCreate']); 
+
+    Route::get('/admin/book/{book}', [BookController::class, 'bookAdminUpdate'])->name('authorAdminUpdate');
+    Route::post('/updateBook', [BookController::class, 'bookUpdate']);
+
+    Route::post('/deleteBook', [BookController::class, 'bookDelete']);
 
 require __DIR__.'/auth.php';

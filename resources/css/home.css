@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar { width: 0.75rem; }
+
+body::-webkit-scrollbar-track { background: #1e1e24; }
+
+body::-webkit-scrollbar-thumb { background: #fff; }
+
+.home {
+	position: relative;
+	min-height: 470px;
+	align-items: center;
+	margin-top: 5rem !important;
+	border-radius: 0.5rem;
+}
+
+.home img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	border-radius: 0.5rem;
+}
+
+.home-title {
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.8);
+}
+
+.home-txt {
+	padding-left: 40px;
+}
+
+.home-author  {
+	margin: 10px 0 0;
+	color: #11998E;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.8);
+}
+
+.home-txt a {
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.8);
+}
+
+.home-pages {
+	margin-bottom: 20px;
+	padding-top: 0;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.8);
+}
+
+.home-pages span {
+
+}
+
+.book-title {
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.8);
+}
+
+.book-genre {
+	background-color: hsla(175, 89%, 33%, 0.4);
+	padding: 3px 7px 3px 7px;
+}
+
+.read-btn {
+	align-items: center;
+	column-gap: 0.8rem;
+	color: #fcfeff;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.8);
+	cursor: default;
+	margin-top: 20px;
+}
+
+.read-btn div:hover {
+	color: #11998E;
+}
+
+.read-btn div {
+	display: flex;
+	transition: all .2s ease;
+	justify-content: flex-start !important;
+	align-items: flex-start !important;
+	cursor: pointer;
+}
+
+.read-btn i {
+	font-size: 21px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.swiper {
+	height: 100%;
+	width: 100%;
+}
+
+.swiper-slide {
+	min-height: 470px;
+	width: 100%;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+	opacity: 0.6 !important;
+	background: #fcfeff !important;
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1 !important;
+	background: #11998E !important;
+}
+
+.home-heading {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	background: #2d2e37;
+	padding: 8px 14px;
+	border: 1px solid hsl(200, 100%, 99% / 5%);
+	margin-bottom: 0.5rem;
+}
+
+.book-box {
+	position: relative;
+	width: 100%;
+	height: 380px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all .8s ease;
+}
+
+.book-box:hover {
+	background-color: #fff;
+}
+
+.book-box:hover .book-box-img {
+	opacity: 0.9;
+	transform: scale(1.1);
+}
+
+.book-box-img {
+	width: 100%;
+	height: 100%;
+	transition: all .5s ease;
+	object-fit: cover;
+}
+
+.book-box-txt {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 14px;
+	background: linear-gradient(8deg, hsl(240, 17%, 14% / 74%) 14%, hsl(240, 17%, 14% / 14%) 44%);
+	overflow: hidden;
+}
+
+.swiper-btn .swiper-button-prev, 
+.swiper-btn .swiper-button-next {
+	position: static !important;
+	margin: 0 0 0 -15px !important;
+}
+
+.swiper-btn .swiper-button-prev::after, 
+.swiper-btn .swiper-button-next::after {
+	position: static !important;
+	color: #fcfeff !important;
+	font-size: 20px !important;
+	font-weight: 800 !important;
+}
+
+#cthulu-home {
+	margin-top: -3.5rem;
+}
+
+#dream-home {
+	margin-top: -3.5rem;
+}
+
+#weird-home {
+	margin-top: -3.5rem;
+}

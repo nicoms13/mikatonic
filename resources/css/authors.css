@@ -1,0 +1,48 @@
+.read-btn div {
+	display: flex;
+	justify-content: center !important;
+	align-items: center !important;
+	font-weight: 500;
+}
+
+.author-genre {
+	background-color: hsla(0, 0%, 13%, 0.8);
+	padding: 3px 7px 3px 7px;
+	margin-right: 10px;
+}
+
+.author-txt-box {
+	margin-top: 25px;
+}
+
+#author-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+}
+
+.author-box {
+	position: relative;
+	width: 100%;
+	height: 280px;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all .8s ease;
+	border-radius: 5%;
+}
+
+.author-box:hover {
+	background-color: #fff;
+}
+
+.author-box:hover .author-box-img {
+	opacity: 0.9;
+	transform: scale(1.1);
+}
+
+.author-box-img {
+	width: 100%;
+	height: 100%;
+	transition: all .5s ease;
+	object-fit: cover;
+}

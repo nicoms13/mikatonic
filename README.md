@@ -24,6 +24,18 @@ Creación de los sliders en la página de home (no están conectados a la base d
 trabajando en el sistema de autenticación; los usuarios ya pueden registrarse e iniciar sesión. Hay correción de errores
 únicamente en el login por ahora. Aún no se distingue entre usuarios normales y administradores.
 
+### Semana 5 (Viernes 13 de mayo)
+
+Al ser la semana de la revisión, eplicaré un poco por encima todo lo hecho hasta ahora. En tema de CSS he creado ya todos los
+elementos y componentes que pienso usar en la aplicación. La mayoría de páginas disponibles para el usuario están todas
+disponibles (tan solo me queda conectarlas con el backend). En cuanto a JS, el visualizador de PDFs es ya 
+funcional, tan solo me queda conectarlo con el backend para que lleguen los archivos. Además, he cread varios sliders a lo
+largo de la páagina. Actualmente estoy trabajando con Laravel. La base de datos ya ha sido creada, el sistema de login
+ya funciona, tan solo me queda añadir validación en el formulario de registro. Estoy realizando el CRUD que estará
+disponible para los administradores para que puedan poblar la base de datos, la mayoría de las tablas que quiero que tengan
+un CRUD ya lo tienen. Para ciertas tablas es posible que las gestione con Ajax Jquery en vez de los controladores porque
+necesito que los datos se manejen en tiempo real.
+
 ### INTRODUCCIÓN
 
 **Miskatonik** es una biblioteca online que contedrá información, obras y biografías sobre el escritor **H.P. Lovecraft**

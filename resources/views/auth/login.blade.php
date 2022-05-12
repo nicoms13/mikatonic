@@ -17,17 +17,19 @@
             <form method="POST" action="{{ route('login') }}">
             @csrf
                <div class="page slide-page">
+                  @error('email')
+                  <div class="message error-message fs-200">
+                     <span role="alert">
+                        <strong>*Invalid email or password</strong>
+                     </span>
+                  </div>
+                  @enderror
                   <div class="field">
                      <div class="label">
                         Email
                      </div>
                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                   </div>
-                     @error('email')
-                     <span style="margin-top: -40px;" class="invalid-feedback" role="alert">
-                        <strong>*{{ $message }}</strong>
-                     </span>
-                     @enderror
                   <div class="field">
                      <div class="label">
                         Password

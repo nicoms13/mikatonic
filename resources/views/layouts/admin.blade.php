@@ -18,16 +18,36 @@
         <! -- Nav -->
         <div class="nav nav-container flex">
             <! -- Logo -->
-            <a class="fs-500 text-color ff-main logo" href="">Miskatonic</a>
-            <! -- Search -->
-            <div class="search-box">
-                <input type="search" id="search-input" class="text-color" placeholder="Search for a book..." autocomplete="off">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            <a class="fs-500 text-color ff-main logo" href="">Miskatonic <i class="fa-solid fa-gears"></i></i></a>
             <! -- User -->
+
+            <div class="container-btn">
+              <div class="button-user btn-admin">
+                <div class="user-icon" onclick="location.href=''">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-btn">
+              <div class="button-user btn-admin">
+                <div class="user-icon admin-icon" onclick="location.href='{{ route('authorAdmin') }}'">
+                  <i class="fa-solid fa-feather-pointed"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-btn">
+              <div class="button-user btn-admin">
+                <div class="user-icon admin-icon" onclick="location.href='{{ route('genreAdmin') }}'">
+                  <i class="fa-solid fa-palette"></i>
+                </div>
+              </div>
+            </div>
+
             <div class="container-btn">
               <div class="button-user">
-                <div class="user-icon" onclick="location.href='{{ route('login') }}'">
+                <div class="user-icon admin-icon" onclick="location.href='{{ route('login') }}'">
                   <i class="fa-solid fa-user"></i>
                 </div>
               </div>
@@ -46,29 +66,9 @@
                     <span class="nav-link-title">Home</span>
                 </a>
                 <a href="" class="nav-link flex">
-                    <i class="fa-solid fa-compass"></i>
-                    <span class="nav-link-title">Explore</span>
-                </a>
-                <a href="{{ route('bookSection') }}" class="nav-link flex">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span class="nav-link-title">Books</span>
-                </a>
-                <a href="{{ route('authors') }}" class="nav-link flex">
-                    <i class="fa-solid fa-feather-pointed"></i>
-                    <span class="nav-link-title">Authors</span>
-                </a>
-                <a href="" class="nav-link flex">
-                    <i class="fa-solid fa-bookmark"></i>
-                    <span class="nav-link-title">Bookshelf</span>
-                </a>
-
-                {{-- @if(@Auth::user()->hasRole('Admin')) --}}
-                <a href="{{ route('admin') }}" class="nav-link flex">
                     <i class="fa-solid fa-wrench"></i>
                     <span class="nav-link-title">Manage</span>
                 </a>
-                {{-- @endif --}}
-
             </div>
         </div>
 

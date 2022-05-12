@@ -1,0 +1,187 @@
+.admin-container {
+	position: relative;
+	align-items: center;
+	border-radius: 0.5rem;
+	margin-top: 6rem !important;
+}
+
+.admin-heading i {
+	cursor: pointer;
+}
+
+.admin-heading i:hover {
+	color: #11998E;
+}
+
+.btn-admin:hover {
+  width: 40px !important;
+}
+
+table {
+	border: 1px solid #fcfeff;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    color: #fcfeff;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+.admin-button {
+	border: none;
+	cursor: pointer;
+	color: #fcfeff;
+	background-color: hsla(175, 89%, 33%, 0.4);
+	padding: 3px 7px 3px 7px;
+}
+
+.admin-button-group .admin-button:nth-child(2) {
+	background-color: hsla(0, 99%, 33%, 0.4);
+}
+
+.admin-button:hover {
+	opacity: 0.8;
+}
+
+table tr {
+    background-color: transparent;
+    border: 1px solid #fcfeff;
+    padding: .35em;
+  }
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.col-75-admin input[type=text], .col-75-admin select, .col-75-admin textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+.col-75-admin label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+.col-75-admin input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+.col-25-admin {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.col-75-admin {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row-admin:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  background-color: hsla(322, 99%, 33%, 0.4);
+  padding: 5px 20px 5px 20px;
+}
+
+.author-select {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.author-select option{
+    background-color: transparent !important;
+  border: 1px solid #e4e4e4;
+  color: #000;
+  -webkit-appearance: none; 
+     -moz-appearance: none; 
+}
+
+  @media screen and (max-width: 600px) {
+  	.admin-container {
+  		margin-top: 8rem !important;
+  	}
+
+    table {
+      border: 0;
+    }
+
+    table caption {
+      font-size: 1.3em;
+    }
+
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    table tr {
+      border-bottom: 3px solid #fcfeff;
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    table td {
+      border-bottom: 1px solid #fcfeff;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    .col-25-admin, .col-75-admin, input[type=submit] {
+	    width: 100%;
+	    margin-top: 0;
+  	}
+  }

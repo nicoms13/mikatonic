@@ -15,9 +15,14 @@
 					<h1 class="home-title ff-main fs-600">The Call of Cthulu</h1>
 					<p class="	fs-200 ff-main home-author">H.P. Lovecraft</p>
 					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
+					<div>
+						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
+					</div>
 					<a href="" class="read-btn flex">
-						<i class="fa-solid fa-play"></i>
-						<span>Read now</span>
+						<div class="flex">
+							<i class="fa-solid fa-play"></i>
+							<span>Read now</span>
+						</div>
 					</a>
 				</div>
 			</div>
@@ -30,9 +35,14 @@
 					<h1 class="home-title ff-main fs-600">The Color out of Space</h1>
 					<p class="fs-200 ff-main home-author">H.P. Lovecraft</p>
 					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
+					<div>
+						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
+					</div>					
 					<a href="" class="read-btn flex">
-						<i class="fa-solid fa-play"></i>
-						<span>Read now</span>
+						<div class="flex">
+							<i class="fa-solid fa-play"></i>
+							<span>Read now</span>
+						</div>
 					</a>
 				</div>
 			</div>
@@ -45,9 +55,14 @@
 					<h1 class="home-title ff-main fs-600">The Shadow over Innsmuth</h1>
 					<p class="fs-200 ff-main home-author">H.P. Lovecraft</p>
 					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
+					<div>
+						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
+					</div>
 					<a href="" class="read-btn flex">
-						<i class="fa-solid fa-play"></i>
-						<span>Read now</span>
+						<div class="flex">
+							<i class="fa-solid fa-play"></i>
+							<span>Read now</span>
+						</div>
 					</a>
 				</div>
 			</div>
@@ -60,9 +75,15 @@
 					<h1 class="home-title ff-main fs-600">The Outsider</h1>
 					<p class="fs-200 ff-main home-author">H.P. Lovecraft & August Derleth</p>
 					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
+					<div>
+						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
+						<span class="book-genre fs-300 ff-main">Weird Tales</span>
+					</div>
 					<a href="" class="read-btn flex">
-						<i class="fa-solid fa-play"></i>
-						<span>Read now</span>
+						<div class="flex">
+							<i class="fa-solid fa-play"></i>
+							<span>Read now</span>
+						</div>
 					</a>
 				</div>
 			</div>
@@ -107,13 +128,12 @@
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
+					<img src="/images/wallpapers/callofcthuluWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<div>
+							<span class="book-genre fs-100 ff-main">Dream Cycle</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -122,22 +142,21 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<div>
+							<span class="book-genre fs-100 ff-main">Cthulu Mythos</span>
+							<span class="book-genre fs-100 ff-main">Weird Tales</span>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="swiper-slide">
 				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
+					<img src="/images/wallpapers/shadowoverinnsmouthWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<div>
+							<span class="book-genre fs-100 ff-main">Weird Tales</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -146,10 +165,9 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<div>
+							<span class="book-genre fs-100 ff-main">Weird Tales</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -158,10 +176,9 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<div>
+							<span class="book-genre fs-100 ff-main">Horror</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -223,10 +240,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -235,10 +249,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -247,10 +258,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -259,10 +267,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -271,10 +276,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -336,10 +338,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -348,10 +347,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -360,10 +356,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -372,10 +365,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -384,10 +374,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -449,10 +436,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -461,10 +445,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -473,10 +454,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -485,10 +463,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
 					</div>
 				</div>
 			</div>
@@ -497,10 +472,7 @@
 					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<span class="book-genre fs-200 ff-main">Horror</span>
-						<a href="" class="read-btn flex">
-							<i class="fa-solid fa-play"></i>
-						</a>
+						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>	
 					</div>
 				</div>
 			</div>

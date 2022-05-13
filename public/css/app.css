@@ -818,6 +818,46 @@ table th {
   -moz-appearance: none;
 }
 
+.select-admin-multi {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #2d2e37;
+}
+
+.select-admin-multi button {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.book-select {
+  overflow-y: auto;
+  display: flex;
+  outline: none;
+}
+
+.book-select option {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+}
+
+.book-select option:checked {
+  background-color: #11998E;
+  color: white !important;
+}
+
+.book-select::-ms-expand {
+  display: none;
+}
+
+.book-select i {
+  cursor: pointer;
+  color: hsla(0, 99%, 33%, 0.4);
+}
+
 @media screen and (max-width: 600px) {
   .admin-container {
     margin-top: 8rem !important;

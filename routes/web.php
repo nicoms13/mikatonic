@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,9 @@ Route::get('/dashboard', function () {
 Route::get('/admin', function () {
     return view('admin.home');
 })->name('admin');
+
+    //Files - upload
+    Route::post('/upload', [UploadController::class, 'store']);
     
     //Author - admin
     Route::get('/admin/author', [AuthorController::class, 'index'])->name('authorAdmin');

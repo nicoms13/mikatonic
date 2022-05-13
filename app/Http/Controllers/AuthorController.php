@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Filesystem\Filesystem;
 
 use App\Models\Author;
+use App\Models\TemporaryFile;
 
 class AuthorController extends Controller
 {
@@ -57,17 +59,25 @@ class AuthorController extends Controller
             'firstName' => 'required',
             'lastName' => 'required',
             'desc' => 'required',
-            'logo' => 'required',
-            'wallpaper' => 'required',            
+            'logo' => 'required',            
         ]);
 
-        Author::create([
+        $author = Author::create([
             'firstName' => request('firstName'),
             'lastName' => request('lastName'),
             'desc' => request('desc'),
             'logo' => request('logo'),
-            'wallpaper' => request('wallpaper'),
         ]);
+
+        $temporaryFile = TemporaryFile::where('folder', request('wallpaper'))->first();
+
+        if($temporaryFile) {
+            $author->addMedia(storage_path('app/public/files/tmp/' . request('wallpaper') . '/' . $temporaryFile->filename))->toMediaCollection('wallpaper');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('wallpaper')));
+            $temporaryFile->delete();
+
+        }
 
         return redirect('/admin/author');
     }

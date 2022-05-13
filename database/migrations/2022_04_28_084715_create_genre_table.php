@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('genre', function (Blueprint $table) {
             $table->increments('idGen');
             $table->string('name');
-            $table->string('desc');
+            $table->longText('desc');
             //$table->timestamps();
         });
     }

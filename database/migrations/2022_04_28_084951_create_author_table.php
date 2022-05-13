@@ -17,9 +17,9 @@ return new class extends Migration
             $table->increments('idAut');
             $table->string('firstName');
             $table->string('lastName');
-            $table->string('desc');
-            $table->string('logo');
-            $table->string('wallpaper');
+            $table->longText('desc');
+            $table->string('logo')->nullable();
+            $table->string('wallpaper')->nullable();
             //$table->timestamps();
         });
     }

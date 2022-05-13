@@ -16,6 +16,7 @@
 		      <th class="ff-title fs-400" scope="col">First Name</th>
 		      <th class="ff-title fs-400" scope="col">Last Name</th>
 		      <th class="ff-title fs-400" scope="col">Books</th>
+		      <th class="ff-title fs-400" scope="col">Logo</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -30,6 +31,10 @@
 		      		<option>Test</option>
 		      		<option>Test</option>
 		      	</select>
+		      </td>
+		      <td class="ff-light" data-label="Logo">
+		      	<img src="{{ $author->getFirstMediaUrl('logo') }}" />
+		      	<img src="{{ $author->getFirstMediaUrl('wallpaper') }}" />
 		      </td>
 		      <td class="ff-light" data-label="Action">
 		      	<button onclick="location.href='/admin/author/{{ $author->idAut }}'" class="admin-button">Edit {{ $author->lastName }}</button>

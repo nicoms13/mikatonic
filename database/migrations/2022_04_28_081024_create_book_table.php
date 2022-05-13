@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('cover');
             $table->string('wallpaper');
-            $table->string('desc');
+            $table->longText('desc');
+            $table->string('pdf');
             $table->integer('pages');
             //$table->timestamps();
         });

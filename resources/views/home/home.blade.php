@@ -233,55 +233,34 @@
 			<div class="swiper-button-next swiper-button-next-mythos"></div>
 		</div>
 	</div>
+
 	<div class="swiper mythos-swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
+			@forelse($books as $book)
+				@if(strpos($book->genresNames(), 'Cthulu Mythos') !== false)
+				<div class="swiper-slide">
+					<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+						<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
+						<div class="book-box-txt">
+							<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+							<p class="	fs-200 ff-main home-pages">
+								@foreach($book->authors()->get() as $author)
+									@if ($loop->first)
+									{{ $author->firstName }} {{ $author->lastName }}
+									@else
+									& {{ $author->firstName }} {{ $author->lastName }}
+									@endif
+								@endforeach
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
+				@endif
+				@empty
+			@endforelse	
 		</div>
 	</div>
+
 	<script>
 		var swiperMythos = new Swiper('.mythos-swiper', {
 		  slidesPerView: 1,
@@ -333,51 +312,28 @@
 	</div>
 	<div class="swiper dream-swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
+			@forelse($books as $book)
+				@if(strpos($book->genresNames(), 'Dream cycle') !== false)
+				<div class="swiper-slide">
+					<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+						<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
+						<div class="book-box-txt">
+							<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+							<p class="	fs-200 ff-main home-pages">
+								@foreach($book->authors()->get() as $author)
+									@if ($loop->first)
+									{{ $author->firstName }} {{ $author->lastName }}
+									@else
+									& {{ $author->firstName }} {{ $author->lastName }}
+									@endif
+								@endforeach
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
+				@endif
+				@empty
+			@endforelse	
 		</div>
 	</div>
 	<script>
@@ -431,51 +387,28 @@
 	</div>
 	<div class="swiper weird-swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
+			@forelse($books as $book)
+				@if(strpos($book->genresNames(), 'Weird Tales') !== false)
+				<div class="swiper-slide">
+					<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+						<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
+						<div class="book-box-txt">
+							<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+							<p class="	fs-200 ff-main home-pages">
+								@foreach($book->authors()->get() as $author)
+									@if ($loop->first)
+									{{ $author->firstName }} {{ $author->lastName }}
+									@else
+									& {{ $author->firstName }} {{ $author->lastName }}
+									@endif
+								@endforeach
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
-						<p class="	fs-200 ff-main home-pages">H.P. Lovecraft</p>	
-					</div>
-				</div>
-			</div>
+				@endif
+				@empty
+			@endforelse	
 		</div>
 	</div>
 	<script>

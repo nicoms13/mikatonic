@@ -5,7 +5,17 @@
 }
 
 #books-container .book-box {
-	margin-top: 2rem;
+	margin-top: 0.3rem;
+}
+
+#content-explore {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+	gap: 1.5rem;
+}
+
+#content-explore .book-box {
+	margin-top: 0.3rem;
 }
 
 .book-box:hover {

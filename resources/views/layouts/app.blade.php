@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <! -- Stylesheet -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @livewireStyles
     <! -- FontAwesome -->
     <script src="https://kit.fontawesome.com/91a731da61.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <! -- Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Miskatonic</title>
 </head>
 <body>
@@ -45,13 +47,9 @@
                     <i class="fa-solid fa-house"></i>
                     <span class="nav-link-title">Home</span>
                 </a>
-                <a href="" class="nav-link flex">
+                <a href="{{ route('bookSection') }}" class="nav-link flex">
                     <i class="fa-solid fa-compass"></i>
                     <span class="nav-link-title">Explore</span>
-                </a>
-                <a href="{{ route('bookSection') }}" class="nav-link flex">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span class="nav-link-title">Books</span>
                 </a>
                 <a href="{{ route('authors') }}" class="nav-link flex">
                     <i class="fa-solid fa-feather-pointed"></i>
@@ -75,6 +73,8 @@
     </nav>
 
     @yield('content')
+
     
+@livewireScripts
 </body>
 </html>

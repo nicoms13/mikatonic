@@ -20,8 +20,6 @@ class Author extends Model implements HasMedia
         'firstName',
         'lastName',
         'desc',
-        'logo',
-        'wallpaper',
     ];
 
     public $timestamps = false;

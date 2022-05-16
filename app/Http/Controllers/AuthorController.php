@@ -58,17 +58,16 @@ class AuthorController extends Controller
         request()->validate([
             'firstName' => 'required',
             'lastName' => 'required',
-            'desc' => 'required',
-            'logo' => 'required',            
+            'desc' => 'required',           
         ]);
 
         $author = Author::create([
             'firstName' => request('firstName'),
             'lastName' => request('lastName'),
-            'desc' => request('desc'),
-            'logo' => request('logo'),
+            'desc' => request('desc'),  
         ]);
 
+        //Wallpaper - media
         $temporaryFile = TemporaryFile::where('folder', request('wallpaper'))->first();
 
         if($temporaryFile) {
@@ -76,6 +75,17 @@ class AuthorController extends Controller
             
             rmdir(storage_path('app/public/files/tmp/' . request('wallpaper')));
             $temporaryFile->delete();
+
+        }
+
+        //Logo - media
+        $temporaryFileLogo = TemporaryFile::where('folder', request('logo'))->first();
+
+        if($temporaryFileLogo) {
+            $author->addMedia(storage_path('app/public/files/tmp/' . request('logo') . '/' . $temporaryFileLogo->filename))->toMediaCollection('logo');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('logo')));
+            $temporaryFileLogo->delete();
 
         }
 

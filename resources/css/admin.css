@@ -168,7 +168,7 @@ table th {
   color: hsla(0, 99%, 33%, 0.4);
 }
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   	.admin-container {
   		margin-top: 8rem !important;
   	}

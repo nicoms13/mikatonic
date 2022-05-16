@@ -167,6 +167,10 @@ body::-webkit-scrollbar-thumb { background: #fff; }
 	overflow: hidden;
 }
 
+.empty-message {
+	margin-bottom: 50px;
+}
+
 .swiper-btn .swiper-button-prev, 
 .swiper-btn .swiper-button-next {
 	position: static !important;

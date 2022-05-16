@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<! -- Stylesheet -->
-    <link href="viewer/viewer.css" rel="stylesheet">
-    <! -- FontAwesome -->
-    <script src="https://kit.fontawesome.com/91a731da61.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js" integrity="sha512-IM60GPudO4jk+ZQm3UlJgKHhXQi5pNDM6mP+pLKL968YgkHMc7He3aGJOVHEZ9rJ4vAaEtJ8W6SKa7Qq4inzBA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<title>Miskatonic</title>
-</head>
-<body>
+@extends('layouts.viewer')
+
+@section('content')
 	<main>
 		<h3 style="font-weight: 200;"><strong>Error.</strong> No book selected</h3>
-		<canvas class="pdf-viewer hidden"></canvas>
+		<canvas id="pdf-render" class="pdf-viewer hidden"></canvas>
 	</main>
 
 	<footer>
@@ -23,8 +12,6 @@
 			<button id="closePDF" onclick="location.href='{{ route('home') }}'">
 				<i class="fa-solid fa-circle-xmark"></i>
 			</button>
-
-				<input type="file" id="inputFile" hidden>
 
 			</li>
 
@@ -36,11 +23,82 @@
 
 			<li class="zoom-container">
 				<span id="zoomValue">150%</span>
-				<input type="range" id="zoom" name="cowbell" min="100" max="300" value="150" step="50" disabled>
+				<input type="range" id="zoom" name="cowbell" min="100" max="300" value="150" step="50">
 			</li>
 		</ul>
 	</footer>
 
-</body>
-<script src="viewer/viewer.js"></script>
-</html>
+<script>
+var pdfRoute = '{{ $book->getFirstMediaUrl('pdf') }}';
+pdfRoute = pdfRoute.substring(pdfRoute.indexOf("0/") + 1);
+
+const zoomButton = document.getElementById('zoom');
+const currentPage = document.getElementById('current_page');
+const viewer = document.querySelector('.pdf-viewer');
+let currentPDF = {}
+
+function resetCurrentPDF() {
+	currentPDF = {
+		file: null,
+		countOfPages: 0,
+		currentPage: 1,
+		zoom: 1.5
+	}
+}
+
+zoomButton.addEventListener('input', () => {
+	if (currentPDF.file) {
+		document.getElementById('zoomValue').innerHTML = zoomButton.value + "%";
+		currentPDF.zoom = parseInt(zoomButton.value) / 100;
+		renderCurrentPage();
+	}
+});
+
+document.getElementById('next').addEventListener('click', () => {
+	const isValidPage = currentPDF.currentPage < currentPDF.countOfPages;
+	if (isValidPage) {
+		currentPDF.currentPage += 1;
+		renderCurrentPage();
+	}
+});
+
+document.getElementById('previous').addEventListener('click', () => {
+	const isValidPage = currentPDF.currentPage - 1 > 0;
+	if (isValidPage) {
+		currentPDF.currentPage -= 1;
+		renderCurrentPage();
+	}
+});
+
+window.addEventListener("load", function(event) {
+	const pdfFile = pdfjsLib.getDocument(pdfRoute);
+	resetCurrentPDF();
+	pdfFile.promise.then((doc) => {
+		currentPDF.file = doc;
+		currentPDF.countOfPages = doc.numPages;
+		viewer.classList.remove('hidden');
+		document.querySelector('main h3').classList.add("hidden");
+		renderCurrentPage();
+	});
+
+});
+
+function renderCurrentPage() {
+	currentPDF.file.getPage(currentPDF.currentPage).then((page) => {
+		var context = viewer.getContext('2d');
+		var viewport = page.getViewport({ scale: currentPDF.zoom, });
+		viewer.height = viewport.height;
+		viewer.width = viewport.width;
+
+		var renderContext = {
+			canvasContext: context,
+			viewport: viewport
+		};
+		page.render(renderContext);
+	});
+	currentPage.innerHTML = currentPDF.currentPage + ' of ' + currentPDF.countOfPages;
+}
+
+
+</script>
+@endsection

@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->longText('desc');
-            $table->string('logo')->nullable();
-            $table->string('wallpaper')->nullable();
             //$table->timestamps();
         });
     }

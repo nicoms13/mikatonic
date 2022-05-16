@@ -16,10 +16,7 @@ return new class extends Migration
         Schema::create('book', function (Blueprint $table) {
             $table->increments('isbn');
             $table->string('title');
-            $table->string('cover');
-            $table->string('wallpaper');
             $table->longText('desc');
-            $table->string('pdf');
             $table->integer('pages');
             //$table->timestamps();
         });

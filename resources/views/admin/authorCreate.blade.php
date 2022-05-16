@@ -49,7 +49,6 @@
 		    </div>
 		    <div class="col-75-admin">
 				<input id="wallpaper" type="file" name="wallpaper">
-
 		    </div>
 
 		    <div class="admin-button-group">

@@ -8,7 +8,7 @@
 		<h2 class="fs-400 ff-main">Create a new book</h2>
 	</div>
 	<div class="swiper popular-swiper">
-		<form method="POST" action="/createBook">
+		<form method="POST" action="/createBook" enctype="multipart/form-data">
 		@csrf
 
 			<div class="row-admin">
@@ -24,7 +24,7 @@
 		        <label for="cover">Cover</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="cover" name="cover" required>
+		        <input id="cover" type="file" name="cover" required>
 		    </div>
 
 		    <div class="row-admin">
@@ -32,7 +32,7 @@
 		        <label for="wallpaper">Wallpaper</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="wallpaper" name="wallpaper" required>
+		        <input id="wallpaper" type="file" name="wallpaper" required>
 		    </div>
 
 		    <div class="row-admin">
@@ -50,6 +50,15 @@
 		    <div class="col-75-admin">
 		        <input type="number" id="pages" name="pages" required>
 		    </div>
+
+		    <div class="row-admin">
+		      <div class="col-25-admin">
+		        <label for="pdf">PDF</label>
+		    </div>
+		    <div class="col-75-admin">
+		        <input id="pdf" type="file" name="pdf" required>
+		    </div>
+
 		</div>
 
 		    <div class="row-admin select-admin-multi">
@@ -67,7 +76,7 @@
 		    <script>
 				function getSelectedAuthor(){
 				    var e = document.getElementById("sel1");
-				    var choiceValue = e.value; // to get value only
+				    var choiceValue = e.value;
 				    var choicetext = e.options[e.selectedIndex].text;
 
 				    var newDiv = document.createElement('span');
@@ -117,4 +126,24 @@
 		</form>
 	</div>
 </section>
+<script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+<script>
+	const inputElementCov = document.querySelector('input[id="cover"]');
+	const pondCov = FilePond.create(inputElementCov);
+
+	const inputElementWall = document.querySelector('input[id="wallpaper"]');
+	const pondWall = FilePond.create(inputElementWall);
+
+	const inputElementPdf = document.querySelector('input[id="pdf"]');
+	const pondPdf = FilePond.create(inputElementPdf);
+
+	FilePond.setOptions({
+		server: {
+			url: '/upload',
+			headers: {
+				'X-CSRF-TOKEN': '{{ csrf_token() }}'
+			}
+		}
+	})
+</script>
 @endsection

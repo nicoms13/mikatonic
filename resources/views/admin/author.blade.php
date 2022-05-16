@@ -16,13 +16,14 @@
 		      <th class="ff-title fs-400" scope="col">First Name</th>
 		      <th class="ff-title fs-400" scope="col">Last Name</th>
 		      <th class="ff-title fs-400" scope="col">Books</th>
-		      <th class="ff-title fs-400" scope="col">Logo</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		  	@foreach($authors as $author)
 		    <tr>
-		      <td class="ff-light" data-label="ID">#{{ $author->idAut }}</td>
+		      <td class="ff-light" style="display: flex; align-items: center; justify-content: center;">
+		      	<img style="max-height: 75px; max-width: 75px;" src="{{ $author->getFirstMediaUrl('logo') }}" />
+		      </td>
 		      <td class="ff-light" data-label="First Name">{{ $author->firstName }}</td>
 		      <td class="ff-light" data-label="Last Name">{{ $author->lastName }}</td>
 		      <td class="ff-light" data-label="Last Name">
@@ -31,10 +32,6 @@
 		      		<option>Test</option>
 		      		<option>Test</option>
 		      	</select>
-		      </td>
-		      <td class="ff-light" data-label="Logo">
-		      	<img src="{{ $author->getFirstMediaUrl('logo') }}" />
-		      	<img src="{{ $author->getFirstMediaUrl('wallpaper') }}" />
 		      </td>
 		      <td class="ff-light" data-label="Action">
 		      	<button onclick="location.href='/admin/author/{{ $author->idAut }}'" class="admin-button">Edit {{ $author->lastName }}</button>

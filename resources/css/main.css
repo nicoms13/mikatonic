@@ -167,6 +167,7 @@ a {
 
 
 .text-color { color: var(--clr-text); }
+.text-color-main { color: var(--clr-main); }
 .text-white { color: hsl( var(--clr-white) ); }
 .text-persian { color: hsl( var(--clr-persian) ); }
 .text-coquelicot { color: hsl( var(--clr-coquelicot) ); }

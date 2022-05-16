@@ -5,6 +5,9 @@ use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\HomeController;
+
+use App\Http\Livewire\Books;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,38 +18,52 @@ use App\Http\Controllers\UploadController;
 |
 */
 
+//Default route
 Route::get('/', function () {
     return redirect('home');
 });
-
-//Default
-Route::get('/home', function () {
-    return view('home.home');
-})->name('home');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 
+//Viewer route
 Route::get('/read', function () {
     return view('viewer.bookViewer');
 })->name('read');
 
-Route::get('/book', function () {
-    return view('home.bookInfo');
-})->name('bookInfo');
 
-Route::get('/books', function () {
-    return view('home.bookSection');
-})->name('bookSection');
+//Book info route
+Route::get('/book/{book}', [BookController::class, 'bookInfo'])->name('bookInfo');
 
+//Explorer route
+Route::get('/explore', [HomeController::class, 'explore'])->name('explore');
+Route::get('/search', [BookController::class, 'search'])->name('search');
+
+
+//Book section route
+Route::get('/books', [BookController::class, 'bookSection'])->name('bookSection');
+
+
+//Author route
 Route::get('/authors', function () {
     return view('home.authors');
 })->name('authors');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 
-// Admin
+//Book viewer route
+Route::get('/read/{book}', [BookController::class, 'read'])->name('readBook');
+
+
+/*
+|--------------------------------------------------------------------------
+| ADMIN
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/admin', function () {
     return view('admin.home');
 })->name('admin');

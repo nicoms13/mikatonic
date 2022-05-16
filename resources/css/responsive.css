@@ -1,0 +1,167 @@
+@media(max-width: 1170px) {
+
+	body {
+		margin-bottom: 4rem;
+	}
+
+	.navbar {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: auto;
+		transform: translateY(0);
+		flex-direction: row;
+		justify-content: space-evenly;
+		row-gap: 1px;
+		padding: 15px 10px 10px 10px;
+		background: linear-gradient(8deg, hsl(0 0% 13% / 100%) 5%, hsl(0 0% 13% / 90%) 100%);
+	};
+
+	.nav-link {
+		gap: 0.4rem;
+	}
+
+	.nav-link i {
+		font-size: 1.3rem;
+	}
+}
+
+@media(max-width: 1060px) {
+
+	.nav-container {
+		padding: 0 0 2rem;
+		width: 95%;
+		margin-top: 1rem;
+	}
+
+	section {
+		margin: 0 auto;
+		width: 95%;
+	}
+}
+
+@media(max-width: 990px) {
+
+	.nav {
+		padding: 0 0 10px 0;
+		margin-top: 10px;
+	}
+
+	.book-box {
+		height: 340px;
+	}
+
+	#books-container {
+		grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+	}
+}
+
+@media(max-width: 880px) {
+
+	.home {
+		min-height: 440px;
+		margin-top: 4.1rem !important;
+	}
+
+	.home-txt {
+		padding-left: 25px;
+	}
+
+	.book-title {
+		font-size: 1.0rem;
+	}
+}
+
+@media(max-width: 750px) {
+
+	.nav {
+		padding: 5px 0 15px;
+	}
+
+	.nav a {
+		font-size: 1.2rem;
+	}
+
+	.home {
+		min-height: 440px;
+		margin-top: 5rem !important;
+	}
+
+	.home-img {
+		object-position: left;
+	}
+
+	.book-genre {
+		font-size: 0.8rem;
+		margin-top: 2px;
+	}
+}
+
+@media(max-width: 550px) {
+
+	.home {
+		min-height: 380px !important;
+	}
+
+	.home-heading {
+		padding: 2px 14px;
+	}
+
+	.home-author {
+		font-size: 1.3rem;
+	}
+
+	.home-pages {
+		font-size: 1.3rem;
+	}
+
+	.book-genre {
+		font-size: 0.9rem;
+	}
+}
+
+@media(max-width: 440px) {
+
+	* {
+		scroll-padding-top: 5rem;
+	}
+
+	.nav {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+		row-gap: 5px;
+	}
+
+	.search-box {
+		max-width: 100%;
+		width: 100%;
+		border-radius: 4px;
+		order: 3;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		margin-top: 3px;
+	}
+
+	#books-container {
+		margin-top: 6rem;
+	}
+
+	.home {
+		margin-top: 7rem !important;
+	}
+
+	.home-explore {
+		margin-top: 8rem !important;
+	}
+}
+
+@media(max-width: 370px) {
+	.book-box {
+		height: 280px;
+	}
+
+	.book-box .book-genre {
+		display: none;
+	}
+}

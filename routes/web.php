@@ -34,6 +34,7 @@ Route::get('/read', function () {
 //Book info route
 Route::get('/book/{book}', [BookController::class, 'bookInfo'])->name('bookInfo');
 
+
 //Explorer route
 Route::get('/explore', [HomeController::class, 'explore'])->name('explore');
 Route::get('/search', [BookController::class, 'search'])->name('search');
@@ -56,6 +57,12 @@ Route::get('/dashboard', function () {
 
 //Book viewer route
 Route::get('/read/{book}', [BookController::class, 'read'])->name('readBook');
+
+
+//Bookshelf route
+Route::get('/bookshelf', [BookController::class, 'bookshelf'])->name('bookshelf');
+Route::get('/bookshelfAdd', [BookController::class, 'bookshelfAdd'])->name('bookshelfAdd');
+Route::get('/bookshelfRemove', [BookController::class, 'bookshelfRemove'])->name('bookshelfRemove');
 
 
 /*

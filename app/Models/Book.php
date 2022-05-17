@@ -36,5 +36,9 @@ class Book extends Model implements HasMedia
     public function genresNames() {
         return $this->genres->pluck('name');
     } 
+
+    public function user() {
+        return $this->belongsToMany('App\Models\User', 'bookshelf', 'isbn', 'idUser');
+    }
     
 }

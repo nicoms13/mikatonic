@@ -154,6 +154,15 @@
 	.home-explore {
 		margin-top: 8rem !important;
 	}
+
+	#author-container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	#books-container {
+		margin-top: 0rem;
+	}
 }
 
 @media(max-width: 370px) {

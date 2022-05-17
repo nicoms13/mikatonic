@@ -55,7 +55,7 @@
                     <i class="fa-solid fa-feather-pointed"></i>
                     <span class="nav-link-title">Authors</span>
                 </a>
-                <a href="" class="nav-link flex">
+                <a href="{{ route('bookshelf') }}" class="nav-link flex">
                     <i class="fa-solid fa-bookmark"></i>
                     <span class="nav-link-title">Bookshelf</span>
                 </a>

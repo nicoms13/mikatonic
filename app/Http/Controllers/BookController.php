@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\TemporaryFile;
+use App\Models\User;
 use App\Models\Book;
 use App\Models\Author;
 use App\Models\Genre;
@@ -43,6 +45,33 @@ class BookController extends Controller
         else $output = "No results found";
 
         return response($output);
+    }
+
+    public function bookshelf(Request $req) {
+
+        $user = Auth::user();
+
+        $books = $user->books()->get();
+
+        return view('home.bookshelf', ['books' => $books]); 
+    }
+
+    public function bookshelfAdd(Request $req) {
+
+            $user = Auth::user();
+
+            $book = Book::find($req->isbn);
+
+            $user->books()->attach($req->isbn);  
+    }
+
+    public function bookshelfRemove(Request $req) {
+
+            $user = Auth::user();
+
+            $book = Book::find($req->isbn);
+
+            $user->books()->detach($req->isbn);  
     }
 
     public function bookInfo(Book $book) {

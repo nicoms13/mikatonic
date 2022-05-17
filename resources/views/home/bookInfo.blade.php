@@ -7,7 +7,9 @@
 	<div class="info-txt">
 		<h2 class="home-title ff-main fs-600">{{ $book->title }}</h2>
 		<div class="bookshelf-icon">
-			<i class="fa-solid fa-bookmark"></i>
+
+			<i id="bookshelf-icon" class="fa-solid fa-bookmark add-bookshelf"></i>
+
 		</div>
 		<div>
 			@foreach($book->genres()->get() as $genre)
@@ -38,5 +40,54 @@
 		</div>
 	</div>
 </section>
+
+@foreach($book->user()->get() as $user)
+	@if($user->idUser == auth()->user()->idUser)
+	<script>
+
+		var bookshelf = document.getElementById('bookshelf-icon');
+
+		bookshelf.classList.remove("add-bookshelf");
+		bookshelf.classList.add("remove-bookshelf");
+
+		bookshelf.style.color = "#11998E";
+
+	</script>
+	@endif
+@endforeach
+
+<script>
+
+	$('.add-bookshelf').on('click', function(){
+
+		$idBook = {{ $book->isbn }};
+
+		$.ajax({
+			type: 'get',
+			url: '{{ URL::to('bookshelfAdd') }}',
+			data: {'isbn':$idBook},
+			success: function(){
+				$('#bookshelf-icon').css('color', '#11998E');
+				console.log("e.olee");
+			}
+		});
+	})
+
+	$('.remove-bookshelf').on('click', function(){
+
+		$idBook = {{ $book->isbn }};
+
+		$.ajax({
+			type: 'get',
+			url: '{{ URL::to('bookshelfRemove') }}',
+			data: {'isbn':$idBook},
+			success: function(){
+				$('#bookshelf-icon').css('color', '#fff');
+				console.log("e.olee");
+			}
+		});
+	})
+
+</script>
 
 @endsection

@@ -54,6 +54,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return view('home.home');
+        return redirect('/home');
     }
 }

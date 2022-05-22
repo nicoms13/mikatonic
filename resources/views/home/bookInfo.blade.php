@@ -16,7 +16,7 @@
 			<span class="book-genre fs-300 ff-main">{{ $genre->name }}</span>
 			@endforeach
 		</div>
-		<a onclick="location.href='/read/{{ $book->isbn }}'" class="read-btn flex">
+		<a class="read-btn flex">
 			<div class="flex">
 				<i class="fa-solid fa-play"></i>
 				<span>Read now</span>
@@ -68,7 +68,6 @@
 			data: {'isbn':$idBook},
 			success: function(){
 				$('#bookshelf-icon').css('color', '#11998E');
-				console.log("e.olee");
 			}
 		});
 	})
@@ -83,7 +82,20 @@
 			data: {'isbn':$idBook},
 			success: function(){
 				$('#bookshelf-icon').css('color', '#fff');
-				console.log("e.olee");
+			}
+		});
+	})
+
+	$('.read-btn').on('click', function(){
+
+		$idBook = {{ $book->isbn }};
+
+		$.ajax({
+			type: 'get',
+			url: '{{ URL::to('bookStartReading') }}',
+			data: {'isbn':$idBook},
+			success: function(){
+				window.location.href = '/read/{{ $book->isbn }}';
 			}
 		});
 	})

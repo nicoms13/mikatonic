@@ -9,7 +9,7 @@
 	<footer>
 		<ul>
 			<li>
-			<button id="closePDF" onclick="location.href='{{ route('home') }}'">
+			<button id="closePDF">
 				<i class="fa-solid fa-circle-xmark"></i>
 			</button>
 
@@ -17,7 +17,7 @@
 
 			<li class="pagination-container">
 				<button id="previous"><i class="fa-solid fa-caret-left"></i></i></button>
-				<span id="current_page">0 of 0</span>
+				<span id="current_page">{{ $bookmark->pageCurrent }} of {{ $bookmark->pageCurrent }}</span>
 				<button id="next"><i class="fa-solid fa-caret-right"></i></button>
 			</li>
 
@@ -28,6 +28,7 @@
 		</ul>
 	</footer>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 var pdfRoute = '{{ $book->getFirstMediaUrl('pdf') }}';
 pdfRoute = pdfRoute.substring(pdfRoute.indexOf("0/") + 1);
@@ -41,7 +42,7 @@ function resetCurrentPDF() {
 	currentPDF = {
 		file: null,
 		countOfPages: 0,
-		currentPage: 1,
+		currentPage: {{ $bookmark->pageCurrent }},
 		zoom: 1.5
 	}
 }
@@ -98,6 +99,21 @@ function renderCurrentPage() {
 	});
 	currentPage.innerHTML = currentPDF.currentPage + ' of ' + currentPDF.countOfPages;
 }
+
+$('#closePDF').on('click', function(){
+
+	$idBook = {{ $book->isbn }};
+	$currentPage = currentPDF.currentPage;
+
+	$.ajax({
+		type: 'get',
+		url: '{{ URL::to('bookmarkSave') }}',
+		data: {'isbn': $idBook, 'pageCurrent': $currentPage},
+		success: function(){
+			window.location.href = '/bookshelf';
+		}
+	});
+})
 
 
 </script>

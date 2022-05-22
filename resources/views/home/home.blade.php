@@ -126,62 +126,21 @@
 	</div>
 	<div class="swiper popular-swiper">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide">
+
+			@foreach($popularBooks as $popularBook)
+			<div class="swiper-slide" onclick="location.href='/book/{{ $popularBook->isbn }}'">
 				<div class="book-box">
-					<img src="/images/wallpapers/callofcthuluWallpaper.png" class="book-box-img">
+					<img class="book-box-img" src="{{ $popularBook->getFirstMediaUrl('cover') }}">
 					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test</h2>
-						<div>
-							<span class="book-genre fs-100 ff-main">Dream Cycle</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 2</h2>
-						<div>
-							<span class="book-genre fs-100 ff-main">Cthulu Mythos</span>
-							<span class="book-genre fs-100 ff-main">Weird Tales</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/shadowoverinnsmouthWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 3</h2>
-						<div>
-							<span class="book-genre fs-100 ff-main">Weird Tales</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 4</h2>
-						<div>
-							<span class="book-genre fs-100 ff-main">Weird Tales</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="book-box">
-					<img src="/images/wallpapers/outsiderWallpaper.png" class="book-box-img">
-					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">This is a test 5</h2>
+						<h2 class="book-title fs-400 ff-main">{{ $popularBook->title }}</h2>
 						<div>
 							<span class="book-genre fs-100 ff-main">Horror</span>
 						</div>
 					</div>
 				</div>
 			</div>
+			@endforeach
+
 		</div>
 	</div>
 	<script>

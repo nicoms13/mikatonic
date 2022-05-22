@@ -10,6 +10,14 @@ use App\Models\TemporaryFile;
 
 class AuthorController extends Controller
 {
+    
+    public function authors() {
+
+        $authors = Author::all();
+
+        return view('home.authors', ['authors' => $authors]);
+    }
+
     public function index() {
 
         $authors = Author::all();

@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('bookmark', function (Blueprint $table) {
-            $table->increments('idMark');
             $table->unsignedInteger('isbn');
             $table->unsignedBigInteger('idUser');
             $table->integer('pageTotal');

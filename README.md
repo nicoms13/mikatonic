@@ -36,6 +36,13 @@ disponible para los administradores (ya se difenrencia entre los ds tipos de usu
 de datos, la mayoría de las tablas que quiero que tengan un CRUD ya lo tienen. Para ciertas tablas es posible que las
 gestione con Ajax Jquery en vez de los controladores porque necesito que los datos se manejen en tiempo real.
 
+### Semana 6 (Viernes 20 de mayo)
+
+El reproductor de libros funciona completamente, ya se guarda la ultima pagina abierta para que se abra por ella. Se pueden
+agregar/eliminar libros para ver más tarde. Funciona el menú de exploración, en el que puedes buscar entre todos los
+libros. Todas las páginas están ya conectadas con la base da datos y son dinámicas. Una de las funcionalidades son la de los
+libros populares, la cual selecciona los 10 libros más leídos por los usuarios de la web en todo momento.
+
 ### INTRODUCCIÓN
 
 **Miskatonik** es una biblioteca online que contedrá información, obras y biografías sobre el escritor **H.P. Lovecraft**

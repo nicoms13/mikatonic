@@ -8,6 +8,11 @@
 	position: relative;
 	margin-top: 6rem !important;
 	margin-bottom: 1rem;
+	padding: 0;
+}
+
+.bookshelf-container {
+	margin-top: -5rem !important;
 }
 
 .info-img {

@@ -11,9 +11,11 @@ use App\Models\User;
 use App\Models\Book;
 use App\Models\Author;
 use App\Models\Genre;
+use App\Models\Bookmark;
 
 class BookController extends Controller
 {
+
     public function index() {
 
         $books = Book::all();
@@ -53,7 +55,9 @@ class BookController extends Controller
 
         $books = $user->books()->get();
 
-        return view('home.bookshelf', ['books' => $books]); 
+        $booksReading = $user->booksReading()->get();
+
+        return view('home.bookshelf', ['books' => $books], ['booksReading' => $booksReading]); 
     }
 
     public function bookshelfAdd(Request $req) {
@@ -74,6 +78,16 @@ class BookController extends Controller
             $user->books()->detach($req->isbn);  
     }
 
+    public function bookStartReading(Request $req) {
+
+            $user = Auth::user();
+
+            $book = Book::find($req->isbn);
+            $pageTotal = $book->pages;
+
+            $user->booksReading()->attach($req->isbn, ['pageTotal' => $pageTotal, 'pageCurrent' => 1]);
+    }
+
     public function bookInfo(Book $book) {
 
         return view('home.bookInfo', ['book' => $book]);
@@ -88,7 +102,37 @@ class BookController extends Controller
 
     public function read(Book $book) {
 
-        return view('viewer.bookViewer', ['book' => $book]);
+        $user = Auth::user();
+
+        $bookmark = Bookmark::select('*')
+            ->where('isbn', '=', $book->isbn)
+            ->where('idUser', '=', $user->idUser)
+            ->get()->first();
+
+        return view('viewer.bookViewer', ['book' => $book, 'bookmark' => $bookmark]);
+    }
+
+    public function bookmarkSave(Request $req) {
+
+        $user = Auth::user();
+        $isbn = $req->isbn;
+
+        $book = Book::find($isbn);
+
+        if($book->pages <= $req->pageCurrent) {
+            $bookmark = Bookmark::select('*')
+            ->where('isbn', '=', $isbn)
+            ->where('idUser', '=', $user->idUser)
+            ->delete();
+        }
+
+        else {
+            $bookmark = Bookmark::select('*')
+            ->where('isbn', '=', $isbn)
+            ->where('idUser', '=', $user->idUser)
+            ->update(['pageCurrent' => $req->pageCurrent]);
+        }
+
     }
 
     public function bookAdminCreate() {

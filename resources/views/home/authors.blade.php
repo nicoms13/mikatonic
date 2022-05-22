@@ -20,26 +20,16 @@
 
 <section id="author-container">
 
+	@foreach($authors as $author)
+	@if($author->lastName != 'Lovecraft')
 	<div class="author-box">
-		<img src="/images/portraits/hpLovecraftPortrait.png" class="author-box-img">
+		<img src="{{ $author->getFirstMediaUrl('wallpaper') }}" class="author-box-img">
 		<div class="book-box-txt">
-			<h2 class="book-title fs-600 ff-main">This is a test</h2>
+			<h2 class="book-title fs-600 ff-main">{{ $author->firstName }} <strong>{{ $author->lastName }}</strong></h2>
 			</div>
 	</div>
-
-	<div class="author-box">
-		<img src="/images/portraits/hpLovecraftPortrait.png" class="author-box-img">
-		<div class="book-box-txt">
-			<h2 class="book-title fs-600 ff-main">This is a test</h2>
-			</div>
-	</div>
-
-	<div class="author-box">
-		<img src="/images/portraits/hpLovecraftPortrait.png" class="author-box-img">
-		<div class="book-box-txt">
-			<h2 class="book-title fs-600 ff-main">This is a test</h2>
-			</div>
-	</div>
+	@endif
+	@endforeach
 
 </section>
 

@@ -58,4 +58,8 @@ class User extends Authenticatable
     public function books() {
         return $this->belongsToMany('App\Models\Book', 'bookshelf', 'idUser', 'isbn');
     }
+
+    public function booksReading() {
+        return $this->belongsToMany('App\Models\Book', 'bookmark', 'idUser', 'isbn');
+    }
 }

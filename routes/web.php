@@ -33,6 +33,7 @@ Route::get('/read', function () {
 
 //Book info route
 Route::get('/book/{book}', [BookController::class, 'bookInfo'])->name('bookInfo');
+Route::get('/bookStartReading', [BookController::class, 'bookStartReading'])->name('bookStartReading');
 
 
 //Explorer route
@@ -45,9 +46,7 @@ Route::get('/books', [BookController::class, 'bookSection'])->name('bookSection'
 
 
 //Author route
-Route::get('/authors', function () {
-    return view('home.authors');
-})->name('authors');
+Route::get('/authors', [AuthorController::class, 'authors'])->name('authors');
 
 
 Route::get('/dashboard', function () {
@@ -57,6 +56,7 @@ Route::get('/dashboard', function () {
 
 //Book viewer route
 Route::get('/read/{book}', [BookController::class, 'read'])->name('readBook');
+Route::get('/bookmarkSave', [BookController::class, 'bookmarkSave'])->name('bookmarkSave');
 
 
 //Bookshelf route

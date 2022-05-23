@@ -103,9 +103,14 @@ El sistema de diseño no está aún actualizado a la temática porque he decido 
 el nombre es django).
 
 ![Imagen home](https://i.gyazo.com/e3f892871442f620f93a0a9ef60be9c7.png)
+
 ![Imagen table](https://i.gyazo.com/ad4a6e74843f3282263c3219ce4fc688.png)
+
 ![Imagen logg](https://i.gyazo.com/c1bae1fa37285902bf8c93fc4e1dc5de.png)
+
 ![Imagen home](https://i.gyazo.com/f5f7f128463836d680e4a0145888657f.png)
+
+![Imagen pdf](https://i.gyazo.com/57622939e468c545096de3df957a5520.png)
 
 ### BASE DE DATOS
 
@@ -122,6 +127,8 @@ intermedia porque ciertos libros están escritos por más de un autor.
 
 ![Imagen bd](https://user-images.githubusercontent.com/91120049/161692122-9c2df334-bdf9-4d82-b6b8-959b5622d01f.png)
 > Click en la imagen para verla a mejor resolución
+
+![Imagen sql](https://i.gyazo.com/ca95345ceb75242116881db4f3849fd9.png)
 
 ### DESPLIEGUE
 

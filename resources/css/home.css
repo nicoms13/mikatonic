@@ -63,8 +63,14 @@ body::-webkit-scrollbar-thumb { background: #fff; }
 }
 
 .book-genre {
-	background-color: hsla(175, 89%, 33%, 0.4);
+	background-color: hsla(175, 89%, 33%, 0.5);
 	padding: 3px 7px 3px 7px;
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.book-genre:hover {
+	text-decoration: underline;
 }
 
 .read-btn {
@@ -195,4 +201,8 @@ body::-webkit-scrollbar-thumb { background: #fff; }
 
 #weird-home {
 	margin-top: -3.5rem;
+}
+
+.dashboard-section {
+	margin-top: 5rem;
 }

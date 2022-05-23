@@ -134,7 +134,9 @@
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">{{ $popularBook->title }}</h2>
 						<div>
-							<span class="book-genre fs-100 ff-main">Horror</span>
+							@foreach($popularBook->genres()->get() as $genre)
+								<span class="book-genre fs-100 ff-main">{{ $genre->name }}</span>
+							@endforeach
 						</div>
 					</div>
 				</div>

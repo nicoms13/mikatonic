@@ -4,7 +4,7 @@
 
 <section class="home-explore">
 	<div class="search-box explore-bar">
-        <input type="search" name="search" id="search-explore" class="text-color" placeholder="Search for a book..." autocomplete="off">
+        <input type="search" name="search" id="search-explore" class="text-color" placeholder="Find something amazing..." autocomplete="off">
         <i class="fa-solid fa-magnifying-glass"></i>
     </div>
 </section>
@@ -16,9 +16,6 @@
 		<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
 		<div class="book-box-txt">
 			<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
-			<div>
-				<span class="book-genre fs-100 ff-main">Weird Tales</span>
-			</div>
 		</div>
 	</div>
 	@endforeach

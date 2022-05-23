@@ -19,10 +19,9 @@ use App\Http\Livewire\Books;
 */
 
 //Default route
-Route::get('/', function () {
-    return redirect('home');
-});
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'landing'])->name('landing');
+
+Route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
 
 
 //Viewer route
@@ -37,16 +36,16 @@ Route::get('/bookStartReading', [BookController::class, 'bookStartReading'])->na
 
 
 //Explorer route
-Route::get('/explore', [HomeController::class, 'explore'])->name('explore');
+Route::get('/explore', [HomeController::class, 'explore'])->name('explore')->middleware('auth');
 Route::get('/search', [BookController::class, 'search'])->name('search');
 
 
 //Book section route
-Route::get('/books', [BookController::class, 'bookSection'])->name('bookSection');
+Route::get('/books', [BookController::class, 'bookSection'])->name('bookSection')->middleware('auth');
 
 
 //Author route
-Route::get('/authors', [AuthorController::class, 'authors'])->name('authors');
+Route::get('/authors', [AuthorController::class, 'authors'])->name('authors')->middleware('auth');
 
 
 Route::get('/dashboard', function () {
@@ -55,7 +54,7 @@ Route::get('/dashboard', function () {
 
 
 //Book viewer route
-Route::get('/read/{book}', [BookController::class, 'read'])->name('readBook');
+Route::get('/read/{book}', [BookController::class, 'read'])->name('readBook')->middleware('auth');
 Route::get('/bookmarkSave', [BookController::class, 'bookmarkSave'])->name('bookmarkSave');
 
 
@@ -71,42 +70,40 @@ Route::get('/bookshelfRemove', [BookController::class, 'bookshelfRemove'])->name
 |--------------------------------------------------------------------------
 */
 
-Route::get('/admin', function () {
-    return view('admin.home');
-})->name('admin');
+Route::get('/admin', [HomeController::class, 'admin'])->name('admin')->middleware('auth');
 
     //Files - upload
     Route::post('/upload', [UploadController::class, 'store']);
     
     //Author - admin
-    Route::get('/admin/author', [AuthorController::class, 'index'])->name('authorAdmin');
+    Route::get('/admin/author', [AuthorController::class, 'index'])->name('authorAdmin')->middleware('auth');
 
-    Route::get('/admin/author/new', [AuthorController::class, 'authorAdminCreate'])->name('authorAdminCreate');
+    Route::get('/admin/author/new', [AuthorController::class, 'authorAdminCreate'])->name('authorAdminCreate')->middleware('auth');
     Route::post('/createAuthor', [AuthorController::class, 'authorCreate']);
 
-    Route::get('/admin/author/{author}', [AuthorController::class, 'authorAdminUpdate'])->name('authorAdminUpdate');
+    Route::get('/admin/author/{author}', [AuthorController::class, 'authorAdminUpdate'])->name('authorAdminUpdate')->middleware('auth');
     Route::post('/updateAuthor', [AuthorController::class, 'authorUpdate']);
 
     Route::post('/deleteAuthor', [AuthorController::class, 'authorDelete']);
 
     //Genre - admin
-    Route::get('/admin/genre', [GenreController::class, 'index'])->name('genreAdmin');
+    Route::get('/admin/genre', [GenreController::class, 'index'])->name('genreAdmin')->middleware('auth');
 
-    Route::get('/admin/genre/new', [GenreController::class, 'genreAdminCreate'])->name('authorAdminCreate');
+    Route::get('/admin/genre/new', [GenreController::class, 'genreAdminCreate'])->name('authorAdminCreate')->middleware('auth');
     Route::post('/createGenre', [GenreController::class, 'genreCreate']); 
 
-    Route::get('/admin/genre/{genre}', [GenreController::class, 'genreAdminUpdate'])->name('authorAdminUpdate');
+    Route::get('/admin/genre/{genre}', [GenreController::class, 'genreAdminUpdate'])->name('authorAdminUpdate')->middleware('auth');
     Route::post('/updateGenre', [GenreController::class, 'genreUpdate']);
 
     Route::post('/deleteGenre', [GenreController::class, 'genreDelete']);
 
     //Book - admin
-    Route::get('/admin/book', [BookController::class, 'index'])->name('bookAdmin');
+    Route::get('/admin/book', [BookController::class, 'index'])->name('bookAdmin')->middleware('auth');
 
-    Route::get('/admin/book/new', [BookController::class, 'bookAdminCreate'])->name('bookAdminCreate');
+    Route::get('/admin/book/new', [BookController::class, 'bookAdminCreate'])->name('bookAdminCreate')->middleware('auth');
     Route::post('/createBook', [BookController::class, 'bookCreate']); 
 
-    Route::get('/admin/book/{book}', [BookController::class, 'bookAdminUpdate'])->name('authorAdminUpdate');
+    Route::get('/admin/book/{book}', [BookController::class, 'bookAdminUpdate'])->name('authorAdminUpdate')->middleware('auth');
     Route::post('/updateBook', [BookController::class, 'bookUpdate']);
 
     Route::post('/deleteBook', [BookController::class, 'bookDelete']);

@@ -114,6 +114,18 @@ table th {
   padding: 5px 20px 5px 20px;
 }
 
+.edit-btn {
+  margin-top: 10px;
+  background-color: hsla(175, 88%, 43%, 0.4);
+  padding: 5px 20px 5px 20px;
+}
+
+.edit {
+  margin-top: 10px;
+  background-color: hsla(322, 99%, 33%, 0.4);
+  padding: 5px 20px 5px 20px;
+}
+
 .author-select {
     background-color: transparent;
     color: white;

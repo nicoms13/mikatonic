@@ -12,12 +12,20 @@ class GenreController extends Controller
 
         $genre = Genre::all();
 
-        return view('admin.genre', ['genres' => $genre]);
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.genre', ['genres' => $genre]); 
+        }
+
+        else return redirect('/home');
     }
 
     public function genreAdminUpdate(Genre $genre) {
 
-        return view('admin.genreUpdate', ['genre' => $genre]);
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.genreUpdate', ['genre' => $genre]);
+        }
+
+        else return redirect('/home');
     }
 
     public function genreUpdate(Request $req) {
@@ -42,7 +50,11 @@ class GenreController extends Controller
 
     public function genreAdminCreate() {
 
-        return view('admin.genreCreate');
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.genreCreate');
+        }
+
+        else return redirect('/home');
     }
 
     public function genreCreate(Request $req) {

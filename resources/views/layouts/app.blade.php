@@ -22,10 +22,11 @@
             <! -- Logo -->
             <a class="fs-500 text-color ff-main logo" href="">Miskatonic</a>
             <! -- Search -->
+            <!-- 
             <div class="search-box">
                 <input type="search" id="search-input" class="text-color" placeholder="Search for a book..." autocomplete="off">
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            </div> -->
             <! -- User -->
             <div class="container-btn">
               <div class="button-user">

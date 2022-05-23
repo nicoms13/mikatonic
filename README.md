@@ -102,7 +102,10 @@ similares serán claramente definidos desde primer momento.
 El sistema de diseño no está aún actualizado a la temática porque he decido cambiarla recientemente (por eso
 el nombre es django).
 
-![Imagen home](https://user-images.githubusercontent.com/91120049/161532329-62c0a453-20f5-40bc-b405-582abe931059.png)
+![Imagen home](https://i.gyazo.com/e3f892871442f620f93a0a9ef60be9c7.png)
+![Imagen table](https://i.gyazo.com/ad4a6e74843f3282263c3219ce4fc688.png)
+![Imagen logg](https://i.gyazo.com/c1bae1fa37285902bf8c93fc4e1dc5de.png)
+![Imagen home](https://i.gyazo.com/f5f7f128463836d680e4a0145888657f.png)
 
 ### BASE DE DATOS
 

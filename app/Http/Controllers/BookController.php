@@ -20,7 +20,11 @@ class BookController extends Controller
 
         $books = Book::all();
 
-        return view('admin.book', ['books' => $books]);
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.book', ['books' => $books]);
+        }
+
+        else return redirect('/home');
     }
 
     public function search(Request $req) {
@@ -36,15 +40,32 @@ class BookController extends Controller
                         <img src="'.$book->getFirstMediaUrl('cover').'" class="books-box-img">
                         <div class="book-box-txt">
                             <h2 class="book-title fs-400 ff-main">'.$book->title.'</h2>
+
                             <div>
-                                <span class="book-genre fs-100 ff-main">Weird Tales</span>
                             </div>
                         </div>
                 </div>';
             }
         }
 
-        else $output = "No results found";
+        $authors = Author::where('lastName', 'Like', '%'.$req->search.'%')->get();
+
+        if (count($authors) > 0) {
+            foreach($authors as $author) {
+                foreach($author->books()->get() as $book) {
+                    $output.='
+                    <div class="book-box" onclick="location.href=\'/book/'.$book->isbn.'\'">
+                            <img src="'.$book->getFirstMediaUrl('cover').'" class="books-box-img">
+                            <div class="book-box-txt">
+                                <h2 class="book-title fs-400 ff-main">'.$book->title.'</h2>
+                                <p class="  fs-200 ff-main home-pages">'.$author->lastName.'</p>
+                            </div>
+                    </div>';
+                }
+            }
+        }
+
+        if((count($books) == 0)&&(count($authors) == 0)) $output = "No results found";
 
         return response($output);
     }
@@ -137,7 +158,11 @@ class BookController extends Controller
 
     public function bookAdminCreate() {
 
-        return view('admin.bookCreate', ['authors' => Author::all(), 'genres' => Genre::all()]);
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.bookCreate', ['authors' => Author::all(), 'genres' => Genre::all()]);
+        }
+
+        else return redirect('/home');
     }
 
     public function bookCreate(Request $req) {

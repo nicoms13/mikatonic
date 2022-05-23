@@ -9,6 +9,11 @@
 	background-color: hsla(0, 0%, 13%, 0.8);
 	padding: 3px 7px 3px 7px;
 	margin-right: 10px;
+	cursor: pointer;
+}
+
+.author-genre:hover {
+	text-decoration: underline;
 }
 
 .author-txt-box {

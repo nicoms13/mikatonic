@@ -22,12 +22,20 @@ class AuthorController extends Controller
 
         $authors = Author::all();
 
-        return view('admin.author', ['authors' => $authors]);
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.author', ['authors' => $authors]);
+        }
+
+        else return redirect('/home');
     }
 
     public function authorAdminUpdate(Author $author) {
 
-        return view('admin.authorUpdate', ['author' => $author]);
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.authorUpdate', ['author' => $author]); 
+        }
+
+        else return redirect('/home');
     }
 
     public function authorUpdate(Request $req) {
@@ -58,7 +66,11 @@ class AuthorController extends Controller
 
     public function authorAdminCreate() {
 
-        return view('admin.authorCreate');
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.authorCreate'); 
+        }
+
+        else return redirect('/home');
     }
 
     public function authorCreate(Request $req) {

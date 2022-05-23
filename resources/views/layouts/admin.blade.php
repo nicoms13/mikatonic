@@ -21,7 +21,6 @@
             <! -- Logo -->
             <a class="fs-500 text-color ff-main logo" href="">Miskatonic <i class="fa-solid fa-gears"></i></i></a>
             <! -- User -->
-              
             <div class="container-btn">
               <div class="button-user btn-admin">
                 <div class="user-icon" onclick="location.href='{{ route('bookAdmin') }}'">

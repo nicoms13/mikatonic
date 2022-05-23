@@ -23,4 +23,8 @@ class Author extends Model implements HasMedia
     ];
 
     public $timestamps = false;
+
+    public function books() {
+        return $this->belongsToMany('App\Models\Book', 'book_author', 'idAut', 'isbn');
+    }
 }

@@ -163,6 +163,19 @@
 	#books-container {
 		margin-top: 0rem;
 	}
+
+	.home-info {
+		margin-top: 8rem !important;
+	}
+
+	.genre-info {
+		margin-top: 10rem !important;
+	}
+
+	.home-bookshelf-bookshelf {
+		margin-top: 10rem !important;
+	}
+
 }
 
 @media(max-width: 370px) {

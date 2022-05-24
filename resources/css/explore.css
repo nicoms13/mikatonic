@@ -27,3 +27,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance:none;
 }
+
+.genre-info {
+	margin-top: 6rem;
+}

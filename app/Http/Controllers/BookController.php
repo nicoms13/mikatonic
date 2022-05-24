@@ -76,7 +76,7 @@ class BookController extends Controller
 
         $books = $user->books()->get();
 
-        $booksReading = $user->booksReading()->get();
+        $booksReading = $user->booksReading()->get()->reverse();
 
         return view('home.bookshelf', ['books' => $books], ['booksReading' => $booksReading]); 
     }
@@ -105,8 +105,10 @@ class BookController extends Controller
 
             $book = Book::find($req->isbn);
             $pageTotal = $book->pages;
-
-            $user->booksReading()->attach($req->isbn, ['pageTotal' => $pageTotal, 'pageCurrent' => 1]);
+            if(!$user->booksReading->contains($book)) {
+                $user->booksReading()->attach($req->isbn, ['pageTotal' => $pageTotal, 'pageCurrent' => 1]);
+            }
+            
     }
 
     public function bookInfo(Book $book) {

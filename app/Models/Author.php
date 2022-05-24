@@ -27,4 +27,5 @@ class Author extends Model implements HasMedia
     public function books() {
         return $this->belongsToMany('App\Models\Book', 'book_author', 'idAut', 'isbn');
     }
+
 }

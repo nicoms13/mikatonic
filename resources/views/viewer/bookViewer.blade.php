@@ -22,6 +22,7 @@
 			</li>
 
 			<li class="zoom-container">
+				<i class="fa-solid fa-circle-half-stroke" id="colorChange"></i>
 				<span id="zoomValue">150%</span>
 				<input type="range" id="zoom" name="cowbell" min="100" max="300" value="150" step="50">
 			</li>
@@ -32,6 +33,8 @@
 <script>
 var pdfRoute = '{{ $book->getFirstMediaUrl('pdf') }}';
 pdfRoute = pdfRoute.substring(pdfRoute.indexOf("0/") + 1);
+
+var backgroundColor = 'rgba(255, 255, 255, 1.0)';
 
 const zoomButton = document.getElementById('zoom');
 const currentPage = document.getElementById('current_page');
@@ -93,6 +96,7 @@ function renderCurrentPage() {
 
 		var renderContext = {
 			canvasContext: context,
+			background: backgroundColor,
 			viewport: viewport
 		};
 		page.render(renderContext);
@@ -115,6 +119,33 @@ $('#closePDF').on('click', function(){
 	});
 })
 
+$('#colorChange').on('click', function(){
+
+	$idBook = {{ $book->isbn }};
+	$currentPage = currentPDF.currentPage;
+
+	$.ajax({
+		type: 'get',
+		url: '{{ URL::to('bookmarkSave') }}',
+		data: {'isbn': $idBook, 'pageCurrent': $currentPage},
+		success: function(){	
+			var pdfFile = pdfjsLib.getDocument(pdfRoute);
+
+			if (backgroundColor == 'rgba(255, 255, 255, 1.0)') backgroundColor = 'rgba(255, 240, 168, 1.0)';
+
+			else backgroundColor = 'rgba(255, 255, 255, 1.0)';
+
+			resetCurrentPDF();
+			pdfFile.promise.then((doc) => {
+				currentPDF.file = doc;
+				currentPDF.countOfPages = doc.numPages;
+				viewer.classList.remove('hidden');
+				document.querySelector('main h3').classList.add("hidden");
+				renderCurrentPage();
+			});
+		}
+	});
+})
 
 </script>
 @endsection

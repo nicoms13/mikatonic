@@ -659,6 +659,10 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
 
+.genre-info {
+  margin-top: 6rem;
+}
+
 #books-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
@@ -833,6 +837,25 @@ input[type=search]::-webkit-search-results-decoration {
      object-fit: cover;
 }
 
+.author-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.author-content h2 {
+  margin-bottom: 25px;
+}
+
+.author-desc {
+  margin-bottom: 3rem;
+}
+
+.lovecraft-title:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 @media (max-width: 1170px) {
   body {
     margin-bottom: 4rem;
@@ -985,6 +1008,18 @@ input[type=search]::-webkit-search-results-decoration {
 
   #books-container {
     margin-top: 0rem;
+  }
+
+  .home-info {
+    margin-top: 8rem !important;
+  }
+
+  .genre-info {
+    margin-top: 10rem !important;
+  }
+
+  .home-bookshelf-bookshelf {
+    margin-top: 10rem !important;
   }
 }
 @media (max-width: 370px) {

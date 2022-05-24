@@ -13,7 +13,7 @@
 		</div>
 		<div>
 			@foreach($book->genres()->get() as $genre)
-			<span class="book-genre fs-300 ff-main">{{ $genre->name }}</span>
+			<span class="book-genre fs-300 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>
 			@endforeach
 		</div>
 		<a class="read-btn flex">
@@ -33,7 +33,7 @@
 		<div class="authors-info-box">
 			@foreach($book->authors()->get() as $author)
 				<div class="author-info-box">
-					<img class="info-author-img" src="{{ $author->getFirstMediaUrl('wallpaper') }}">
+					<img class="info-author-img" src="{{ $author->getFirstMediaUrl('logo') }}">
 					<span class="info-author-txt ff-light">{{ $author->firstName }} <strong>{{ $author->lastName }}</strong></span>
 				</div>
 			@endforeach

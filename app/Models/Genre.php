@@ -18,4 +18,8 @@ class Genre extends Model
     ];
 
     public $timestamps = false;
+
+    public function books() {
+        return $this->belongsToMany('App\Models\Book', 'book_genre', 'idGen', 'isbn');
+    }
 }

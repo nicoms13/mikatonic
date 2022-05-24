@@ -46,6 +46,10 @@ Route::get('/books', [BookController::class, 'bookSection'])->name('bookSection'
 
 //Author route
 Route::get('/authors', [AuthorController::class, 'authors'])->name('authors')->middleware('auth');
+Route::get('/author/{author}', [AuthorController::class, 'authorInfo'])->name('authorInfo');
+
+//Genre route
+Route::get('/genre/{genre}', [GenreController::class, 'genreInfo'])->name('genreInfo');
 
 
 Route::get('/dashboard', function () {

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="home-bookshelf">
+<section class="home-bookshelf home-bookshelf-bookshelf">
 	<h2 class="ff-title info-author-title">Continue reading</h2>
 </section>
 

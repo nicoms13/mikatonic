@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Genre;
 
@@ -17,6 +18,13 @@ class GenreController extends Controller
         }
 
         else return redirect('/home');
+    }
+
+    public function genreInfo(Genre $genre) {
+
+        $books = $genre->books()->get();
+
+        return view('home.genreInfo', ['genre' => $genre, 'books' => $books]);
     }
 
     public function genreAdminUpdate(Genre $genre) {

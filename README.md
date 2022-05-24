@@ -32,16 +32,52 @@ disponibles (tan solo me queda conectarlas con el backend). En cuanto a JS, el v
 funcional, tan solo me queda conectarlo con el backend para que lleguen los archivos. Además, he cread varios sliders a lo
 largo de la página. Actualmente estoy trabajando con Laravel. La base de datos ya ha sido creada y el sistema de login
 ya funciona, tan solo me queda añadir validación en el formulario de registro. Estoy realizando el CRUD que estará
-disponible para los administradores (ya se difenrencia entre los ds tipos de usuarois) para que puedan poblar la base 
+disponible para los administradores (ya se difenrencia entre los ds tipos de usuarios) para que puedan poblar la base 
 de datos, la mayoría de las tablas que quiero que tengan un CRUD ya lo tienen. Para ciertas tablas es posible que las
 gestione con Ajax Jquery en vez de los controladores porque necesito que los datos se manejen en tiempo real.
 
 ### Semana 6 (Viernes 20 de mayo)
 
-El reproductor de libros funciona completamente, ya se guarda la ultima pagina abierta para que se abra por ella. Se pueden
-agregar/eliminar libros para ver más tarde. Funciona el menú de exploración, en el que puedes buscar entre todos los
-libros. Todas las páginas están ya conectadas con la base da datos y son dinámicas. Una de las funcionalidades son la de los
-libros populares, la cual selecciona los 10 libros más leídos por los usuarios de la web en todo momento.
+El rerproductor está finalizado casi al completo. La funcionalidad para que el libro se abra por la última página leída ya ha
+sido implementada. Además, todo libro que empieze a leerse se almacenará en una lista (en la que también se elimina
+automáticamente cuando lea la última página) para que pueda acceder más facilmente. El usuario ya puede añadir 
+libros a su lista para leer más tarde.
+
+Todas las vistas son ya dinámicas y están conectadas con la base de datos.
+
+El buscador de libros ha sido creado. He usado Ajax para que los resultados vayan apareciendo 'onkeyup' y no al hacer
+click en un botón.
+
+### Semana 7 (Viernes 27 de mayo)
+
+Creadas dos nuevas vistas: al hacer click en un autor o un género, el usuario irá a una vista en la que se le mostrarán los 
+libros de formas filtrada. 
+
+El usuario puede cambiar el color del reproductor entre blanco y sepia según le sea más cómodo.
+
+Han sido añadidos tanto los middlewares de autenticación como de roles (para controlar que solo el administrador pueda
+acceder al panel).
+
+Actualizado el buscador, ahora se pueden buscar libros tanto por título como por autor.
+
+
+
+### TO DO:
+
+	- Añadir la posibilidad para el administrador de editar los archivos multimedia (pdfs e imágenes). Por ahora sólo
+	puede crearlos.
+
+	- Añadir al usuario la posibilidad de editar los datos de su perfil.
+
+	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se le podrá
+	notificar cuando sea el próximo pago.
+
+	- Validación de datos en los formularios (registro y administrador).
+
+	- Cambiar idioma.
+
+	- Permitir al administrador borrar los archivos de la carpeta temporal en caso de que falle el borrado
+	automático tras subir un archivo multimedia.
 
 ### INTRODUCCIÓN
 

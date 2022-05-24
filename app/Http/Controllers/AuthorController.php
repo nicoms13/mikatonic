@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Author;
+use App\Models\Genre;
 use App\Models\TemporaryFile;
 
 class AuthorController extends Controller
@@ -15,7 +17,9 @@ class AuthorController extends Controller
 
         $authors = Author::all();
 
-        return view('home.authors', ['authors' => $authors]);
+        $genres = Genre::all();
+
+        return view('home.authors', ['authors' => $authors, 'genres' => $genres]);
     }
 
     public function index() {
@@ -27,6 +31,13 @@ class AuthorController extends Controller
         }
 
         else return redirect('/home');
+    }
+
+    public function authorInfo(Author $author) {
+
+        $books = $author->books()->get();
+
+        return view('home.authorInfo', ['author' => $author, 'books' => $books]);
     }
 
     public function authorAdminUpdate(Author $author) {

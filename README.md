@@ -64,13 +64,13 @@ Actualizado el buscador, ahora se pueden buscar libros tanto por título como po
 
 ### TO DO:
 
-	- Añadir la posibilidad para el administrador de editar los archivos multimedia (pdfs e imágenes). Por ahora sólo
-	puede crearlos.
+	- Añadir la posibilidad para el administrador de editar los archivos multimedia (pdfs e imágenes). Por 
+	ahora sólo puede crearlos.
 
 	- Añadir al usuario la posibilidad de editar los datos de su perfil.
 
-	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se le podrá
-	notificar cuando sea el próximo pago.
+	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se 
+	le podrá notificar cuando sea el próximo pago.
 
 	- Validación de datos en los formularios (registro y administrador).
 

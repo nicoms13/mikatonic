@@ -6,6 +6,7 @@
 <section class="admin-container">
 	<div class="home-heading admin-heading">
 		<h2 class="fs-400 ff-main">Update the author {{ $author->lastName }}</h2>
+		<img style="max-height: 50px; max-width: 50px;" src="{{ $author->getFirstMediaUrl('logo') }}" />
 	</div>
 	<div class="swiper popular-swiper">
 		<form method="POST" action="/updateAuthor">
@@ -42,7 +43,7 @@
 		        <label for="firstName">Logo</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="logo" name="logo" value="{{ $author->logo }}" required>
+		        <input id="logo" type="file" name="logo">
 		    </div>
 
 		    <div class="row-admin">
@@ -50,8 +51,10 @@
 		        <label for="firstName">Wallpaper</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="wallpaper" name="wallpaper" value="{{ $author->wallpaper }}" required>
+				<input id="wallpaper" type="file" name="wallpaper">
 		    </div>
+
+
 
 		    <div class="admin-button-group">
 			    <button class="admin-button">Update</button>
@@ -70,4 +73,23 @@
 
 	</div>
 </section>
+
+<script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+<script>
+	const inputElement = document.querySelector('input[id="wallpaper"]');
+	const pond = FilePond.create(inputElement);
+
+	const inputElementLogo = document.querySelector('input[id="logo"]');
+	const pondLogo = FilePond.create(inputElementLogo);
+
+	FilePond.setOptions({
+		server: {
+			url: '/upload',
+			headers: {
+				'X-CSRF-TOKEN': '{{ csrf_token() }}'
+			}
+		}
+	})
+</script>
+
 @endsection

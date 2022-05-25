@@ -108,6 +108,7 @@ Route::get('/admin', [HomeController::class, 'admin'])->name('admin')->middlewar
     Route::post('/createBook', [BookController::class, 'bookCreate']); 
 
     Route::get('/admin/book/{book}', [BookController::class, 'bookAdminUpdate'])->name('authorAdminUpdate')->middleware('auth');
+
     Route::post('/updateBook', [BookController::class, 'bookUpdate']);
 
     Route::post('/deleteBook', [BookController::class, 'bookDelete']);

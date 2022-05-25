@@ -59,18 +59,37 @@ class AuthorController extends Controller
         request()->validate([
             'firstName' => 'required',
             'lastName' => 'required',
-            'desc' => 'required',
-            'logo' => 'required',
-            'wallpaper' => 'required',            
+            'desc' => 'required',            
         ]);
 
         $author->update([
             'firstName' => request('firstName'),
             'lastName' => request('lastName'),
             'desc' => request('desc'),
-            'logo' => request('logo'),
-            'wallpaper' => request('wallpaper'),
         ]);
+
+        //Update the wallpaper in case in send
+        $temporaryFile = TemporaryFile::where('folder', request('wallpaper'))->first();
+
+        if($temporaryFile) {
+            $author->clearMediaCollection('wallpaper');
+            $author->addMedia(storage_path('app/public/files/tmp/' . request('wallpaper') . '/' . $temporaryFile->filename))->toMediaCollection('wallpaper');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('wallpaper')));
+            $temporaryFile->delete();
+
+        }
+
+        //Update the logo in case in send
+        $temporaryFile = TemporaryFile::where('folder', request('logo'))->first();
+
+        if($temporaryFile) {
+            $author->clearMediaCollection('logo');
+            $author->addMedia(storage_path('app/public/files/tmp/' . request('logo') . '/' . $temporaryFile->filename))->toMediaCollection('logo');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('logo')));
+            $temporaryFile->delete();
+        }
 
         return redirect('/admin/author');
     }

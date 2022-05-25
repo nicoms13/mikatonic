@@ -2,29 +2,29 @@
 > Nicolás Moreno Sánchez
 ![Imagen presentacion](https://user-images.githubusercontent.com/91120049/161498683-57323a1b-316b-4078-8ec0-7c7caa3ee5ed.png)
 
-### Semana 1 (Viernes 15 de abril)
+## Semana 1 (Viernes 15 de abril)
 
 Creación del proyecto con Laravel. He estado realizando el sistema de clases de CSS para facilitarme el diseño en el futuro
 (\resources\css\styles.css). He comenzado la creación de la vista de la página de inicio (para aquellos usuarios no
 registrados), es completamente estática, no tiene conexión con el backend por ahora.
 
-### Semana 2 (Viernes 22 de abril)
+## Semana 2 (Viernes 22 de abril)
 
 He completado casi al completo el diseño de la página de inicio, que además ha sido configurada correctamente como tal
 en Laravel. El sistema de autenticación ya está configurado, aunque es necesario aplicar los estilos a los formularios
 de login y registro.
 
-### Semana 3 (Viernes 29 de abril)
+## Semana 3 (Viernes 29 de abril)
 
 He comenzado a dividir el diseño en módulos para facilitar su uso (nav, content, footer, etc). También, he creado las migraciones de la base de datos, y finalmente he creado una tabla más de las que tenía previstas (bookmark), para almacenar la última página leída de cada libro que comienze a leer el usuario (es una nueva tabla intermedia entre usuario y libro).
 
-### Semana 4 (Viernes 06 de mayo)
+## Semana 4 (Viernes 06 de mayo)
 
 Creación de los sliders en la página de home (no están conectados a la base de datos aún, funcionan de forma estática). He estado
 trabajando en el sistema de autenticación; los usuarios ya pueden registrarse e iniciar sesión. Hay correción de errores
 únicamente en el login por ahora. Aún no se distingue entre usuarios normales y administradores.
 
-### Semana 5 - Checkpoint (Viernes 13 de mayo): https://www.youtube.com/watch?v=0Pke4Tyd-XE
+## Semana 5 - Checkpoint (Viernes 13 de mayo): https://www.youtube.com/watch?v=0Pke4Tyd-XE
 
 Al ser la semana de la revisión, eplicaré un poco por encima todo lo hecho hasta ahora. En tema de CSS he creado ya todos los
 elementos y componentes que pienso usar en la aplicación. La mayoría de páginas disponibles para el usuario están todas
@@ -36,7 +36,7 @@ disponible para los administradores (ya se difenrencia entre los ds tipos de usu
 de datos, la mayoría de las tablas que quiero que tengan un CRUD ya lo tienen. Para ciertas tablas es posible que las
 gestione con Ajax Jquery en vez de los controladores porque necesito que los datos se manejen en tiempo real.
 
-### Semana 6 (Viernes 20 de mayo)
+## Semana 6 (Viernes 20 de mayo)
 
 El rerproductor está finalizado casi al completo. La funcionalidad para que el libro se abra por la última página leída ya ha
 sido implementada. Además, todo libro que empieze a leerse se almacenará en una lista (en la que también se elimina
@@ -48,24 +48,21 @@ Todas las vistas son ya dinámicas y están conectadas con la base de datos.
 El buscador de libros ha sido creado. He usado Ajax para que los resultados vayan apareciendo 'onkeyup' y no al hacer
 click en un botón.
 
-### Semana 7 (Viernes 27 de mayo)
+## Semana 7 (Viernes 27 de mayo)
 
 Creadas dos nuevas vistas: al hacer click en un autor o un género, el usuario irá a una vista en la que se le mostrarán los 
 libros de formas filtrada. 
 
-El usuario puede cambiar el color del reproductor entre blanco y sepia según le sea más cómodo.
+El usuario puede cambiar el color de fondo del reproductor entre blanco y sepia.
 
 Han sido añadidos tanto los middlewares de autenticación como de roles (para controlar que solo el administrador pueda
-acceder al panel).
+acceder al panel de control).
 
 Actualizado el buscador, ahora se pueden buscar libros tanto por título como por autor.
 
-
+El administrador ya puede actualizar los archivos multimedia y las reaciones foráneas.
 
 ### TO DO:
-
-	- Añadir la posibilidad para el administrador de editar los archivos multimedia (pdfs e imágenes). Por 
-	ahora sólo puede crearlos.
 
 	- Añadir al usuario la posibilidad de editar los datos de su perfil.
 
@@ -76,8 +73,10 @@ Actualizado el buscador, ahora se pueden buscar libros tanto por título como po
 
 	- Cambiar idioma.
 
-	- Permitir al administrador borrar los archivos de la carpeta temporal en caso de que falle el borrado
-	automático tras subir un archivo multimedia.
+	- Permitir al administrador borrar los archivos de la carpeta temporal, por si fallara el borrado
+	automático durante la subida de archivos.
+
+	- Paginación en la vista de exploración.
 
 ### INTRODUCCIÓN
 

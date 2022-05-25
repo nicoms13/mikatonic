@@ -219,4 +219,76 @@ class BookController extends Controller
 
         return redirect('/admin/book');
     }
+
+    public function bookAdminUpdate(Book $book) {
+
+        if(Auth::user()->hasRole('Admin')) {
+           return view('admin.bookUpdate', ['book' => $book, 'authors' => Author::all(), 'genres' => Genre::all()]); 
+        }
+
+        else return redirect('/home');
+    }
+
+    public function bookUpdate(Request $req) {
+
+        request()->validate(['isbn' => 'required']);
+
+        $isbn = request('isbn');
+        $book = Book::find($isbn);
+
+        request()->validate([
+            'title' => 'required',
+            'desc' => 'required',
+            'pages' => 'required',            
+        ]);
+
+        $book->update([
+            'title' => request('title'),
+            'desc' => request('desc'),
+            'pages' => request('pages'),
+        ]);
+
+        //Update the wallpaper in case in send
+        $temporaryFile = TemporaryFile::where('folder', request('wallpaper'))->first();
+
+        if($temporaryFile) {
+            $book->clearMediaCollection('wallpaper');
+            $book->addMedia(storage_path('app/public/files/tmp/' . request('wallpaper') . '/' . $temporaryFile->filename))->toMediaCollection('wallpaper');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('wallpaper')));
+            $temporaryFile->delete();
+
+        }
+
+        //Update the cover in case in send
+        $temporaryFile = TemporaryFile::where('folder', request('cover'))->first();
+
+        if($temporaryFile) {
+            $book->clearMediaCollection('cover');
+            $book->addMedia(storage_path('app/public/files/tmp/' . request('cover') . '/' . $temporaryFile->filename))->toMediaCollection('cover');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('cover')));
+            $temporaryFile->delete();
+        }
+
+        //Update the pdf in case in send
+        $temporaryFile = TemporaryFile::where('folder', request('pdf'))->first();
+
+        if($temporaryFile) {
+            $book->clearMediaCollection('pdf');
+            $book->addMedia(storage_path('app/public/files/tmp/' . request('pdf') . '/' . $temporaryFile->filename))->toMediaCollection('pdf');
+            
+            rmdir(storage_path('app/public/files/tmp/' . request('pdf')));
+            $temporaryFile->delete();
+
+        }
+
+        $book->authors()->detach();
+        $book->authors()->attach($req->input('authors', []));
+
+        $book->genres()->detach();
+        $book->genres()->attach($req->input('genres', []));
+
+        return redirect('/admin/book');
+    }
 }

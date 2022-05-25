@@ -36,6 +36,12 @@ class RegisteredUserController extends Controller
         $request->validate([
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', Rules\Password::defaults()],
+            'firstName' => ['required', 'string'],
+            'lastName' => ['required', 'string'],
+            'cardNumber' => ['required', 'numeric'],
+            'cardExpirity' => ['required', 'date_format'],
+            'cvc' => ['required', 'numeric'],
+            'paymentType' => ['required']
         ]);
 
         $user = User::create([

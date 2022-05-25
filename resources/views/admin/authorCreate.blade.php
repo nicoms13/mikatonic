@@ -7,6 +7,18 @@
 	<div class="home-heading admin-heading">
 		<h2 class="fs-400 ff-main">Create a new author</h2>
 	</div>
+
+	@if ($errors->any())
+          <div class="alert alert-danger">
+            <h3>Woops! Something went wrong</h3>
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+    @endif
+
 	<div class="swiper popular-swiper">
 		<form method="POST" action="/createAuthor" enctype="multipart/form-data">
 		@csrf
@@ -16,7 +28,7 @@
 		        <label for="firstName">First Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="firstName" name="firstName" required>
+		        <input type="text" id="firstName" name="firstName">
 		    </div>
 
 		    <div class="row-admin">
@@ -24,7 +36,7 @@
 		        <label for="firstName">Last Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="lastName" name="lastName" required>
+		        <input type="text" id="lastName" name="lastName">
 		    </div>
 
 		    <div class="row-admin">
@@ -32,7 +44,7 @@
 		        <label for="firstName">Description</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <textarea id="desc" name="desc" required></textarea>
+		        <textarea id="desc" name="desc"></textarea>
 		    </div>
 
 		    <div class="row-admin">

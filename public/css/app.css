@@ -1213,6 +1213,26 @@ table th {
   color: hsla(0, 99%, 33%, 0.4);
 }
 
+.alert-danger {
+  background-color: hsla(0, 89%, 33%, 0.7);
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.alert-danger h3 {
+  font-size: 15px;
+}
+
+.alert-danger ul {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.alert-danger li {
+  list-style: none;
+}
+
 @media screen and (max-width: 600px) {
   .admin-container {
     margin-top: 8rem !important;

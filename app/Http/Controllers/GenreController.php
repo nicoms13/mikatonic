@@ -44,8 +44,8 @@ class GenreController extends Controller
         $genre = Genre::find($idGen);
 
         request()->validate([
-            'name' => 'required',
-            'desc' => 'required',          
+            'name' => 'required|string|max:255',
+            'desc' => 'required|string|max:10000',          
         ]);
 
         $genre->update([
@@ -68,8 +68,8 @@ class GenreController extends Controller
     public function genreCreate(Request $req) {
 
         request()->validate([
-            'name' => 'required',
-            'desc' => 'required',            
+            'name' => 'required|string|max:255',
+            'desc' => 'required|string|max:10000',            
         ]);
 
         Genre::create([

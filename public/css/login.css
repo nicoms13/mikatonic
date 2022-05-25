@@ -231,9 +231,18 @@ form .page .btns button.next{
   color: #fff;
 }
 
-.message {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: hsla(0, 89%, 45%, 0.4);
+.alert-danger {
+  background-color: hsla(0, 89%, 33%, 0.7);
+  margin-top: 10px;
+  padding: 3px;
   border-radius: 5px;
+}
+
+.alert-danger h3 {
+  font-size: 15px;
+}
+
+.alert-danger ul {
+  padding: 5px;
+  font-size: 13px;
 }

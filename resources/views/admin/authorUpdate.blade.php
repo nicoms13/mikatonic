@@ -8,6 +8,18 @@
 		<h2 class="fs-400 ff-main">Update the author {{ $author->lastName }}</h2>
 		<img style="max-height: 50px; max-width: 50px;" src="{{ $author->getFirstMediaUrl('logo') }}" />
 	</div>
+
+	@if ($errors->any())
+          <div class="alert alert-danger">
+            <h3>Woops! Something went wrong</h3>
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+    @endif
+    
 	<div class="swiper popular-swiper">
 		<form method="POST" action="/updateAuthor">
 		@csrf

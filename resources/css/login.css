@@ -231,9 +231,6 @@ form .page .btns button.next{
   color: #fff;
 }
 
-.message {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: hsla(0, 89%, 45%, 0.4);
-  border-radius: 5px;
+.alert-danger {
+  background-color: red;
 }

@@ -57,9 +57,9 @@ class AuthorController extends Controller
         $author = Author::find($idAut);
 
         request()->validate([
-            'firstName' => 'required',
-            'lastName' => 'required',
-            'desc' => 'required',            
+            'firstName' => 'required|string|max:255',
+            'lastName' => 'required|string|max:255',
+            'desc' => 'required|string|max:10000',           
         ]);
 
         $author->update([
@@ -106,9 +106,9 @@ class AuthorController extends Controller
     public function authorCreate(Request $req) {
 
         request()->validate([
-            'firstName' => 'required',
-            'lastName' => 'required',
-            'desc' => 'required',           
+            'firstName' => 'required|string|max:255',
+            'lastName' => 'required|string|max:255',
+            'desc' => 'required|string|max:10000',           
         ]);
 
         $author = Author::create([

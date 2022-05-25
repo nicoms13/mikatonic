@@ -7,6 +7,18 @@
 	<div class="home-heading admin-heading">
 		<h2 class="fs-400 ff-main">Create a new genre</h2>
 	</div>
+
+	@if ($errors->any())
+          <div class="alert alert-danger">
+            <h3>Woops! Something went wrong</h3>
+              <ul>
+                  @foreach ($errors->all()->slice(1, 5) as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+    @endif
+
 	<div class="swiper popular-swiper">
 		<form method="POST" action="/createGenre">
 		@csrf

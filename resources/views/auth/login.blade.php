@@ -13,34 +13,32 @@
 <body>
       <div class="container">
          <header>Sign in</header>
+         @if ($errors->any())
+          <div class="alert alert-danger">
+            <h3>Woops! Something went wrong</h3>
+              <ul>
+                  @foreach ($errors->all()->slice(1, 5) as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+         @endif
          <div class="form-outer">
             <form method="POST" action="{{ route('login') }}">
             @csrf
                <div class="page slide-page">
-                  @error('email')
-                  <div class="message error-message fs-200">
-                     <span role="alert">
-                        <strong>*Invalid email or password</strong>
-                     </span>
-                  </div>
-                  @enderror
                   <div class="field">
                      <div class="label">
                         Email
                      </div>
-                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
                   </div>
                   <div class="field">
                      <div class="label">
                         Password
                      </div>
-                     <input type="password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                     <input type="password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
                   </div>
-                     @error('password')
-                     <span class="invalid-feedback" role="alert">
-                        <strong>*{{ $message }}</strong>
-                     </span>
-                     @enderror
                   <div class="field btns">
                      <button class="back"><a href="/">Back</a></button>
                      <button class="submit">Sign in</button>

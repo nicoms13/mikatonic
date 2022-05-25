@@ -60,7 +60,9 @@ acceder al panel de control).
 
 Actualizado el buscador, ahora se pueden buscar libros tanto por título como por autor.
 
-El administrador ya puede actualizar los archivos multimedia y las reaciones foráneas.
+El administrador ya puede actualizar los archivos multimedia y las relaciones foráneas.
+
+Los datos son validados en todos los formularios (login y panel de administración)
 
 ### TO DO:
 
@@ -68,8 +70,6 @@ El administrador ya puede actualizar los archivos multimedia y las reaciones for
 
 	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se 
 	le podrá notificar cuando sea el próximo pago.
-
-	- Validación de datos en los formularios (registro y administrador).
 
 	- Cambiar idioma.
 

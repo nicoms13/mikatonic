@@ -170,9 +170,9 @@ class BookController extends Controller
     public function bookCreate(Request $req) {
 
         request()->validate([
-            'title' => 'required',
-            'desc' => 'required',
-            'pages' => 'required',            
+            'title' => 'required|string|max:255',
+            'desc' => 'required|string|max:10000',
+            'pages' => 'required|numeric',            
         ]);
 
         $book = Book::create([
@@ -237,9 +237,9 @@ class BookController extends Controller
         $book = Book::find($isbn);
 
         request()->validate([
-            'title' => 'required',
-            'desc' => 'required',
-            'pages' => 'required',            
+            'title' => 'required|string|max:255',
+            'desc' => 'required|string|max:10000',
+            'pages' => 'required|numeric',             
         ]);
 
         $book->update([

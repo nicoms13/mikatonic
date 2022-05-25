@@ -13,6 +13,16 @@
 <body>
       <div class="container">
          <header>Create account</header>
+         @if ($errors->any())
+          <div class="alert alert-danger">
+            <h3>Woops! Something went wrong</h3>
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+         @endif
          <div class="progress-bar">
             <div class="step">
                <p>
@@ -59,13 +69,13 @@
                      <div class="label">
                         First Name
                      </div>
-                     <input id="firstName" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required>
+                     <input id="firstName" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}">
                   </div>
                   <div class="field">
                      <div class="label">
                         Last Name
                      </div>
-                     <input id="lastName" type="text" class="form-control @error('name') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}" required>
+                     <input id="lastName" type="text" class="form-control @error('name') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}">
                   </div>
                   <div class="field">
                      <button class="firstNext next">Next</button>
@@ -76,13 +86,13 @@
                      <div class="label">
                         Email
                      </div>
-                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
                   </div>
                   <div class="field">
                      <div class="label">
                         Plan
                      </div>
-                     <select id="paymentType" name="paymentType" required>
+                     <select id="paymentType" name="paymentType">
                       <option value="month">Month -- €8.99 / month</option>
                       <option value="year">Year -- €69.99 / year</option>
                      </select>
@@ -97,11 +107,11 @@
                      <div class="label">
                         Credit Card
                      </div>
-                     <input id="cardNumber" type="text" class="form-control @error('cardNumber') is-invalid @enderror" name="cardNumber" required placeholder="XXXX XXXX XXXX">
+                     <input id="cardNumber" type="text" class="form-control @error('cardNumber') is-invalid @enderror" name="cardNumber" placeholder="XXXX XXXX XXXX">
                   </div>
                   <div class="field">
-                     <input style="margin-right: 10px;" id="cardExpirity" type="text" class="form-control @error('cardExpirity') is-invalid @enderror" name="cardExpirity" required placeholder="** / **">
-                     <input style="margin-left: 10px;" id="cvc" type="text" class="form-control @error('cvc') is-invalid @enderror" name="cvc" required placeholder="CVC">
+                     <input style="margin-right: 10px;" id="cardExpirity" type="text" class="form-control @error('cardExpirity') is-invalid @enderror" name="cardExpirity" placeholder="** / **">
+                     <input style="margin-left: 10px;" id="cvc" type="text" class="form-control @error('cvc') is-invalid @enderror" name="cvc" placeholder="CVC">
                   </div>
 
                   <div class="field btns">
@@ -114,13 +124,13 @@
                      <div class="label">
                         Username
                      </div>
-                     <input id="username" type="text" class="form-control @error('name') is-invalid @enderror" name="username" value="{{ old('username') }}" required>
+                     <input id="username" type="text" class="form-control @error('name') is-invalid @enderror" name="username" value="{{ old('username') }}">
                   </div>
                   <div class="field">
                      <div class="label">
                         Password
                      </div>
-                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required>
+                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password">
                   </div>
                   <div class="field btns">
                      <button class="prev-3 prev">Previous</button>

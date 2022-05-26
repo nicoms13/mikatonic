@@ -12,10 +12,10 @@
 </head>
 <body>
       <div class="container">
-         <header>Create account</header>
+         <header>{{ __('messages.create_account') }}</header>
          @if ($errors->any())
           <div class="alert alert-danger">
-            <h3>Woops! Something went wrong</h3>
+            <h3>{{ __('messages.error_message') }}</h3>
               <ul>
                   @foreach ($errors->all() as $error)
                       <li>{{ $error }}</li>

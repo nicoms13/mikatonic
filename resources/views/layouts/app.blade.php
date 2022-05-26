@@ -28,6 +28,25 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div> -->
             <! -- User -->
+            <div class="row">
+                <div class="col-md-4">
+                    <select class="changeLang">
+                        <option value="en" {{ session()->get('locale') == 'en' ? 'selected' : '' }}>Eng</option>
+                        <option value="sp" {{ session()->get('locale') == 'sp' ? 'selected' : '' }}>Spa</option>
+                    </select>
+                </div>
+            </div>
+<span class="fi fi-gr fis"></span>
+            <script type="text/javascript">
+  
+                var url = "{{ route('changeLang') }}";
+  
+                $(".changeLang").change(function(){
+                    window.location.href = url + "?lang="+ $(this).val();
+                });
+  
+            </script>
+
             <div class="container-btn">
               <div class="button-user">
                 <div class="user-icon" onclick="location.href='{{ route('login') }}'">
@@ -46,25 +65,25 @@
             <div class="navbar flex">
                 <a href="{{ route('home') }}" class="nav-link flex">
                     <i class="fa-solid fa-house"></i>
-                    <span class="nav-link-title">Home</span>
+                    <span class="nav-link-title">{{ __('messages.home') }}</span>
                 </a>
                 <a href="{{ route('bookSection') }}" class="nav-link flex">
                     <i class="fa-solid fa-compass"></i>
-                    <span class="nav-link-title">Explore</span>
+                    <span class="nav-link-title">{{ __('messages.explore') }}</span>
                 </a>
                 <a href="{{ route('authors') }}" class="nav-link flex">
                     <i class="fa-solid fa-feather-pointed"></i>
-                    <span class="nav-link-title">Authors</span>
+                    <span class="nav-link-title">{{ __('messages.authors') }}</span>
                 </a>
                 <a href="{{ route('bookshelf') }}" class="nav-link flex">
                     <i class="fa-solid fa-bookmark"></i>
-                    <span class="nav-link-title">Bookshelf</span>
+                    <span class="nav-link-title">{{ __('messages.bookshelf') }}</span>
                 </a>
 
                 @if(@Auth::user()->hasRole('Admin'))
                 <a href="{{ route('admin') }}" class="nav-link flex">
                     <i class="fa-solid fa-wrench"></i>
-                    <span class="nav-link-title">Manage</span>
+                    <span class="nav-link-title">{{ __('messages.manage') }}</span>
                 </a>
                 @endif
 

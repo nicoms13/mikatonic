@@ -6,6 +6,7 @@ use App\Http\Controllers\GenreController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LangController;
 
 use App\Http\Livewire\Books;
 
@@ -22,6 +23,9 @@ use App\Http\Livewire\Books;
 Route::get('/', [HomeController::class, 'landing'])->name('landing');
 
 Route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
+
+Route::get('lang/home', [LangController::class, 'index']);
+Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 
 //Viewer route

@@ -21,7 +21,7 @@
 					<a href="" class="read-btn flex">
 						<div class="flex">
 							<i class="fa-solid fa-play"></i>
-							<span>Read now</span>
+							<span>{{ __('messages.read_now') }}</span>
 						</div>
 					</a>
 				</div>
@@ -61,7 +61,7 @@
 					<a href="" class="read-btn flex">
 						<div class="flex">
 							<i class="fa-solid fa-play"></i>
-							<span>Read now</span>
+							<span>{{ __('messages.read_now') }}</span>
 						</div>
 					</a>
 				</div>
@@ -82,7 +82,7 @@
 					<a href="" class="read-btn flex">
 						<div class="flex">
 							<i class="fa-solid fa-play"></i>
-							<span>Read now</span>
+							<span>{{ __('messages.read_now') }}</span>
 						</div>
 					</a>
 				</div>
@@ -118,7 +118,7 @@
 <!-- Popular section -->
 <section id="top-home">
 	<div class="home-heading">
-		<h2 class="fs-400 ff-main">Popular books</h2>
+		<h2 class="fs-400 ff-main">{{ __('messages.popular_books') }}</h2>
 		<div class="swiper-btn flex">
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
@@ -185,7 +185,7 @@
 <!-- Cthulu section -->
 <section id="cthulu-home">
 	<div class="home-heading">
-		<h2 class="fs-400 ff-main">Cthulu Mythos</h2>
+		<h2 class="fs-400 ff-main">{{ __('messages.cthulu_mythos') }}</h2>
 		<div class="swiper-btn flex">
 			<div class="swiper-button-prev swiper-button-prev-mythos"></div>
 			<div class="swiper-button-next swiper-button-next-mythos"></div>
@@ -262,7 +262,7 @@
 <!-- Dream section -->
 <section id="dream-home">
 	<div class="home-heading">
-		<h2 class="fs-400 ff-main">Dream Cycle</h2>
+		<h2 class="fs-400 ff-main">{{ __('messages.dream_cycle') }}</h2>
 		<div class="swiper-btn flex">
 			<div class="swiper-button-prev swiper-button-prev-dream"></div>
 			<div class="swiper-button-next swiper-button-next-dream"></div>
@@ -337,7 +337,7 @@
 <!-- Weird Section -->
 <section id="weird-home">
 	<div class="home-heading">
-		<h2 class="fs-400 ff-main">Weird Tales</h2>
+		<h2 class="fs-400 ff-main">{{ __('messages.weird_tales') }}</h2>
 		<div class="swiper-btn flex">
 			<div class="swiper-button-prev swiper-button-prev-weird"></div>
 			<div class="swiper-button-next swiper-button-next-weird"></div>

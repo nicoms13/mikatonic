@@ -12,10 +12,10 @@
 </head>
 <body>
       <div class="container">
-         <header>Sign in</header>
+         <header>{{ __('messages.sign_in') }}</header>
          @if ($errors->any())
           <div class="alert alert-danger">
-            <h3>Woops! Something went wrong</h3>
+            <h3>{{ __('messages.error_message') }}</h3>
               <ul>
                   @foreach ($errors->all()->slice(1, 5) as $error)
                       <li>{{ $error }}</li>

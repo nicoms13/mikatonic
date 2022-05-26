@@ -132,3 +132,13 @@ nav {
 .logout-btn:hover {
 	color: #991111;
 }
+
+.changeLang {
+	background-color: transparent;
+	border: none;
+	color: #fcfeff;
+}
+
+.changeLang option {
+	color: #11998E;
+}

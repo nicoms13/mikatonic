@@ -62,21 +62,22 @@ Actualizado el buscador, ahora se pueden buscar libros tanto por título como po
 
 El administrador ya puede actualizar los archivos multimedia y las relaciones foráneas.
 
-Los datos son validados en todos los formularios (login y panel de administración)
+Los datos son validados en todos los formularios (login y panel de administración).
+
+El usuario puede cambiar entre inglés y español.
 
 ### TO DO:
 
-	- Añadir al usuario la posibilidad de editar los datos de su perfil.
+	- Añadir al usuario la posibilidad de editar los datos de su perfil
 
 	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se 
-	le podrá notificar cuando sea el próximo pago.
-
-	- Cambiar idioma.
+	le podrá notificar cuando sea el próximo pago
 
 	- Permitir al administrador borrar los archivos de la carpeta temporal, por si fallara el borrado
-	automático durante la subida de archivos.
+	automático durante la subida de archivos
 
-	- Paginación en la vista de exploración.
+	- Crear una nueva tabla para almacenar los libros que aparecen en el slider principal (por ahora son
+	estáticos)
 
 ### INTRODUCCIÓN
 

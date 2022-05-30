@@ -81,6 +81,34 @@ class BookController extends Controller
         return view('home.bookshelf', ['books' => $books], ['booksReading' => $booksReading]); 
     }
 
+    public function booksList() {
+
+            $books = Book::select('title')->get();
+            $data = [];
+
+            foreach($books as $book) {
+                $data[] = $book['title'];
+            }
+
+            return $data; 
+    }
+
+    public function searchBook(Request $req) {
+
+        request()->validate([
+            'title' => 'required|string|max:255'           
+        ]);
+
+        $bookTitle = $req->title;
+
+        if ($bookTitle !== '') {
+            $book = Book::where('title', 'LIKE', "%$bookTitle%")->first();
+            if($book) return redirect('book/'.$book->isbn);
+        }
+
+        return redirect()->back();
+    }
+
     public function bookshelfAdd(Request $req) {
 
             $user = Auth::user();
@@ -232,6 +260,12 @@ class BookController extends Controller
     public function bookUpdate(Request $req) {
 
         request()->validate(['isbn' => 'required']);
+
+        request()->validate([
+            'title' => 'string|max:255',
+            'desc' => 'string|max:10000',
+            'pages' => 'numeric',            
+        ]);
 
         $isbn = request('isbn');
         $book = Book::find($isbn);

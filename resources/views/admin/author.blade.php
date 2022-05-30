@@ -27,10 +27,12 @@
 		      <td class="ff-light" data-label="First Name">{{ $author->firstName }}</td>
 		      <td class="ff-light" data-label="Last Name">{{ $author->lastName }}</td>
 		      <td class="ff-light" data-label="Last Name">
-		      	<select class="author-select">
-		      		<option>Test</option>
-		      		<option>Test</option>
-		      		<option>Test</option>
+		      	<select class="author-select option-author-book">
+		      		@forelse($author->books()->get() as $book)
+		      			<option class="option-author-book">{{ $book->title }}</option>
+		      			@empty
+		      			<option class="option-author-book">00</option>
+		      		@endforelse
 		      	</select>
 		      </td>
 		      <td class="ff-light" data-label="Action">

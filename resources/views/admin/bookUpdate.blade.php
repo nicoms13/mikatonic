@@ -12,7 +12,7 @@
           <div class="alert alert-danger">
             <h3>Woops! Something went wrong</h3>
               <ul>
-                  @foreach ($errors->all()->slice(1, 5) as $error)
+                  @foreach (array_slice($errors->all(), 0, 5) as $error)
                       <li>{{ $error }}</li>
                   @endforeach
               </ul>

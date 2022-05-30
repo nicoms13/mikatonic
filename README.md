@@ -66,9 +66,13 @@ Los datos son validados en todos los formularios (login y panel de administraci�
 
 El usuario puede cambiar entre inglés y español.
 
-### TO DO:
+## Semana 8 (Viernes 03 de junio)
 
-	- Añadir al usuario la posibilidad de editar los datos de su perfil
+El usuario puede cambiar la información de su perfil, incluido la información sobre su tarjeta de crédito, para lo cual
+deberá confirmar su contraseña (en ningún momento se muestra la información completa de la tarjeta, tan sólo los
+últimos dígitos del número de la tarjeta).
+
+### TO DO:
 
 	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se 
 	le podrá notificar cuando sea el próximo pago

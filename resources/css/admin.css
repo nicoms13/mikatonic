@@ -200,6 +200,27 @@ table th {
   list-style: none;
 }
 
+.option-author-book {
+  width: 150px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-nav-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-nav-icons > div {
+  margin: 5px;
+}
+
+.admin-nav-icons .logout-btn {
+  margin-left: 20px;
+}
+
 @media screen and (max-width: 600px) {
   	.admin-container {
   		margin-top: 8rem !important;

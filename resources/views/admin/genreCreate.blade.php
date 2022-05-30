@@ -12,7 +12,7 @@
           <div class="alert alert-danger">
             <h3>Woops! Something went wrong</h3>
               <ul>
-                  @foreach ($errors->all()->slice(1, 5) as $error)
+                  @foreach (array_slice($errors->all(), 0, 5) as $error)
                       <li>{{ $error }}</li>
                   @endforeach
               </ul>
@@ -28,7 +28,7 @@
 		        <label for="name">Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="name" name="name" required>
+		        <input type="text" id="name" name="name">
 		    </div>
 
 		    <div class="row-admin">
@@ -36,7 +36,7 @@
 		        <label for="firstName">Description</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <textarea id="desc" name="desc" required></textarea>
+		        <textarea id="desc" name="desc"></textarea>
 		    </div>
 
 		    <div class="admin-button-group">

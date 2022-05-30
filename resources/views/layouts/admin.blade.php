@@ -21,6 +21,7 @@
             <! -- Logo -->
             <a class="fs-500 text-color ff-main logo" href="">Miskatonic <i class="fa-solid fa-gears"></i></i></a>
             <! -- User -->
+            <div class="admin-nav-icons">
             <div class="container-btn">
               <div class="button-user btn-admin">
                 <div class="user-icon" onclick="location.href='{{ route('bookAdmin') }}'">
@@ -52,23 +53,38 @@
                 </div>
               </div>
             </div>
-
+            
                 <a class="logout-btn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-            
+            </div>
             <! -- NavBar -->
             <div class="navbar flex">
                 <a href="{{ route('home') }}" class="nav-link flex">
                     <i class="fa-solid fa-house"></i>
-                    <span class="nav-link-title">Home</span>
+                    <span class="nav-link-title">{{ __('messages.home') }}</span>
                 </a>
-                <a href="" class="nav-link flex">
+                <a href="{{ route('bookSection') }}" class="nav-link flex">
+                    <i class="fa-solid fa-compass"></i>
+                    <span class="nav-link-title">{{ __('messages.explore') }}</span>
+                </a>
+                <a href="{{ route('authors') }}" class="nav-link flex">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                    <span class="nav-link-title">{{ __('messages.authors') }}</span>
+                </a>
+                <a href="{{ route('bookshelf') }}" class="nav-link flex">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <span class="nav-link-title">{{ __('messages.bookshelf') }}</span>
+                </a>
+
+                @if(@Auth::user()->hasRole('Admin'))
+                <a href="{{ route('admin') }}" class="nav-link flex">
                     <i class="fa-solid fa-wrench"></i>
-                    <span class="nav-link-title">Manage</span>
+                    <span class="nav-link-title">{{ __('messages.manage') }}</span>
                 </a>
+                @endif
             </div>
         </div>
 

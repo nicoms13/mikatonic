@@ -17,7 +17,7 @@
           <div class="alert alert-danger">
             <h3>{{ __('messages.error_message') }}</h3>
               <ul>
-                  @foreach ($errors->all() as $error)
+                  @foreach (array_slice($errors->all(), 0, 1) as $error)
                       <li>{{ $error }}</li>
                   @endforeach
               </ul>

@@ -9,10 +9,12 @@
     <! -- FontAwesome -->
     <script src="https://kit.fontawesome.com/91a731da61.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <! -- Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <title>Miskatonic</title>
 </head>
 <body>
@@ -22,11 +24,30 @@
             <! -- Logo -->
             <a class="fs-500 text-color ff-main logo" href="">Miskatonic</a>
             <! -- Search -->
-            <!-- 
-            <div class="search-box">
-                <input type="search" id="search-input" class="text-color" placeholder="Search for a book..." autocomplete="off">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div> -->
+            <form class="search-box form-search" action="{{ url('searchBook') }}" method="POST">
+                @csrf
+                    <input type="search" name="title" id="search-input" class="text-color" placeholder="Search for a book..." autocomplete="off">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <script>
+                var availableTags = [];
+
+                $.ajax({
+                    type: "GET",
+                    url: "/booksList",
+                    success: function(response) {
+                        startAutocomplete(response);
+                    }
+                });
+
+                function startAutocomplete(availableTags) {
+                    $( "#search-input" ).autocomplete({
+                        source: availableTags
+                    });
+                };
+
+
+            </script>
             <! -- User -->
             <div class="row">
                 <div class="col-md-4">
@@ -36,7 +57,6 @@
                     </select>
                 </div>
             </div>
-<span class="fi fi-gr fis"></span>
             <script type="text/javascript">
   
                 var url = "{{ route('changeLang') }}";

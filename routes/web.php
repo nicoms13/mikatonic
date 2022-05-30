@@ -7,6 +7,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LangController;
+use App\Http\Controllers\UserController;
 
 use App\Http\Livewire\Books;
 
@@ -24,8 +25,26 @@ Route::get('/', [HomeController::class, 'landing'])->name('landing');
 
 Route::get('/home', [HomeController::class, 'home'])->name('home')->middleware('auth');
 
+Route::get('lang/home', 'LangController@index');
+Route::get('lang/change', 'LangController@change')->name('changeLang');
+
 Route::get('lang/home', [LangController::class, 'index']);
 Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
+
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LangController@switchLang']);
+
+//USER
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+
+Route::get('/confirmPassword', function () {
+    return view('auth.confirm-password');
+})->name('confirmPassword');
+
+Route::post('/confirmCurrentPassword', [HomeController::class, 'confirmCurrentPassword'])->name('confirmCurrentPassword');
+
+Route::get('/payment', [UserController::class, 'payment'])->name('payment');
+
+Route::post('/newPayment', [UserController::class, 'newPayment']);
 
 
 //Viewer route
@@ -43,6 +62,9 @@ Route::get('/bookStartReading', [BookController::class, 'bookStartReading'])->na
 Route::get('/explore', [HomeController::class, 'explore'])->name('explore')->middleware('auth');
 Route::get('/search', [BookController::class, 'search'])->name('search');
 
+Route::get('/booksList', [BookController::class, 'booksList'])->name('booksList');
+Route::post('/searchBook', [BookController::class, 'searchBook'])->name('searchBook');
+
 
 //Book section route
 Route::get('/books', [BookController::class, 'bookSection'])->name('bookSection')->middleware('auth');
@@ -54,12 +76,6 @@ Route::get('/author/{author}', [AuthorController::class, 'authorInfo'])->name('a
 
 //Genre route
 Route::get('/genre/{genre}', [GenreController::class, 'genreInfo'])->name('genreInfo');
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 
 //Book viewer route
 Route::get('/read/{book}', [BookController::class, 'read'])->name('readBook')->middleware('auth');
@@ -116,5 +132,8 @@ Route::get('/admin', [HomeController::class, 'admin'])->name('admin')->middlewar
     Route::post('/updateBook', [BookController::class, 'bookUpdate']);
 
     Route::post('/deleteBook', [BookController::class, 'bookDelete']);
+
+//User
+Route::post('/deleteUser', [UserController::class, 'userDelete']);
 
 require __DIR__.'/auth.php';

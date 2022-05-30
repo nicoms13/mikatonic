@@ -10,6 +10,7 @@ use App\Models\Book;
 use App\Models\Author;
 use App\Models\Genre;
 use App\Models\Bookmark;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -40,6 +41,23 @@ class HomeController extends Controller
     public function landing() {
 
         return view('home.landing');
+    }
+
+    public function dashboard() {
+
+        $cardNumber = substr((Auth::user()->cardNumber), -3);
+
+        return view('dashboard', ['cardNumber' => $cardNumber]);
+    }
+
+    public function confirmCurrentPassword() {
+
+        if(Hash::check(request('password'), Auth::user()->password)) {
+            return redirect('/payment');
+        }
+
+        return redirect()->back();
+        
     }
 
     public function admin() {

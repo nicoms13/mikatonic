@@ -17,8 +17,8 @@
           <div class="alert alert-danger">
             <h3>{{ __('messages.error_message') }}</h3>
               <ul>
-                  @foreach ($errors->all()->slice(1, 5) as $error)
-                      <li>{{ $error }}</li>
+                  @foreach (array_slice($errors->all(), 0, 3) as $error)
+                      <li>Username or password incorrect</li>
                   @endforeach
               </ul>
           </div>

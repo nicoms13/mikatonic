@@ -50,6 +50,15 @@ function resetCurrentPDF() {
 	}
 }
 
+function reloadPDF() {
+	currentPDF = {
+		file: null,
+		countOfPages: 0,
+		currentPage: currentPDF.currentPage,
+		zoom: 1.5
+	}
+}
+
 zoomButton.addEventListener('input', () => {
 	if (currentPDF.file) {
 		document.getElementById('zoomValue').innerHTML = zoomButton.value + "%";
@@ -135,7 +144,7 @@ $('#colorChange').on('click', function(){
 
 			else backgroundColor = 'rgba(255, 255, 255, 1.0)';
 
-			resetCurrentPDF();
+			reloadPDF();
 			pdfFile.promise.then((doc) => {
 				currentPDF.file = doc;
 				currentPDF.countOfPages = doc.numPages;

@@ -542,7 +542,7 @@ nav {
 }
 
 .search-box i:hover {
-  color: #11998E;
+  color: #11998E !important;
 }
 
 #search-input {
@@ -637,6 +637,37 @@ nav {
 
 .changeLang option {
   color: #11998E;
+}
+
+.form-search button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.form-search i {
+  color: #fcfeff !important;
+}
+
+.ui-menu-item {
+  background-color: rgba(34, 34, 34, 0.7);
+  border: none;
+}
+
+.ui-menu-item:hover div {
+  background-color: #11998E !important;
+  border-color: #fcfeff !important;
+}
+
+.ui-widget-content {
+  background: transparent !important;
+  border: none !important;
+  color: #fcfeff !important;
+}
+
+ul {
+  border: none;
 }
 
 .home-explore {
@@ -969,8 +1000,12 @@ input[type=search]::-webkit-search-results-decoration {
     font-size: 1.3rem;
   }
 
-  .home-pages {
+  .book-title {
     font-size: 1.3rem;
+  }
+
+  .home-pages {
+    font-size: 1.1 rem;
   }
 
   .book-genre {
@@ -995,7 +1030,7 @@ input[type=search]::-webkit-search-results-decoration {
     border-radius: 4px;
     order: 3;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     margin-top: 3px;
   }
 
@@ -1241,6 +1276,27 @@ table th {
 
 .alert-danger li {
   list-style: none;
+}
+
+.option-author-book {
+  width: 150px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-nav-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-nav-icons > div {
+  margin: 5px;
+}
+
+.admin-nav-icons .logout-btn {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 600px) {

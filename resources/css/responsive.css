@@ -111,8 +111,12 @@
 		font-size: 1.3rem;
 	}
 
-	.home-pages {
+	.book-title {
 		font-size: 1.3rem;
+	}
+
+	.home-pages {
+		font-size: 1.1	rem;
 	}
 
 	.book-genre {
@@ -139,7 +143,7 @@
 		border-radius: 4px;
 		order: 3;
 		grid-column-start: 1;
-		grid-column-end: 4;
+		grid-column-end: 5;
 		margin-top: 3px;
 	}
 

@@ -127,7 +127,7 @@
 	<div class="swiper popular-swiper">
 		<div class="swiper-wrapper">
 
-			@foreach($popularBooks as $popularBook)
+			@forelse($popularBooks as $popularBook)
 			<div class="swiper-slide" onclick="location.href='/book/{{ $popularBook->isbn }}'">
 				<div class="book-box">
 					<img class="book-box-img" src="{{ $popularBook->getFirstMediaUrl('cover') }}">
@@ -138,7 +138,10 @@
 					</div>
 				</div>
 			</div>
-			@endforeach
+
+			@empty
+			<p style="margin-bottom: 5rem;">You are not reading any book now</p>
+			@endforelse
 
 		</div>
 	</div>
@@ -214,7 +217,8 @@
 					</div>
 				</div>
 				@endif
-				@empty
+			@empty
+			<p style="margin-bottom: 5rem;">You are not reading any book now</p>
 			@endforelse	
 		</div>
 	</div>
@@ -290,7 +294,8 @@
 					</div>
 				</div>
 				@endif
-				@empty
+			@empty
+			<p style="margin-bottom: 5rem;">You are not reading any book now</p>
 			@endforelse	
 		</div>
 	</div>
@@ -365,7 +370,8 @@
 					</div>
 				</div>
 				@endif
-				@empty
+			@empty
+			<p style="margin-bottom: 5rem;">You are not reading any book now</p>
 			@endforelse	
 		</div>
 	</div>

@@ -43,6 +43,10 @@ main {
 .pdf-viewer {
 	background-color: #222;
 	margin: auto;
+	width: viewport.width;
+	height: viewport.height;
+	min-width: viewport.width;
+	min-height: viewport.height;
 }
 
 .hidden {
@@ -50,10 +54,11 @@ main {
 }
 
 footer {
-	position:sticky;
+	position: sticky;
 	bottom: 0;
 	height: 10vh;
 	width: 100%;
+	min-width: 100% !important;
 	background-color:#2d2e37;
 	display: flex;
 	align-items: center;

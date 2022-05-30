@@ -2,6 +2,8 @@
 > Nicolás Moreno Sánchez
 ![Imagen presentacion](https://user-images.githubusercontent.com/91120049/161498683-57323a1b-316b-4078-8ec0-7c7caa3ee5ed.png)
 
+Guía de usuario (no terminada): https://docs.google.com/document/d/1kCZPMeb8tJxEAAemSH0SjkHLttAI_EDRDKMS3iPBLAk/edit?usp=sharing
+
 ## Semana 1 (Viernes 15 de abril)
 
 Creación del proyecto con Laravel. He estado realizando el sistema de clases de CSS para facilitarme el diseño en el futuro

@@ -24,6 +24,8 @@ return new class extends Migration
             $table->integer('cvc');
             $table->string('paymentType');
             $table->string('password');
+            $table->timestamps();
+            $table->integer('subscribedMonths')->default(1);
         });
     }
 

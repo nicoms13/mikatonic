@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -31,6 +32,11 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+
+        if(Auth::user()->created_at < now()->subMonth()) {
+            Auth::user()->subscribedMonths += 1;
+            Auth::user()->save();
+        }
 
         if (Auth::user()->hasRole('Admin')) {
            return redirect('admin'); 

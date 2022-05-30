@@ -41,11 +41,18 @@
 	</div>
 </section>
 
+<audio>
+	<source id="SuccessSoundEffect" src="\sounds\SuccessSoundEffect.mp3" type="audio/mp3">
+</audio>
+
 @foreach($book->user()->get() as $user)
 	@if($user->idUser == auth()->user()->idUser)
 	<script>
 
 		var bookshelf = document.getElementById('bookshelf-icon');
+		var audioElement = document.getElementById('SuccessSoundEffect');
+
+		var audio = new Audio('/sounds/SuccessSoundEffect.mp3');
 
 		bookshelf.classList.remove("add-bookshelf");
 		bookshelf.classList.add("remove-bookshelf");
@@ -68,6 +75,7 @@
 			data: {'isbn':$idBook},
 			success: function(){
 				$('#bookshelf-icon').css('color', '#11998E');
+				new Audio('/sounds/SuccessSoundEffect.mp3').play();
 			}
 		});
 	})

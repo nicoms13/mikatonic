@@ -147,8 +147,17 @@ body::-webkit-scrollbar-thumb { background: #fff; }
 	background-color: #fff;
 }
 
+.book-box-remove:hover {
+	background-color: red !important	;
+}
+
 .book-box:hover .book-box-img {
 	opacity: 0.9;
+	transform: scale(1.1);
+}
+
+.book-box-remove:hover .book-box-img {
+	opacity: 0.8 !important;
 	transform: scale(1.1);
 }
 

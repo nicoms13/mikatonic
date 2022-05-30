@@ -8,6 +8,7 @@ use App\Http\Controllers\UploadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LangController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookSliderController;
 
 use App\Http\Livewire\Books;
 
@@ -95,6 +96,12 @@ Route::get('/bookshelfRemove', [BookController::class, 'bookshelfRemove'])->name
 */
 
 Route::get('/admin', [HomeController::class, 'admin'])->name('admin')->middleware('auth');
+
+    //Slider
+    Route::post('/bookSlider', [BookSliderController::class, 'bookSlider'])->name('bookSlider');
+    Route::post('/updateBookSlider', [BookSliderController::class, 'updateBookSlider'])->name('bookSlider');
+    Route::get('/removeBookSlider/{book}', [BookSliderController::class, 'removeBookSlider'])->name('removeBookSlider');
+
 
     //Files - upload
     Route::post('/upload', [UploadController::class, 'store']);

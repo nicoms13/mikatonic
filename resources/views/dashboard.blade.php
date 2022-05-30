@@ -25,7 +25,8 @@
 
     </form>
 
-    <p style="margin-top: 25px; margin-bottom: 15px;">Your credit card is <strong>XXXX-XXXX-XXXX-X{{ $cardNumber }}</strong></p>
+    <p style="margin-top: 25px;">Your credit card is <strong>XXXX-XXXX-XXXX-X{{ $cardNumber }}</strong></p>
+    <p style="margin-top: 5px; margin-bottom: 15px; font-size: 15px">Next payment: <strong>{{ $date }}</strong></p>
     <button style="margin-bottom: 25px;" class="admin-button" onclick="location.href='/confirmPassword'">Change payment details</button>
 
     <form method="POST" action="/deleteUser">

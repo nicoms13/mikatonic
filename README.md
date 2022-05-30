@@ -76,14 +76,7 @@ deberá confirmar su contraseña (en ningún momento se muestra la información 
 
 ### TO DO:
 
-	- Actualizar la tabla de usuarios para almacenar la fecha de creación del usuario. De esta forma se 
-	le podrá notificar cuando sea el próximo pago
-
-	- Permitir al administrador borrar los archivos de la carpeta temporal, por si fallara el borrado
-	automático durante la subida de archivos
-
-	- Crear una nueva tabla para almacenar los libros que aparecen en el slider principal (por ahora son
-	estáticos)
+	- Revisión de bugs y correcciones
 
 ### INTRODUCCIÓN
 

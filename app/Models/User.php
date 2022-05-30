@@ -53,8 +53,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public $timestamps = false;
-
     public function books() {
         return $this->belongsToMany('App\Models\Book', 'bookshelf', 'idUser', 'isbn');
     }

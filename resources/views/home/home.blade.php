@@ -7,18 +7,29 @@
 	<div class="swiper">
 		<div class="swiper-wrapper">
 
-			<!-- Slide 1 -->
+			@foreach($sliderBooks as $sliderBook)
 			<div class="swiper-slide swiper-main flex">
-				<img src="/images/wallpapers/callofcthuluWallpaper.png" class="home-img">
+				<img src="{{ $sliderBook->getFirstMediaUrl('cover') }}" class="home-img">
 
 				<div class="home-txt">
-					<h1 class="home-title ff-main fs-600">The Call of Cthulu</h1>
-					<p class="	fs-200 ff-main home-author">H.P. Lovecraft</p>
-					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
+					<h1 class="home-title ff-main fs-600">{{ $sliderBook->title }}</h1>
+					<p class="	fs-200 ff-main home-author">
+						@foreach($sliderBook->authors()->get() as $author)
+							@if ($loop->first)
+								{{ $author->firstName }} {{ $author->lastName }}
+							@else
+								& {{ $author->firstName }} {{ $author->lastName }}
+							@endif
+						@endforeach
+					</p>
+
+					<p class="fs-200 home-pages"><span class="ff-main">{{ $sliderBook->pages }}</span> pages</p>
 					<div>
-						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
+						@foreach($sliderBook->genres()->get() as $genre)
+							<span class="author-genre fs-400 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>
+						@endforeach
 					</div>
-					<a href="" class="read-btn flex">
+					<a href="/read/{{ $sliderBook->isbn }}" class="read-btn flex">
 						<div class="flex">
 							<i class="fa-solid fa-play"></i>
 							<span>{{ __('messages.read_now') }}</span>
@@ -26,67 +37,8 @@
 					</a>
 				</div>
 			</div>
+			@endforeach
 
-			<!-- Slide 2 -->
-			<div class="swiper-slide swiper-main flex">
-				<img src="/images/wallpapers/coloroutofspaceWallpaper.png" class="home-img">
-
-				<div class="home-txt">
-					<h1 class="home-title ff-main fs-600">The Color out of Space</h1>
-					<p class="fs-200 ff-main home-author">H.P. Lovecraft</p>
-					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
-					<div>
-						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
-					</div>					
-					<a href="" class="read-btn flex">
-						<div class="flex">
-							<i class="fa-solid fa-play"></i>
-							<span>Read now</span>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- Slide 3 -->
-			<div class="swiper-slide swiper-main flex">
-				<img src="/images/wallpapers/shadowoverinnsmouthWallpaper.png" class="home-img">
-
-				<div class="home-txt">
-					<h1 class="home-title ff-main fs-600">The Shadow over Innsmuth</h1>
-					<p class="fs-200 ff-main home-author">H.P. Lovecraft</p>
-					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
-					<div>
-						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
-					</div>
-					<a href="" class="read-btn flex">
-						<div class="flex">
-							<i class="fa-solid fa-play"></i>
-							<span>{{ __('messages.read_now') }}</span>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<!-- Slide 4 -->
-			<div class="swiper-slide swiper-main flex">
-				<img src="/images/wallpapers/outsiderWallpaper.png" class="home-img">
-
-				<div class="home-txt">
-					<h1 class="home-title ff-main fs-600">The Outsider</h1>
-					<p class="fs-200 ff-main home-author">H.P. Lovecraft & August Derleth</p>
-					<p class="fs-200 home-pages"><span class="ff-main">00</span> pages</p>
-					<div>
-						<span class="book-genre fs-300 ff-main">Cthulu mythos</span>
-						<span class="book-genre fs-300 ff-main">Weird Tales</span>
-					</div>
-					<a href="" class="read-btn flex">
-						<div class="flex">
-							<i class="fa-solid fa-play"></i>
-							<span>{{ __('messages.read_now') }}</span>
-						</div>
-					</a>
-				</div>
-			</div>
 		</div>
 		<div class="swiper-pagination"></div>
 	</div>
@@ -140,7 +92,7 @@
 			</div>
 
 			@empty
-			<p style="margin-bottom: 5rem;">You are not reading any book now</p>
+			<p style="margin-bottom: 5rem;">No popular books yet</p>
 			@endforelse
 
 		</div>

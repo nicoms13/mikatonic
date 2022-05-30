@@ -10,7 +10,10 @@ use App\Models\Book;
 use App\Models\Author;
 use App\Models\Genre;
 use App\Models\Bookmark;
+use App\Models\User;
+use App\Models\SliderBooks;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -30,7 +33,14 @@ class HomeController extends Controller
             $popularBooks->push(Book::find($popularBookISBN->isbn));
         }
 
-        return view('home.home', ['books' => $books, 'popularBooks' => $popularBooks]);
+        $sliderISBNs = SliderBooks::all();
+
+        $sliderBooks = collect();
+        foreach($sliderISBNs as $sliderISBN) {
+            $sliderBooks->push(Book::find($sliderISBN->isbn));             
+        }
+
+        return view('home.home', ['books' => $books, 'popularBooks' => $popularBooks, 'sliderBooks' => $sliderBooks]);
     }
 
     public function explore() {
@@ -46,8 +56,11 @@ class HomeController extends Controller
     public function dashboard() {
 
         $cardNumber = substr((Auth::user()->cardNumber), -3);
+        $date = Auth::user()->created_at->addMonth(Auth::user()->subscribedMonths);
 
-        return view('dashboard', ['cardNumber' => $cardNumber]);
+        $dateFormat = Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d-m-Y');
+
+        return view('dashboard', ['cardNumber' => $cardNumber, 'date' => $dateFormat]);
     }
 
     public function confirmCurrentPassword() {
@@ -63,7 +76,17 @@ class HomeController extends Controller
     public function admin() {
 
         if(Auth::user()->hasRole('Admin')) {
-           return view('admin.home'); 
+
+            $books = Book::all();
+
+            $sliderISBNs = SliderBooks::all();
+
+            $sliderBooks = collect();
+            foreach($sliderISBNs as $sliderISBN) {
+                $sliderBooks->push(Book::find($sliderISBN->isbn));             
+            }
+
+            return view('admin.home', ['books' => $books, 'sliderBooks' => $sliderBooks]); 
         }
 
         else return redirect('/home');

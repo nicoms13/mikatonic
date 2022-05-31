@@ -26,7 +26,7 @@
             <! -- Search -->
             <form class="search-box form-search" action="{{ url('searchBook') }}" method="POST">
                 @csrf
-                    <input type="search" name="title" id="search-input" class="text-color" placeholder="Search for a book..." autocomplete="off">
+                    <input type="search" name="title" id="search-input" class="text-color" placeholder="{{ __('messages.search_book') }}" autocomplete="off">
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <script>

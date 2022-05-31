@@ -142,5 +142,6 @@ Route::get('/admin', [HomeController::class, 'admin'])->name('admin')->middlewar
 
 //User
 Route::post('/deleteUser', [UserController::class, 'userDelete']);
+Route::get('/updateUser', [UserController::class, 'userUpdate']);
 
 require __DIR__.'/auth.php';

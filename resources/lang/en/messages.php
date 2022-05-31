@@ -15,4 +15,7 @@ return [
     'sign_in' => 'Sign in',
     'create_account' => 'Create account',
     'error_message' => 'Woops! Something went wrong',
+    'search_book' => 'Search for a book...',
+    'credit_card_info' => 'Your credit card is ',
+    'next_pay' => 'Next payment: ',
 ];

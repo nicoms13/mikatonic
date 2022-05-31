@@ -91,26 +91,26 @@ y sus allegados. Las funciones de la web serán:
 
 	● Sistema de login. Se diferenciará entre al menos dos tipos de usuarios (administrador y 
 	suscriptor). No se permitirá el acceso más allá de la página de inicio a aquellos que no
-	tengan cuenta en la web.
+	tengan cuenta en la web :heavy_check_mark:	
 		
 	● Sistema de administración. Se podrá subir nuevo contenido, además de modificar 
-	y eliminar el existente.
+	y eliminar el existente :heavy_check_mark:	
 		
 	● Lector de PDFs. Mediante la librería PDF.js crearé un reproductor personalizado en el 
-	que el usuario podrá leer los libros que desee.
+	que el usuario podrá leer los libros que desee :heavy_check_mark:	
 	
 	● Marcapáginas. El usuario podrá seguir de forma automática por la última página que haya 
-	leido al abrir de nuevo el libro.
+	leido al abrir de nuevo el libro :heavy_check_mark:	
 		
-	● Colores. El usuario podrá cambiar los colores del reproductor para leer de forma cómoda, 
-	en principio podrá elegir entre día, noche y sepia.
+	● Colores. El usuario podrá cambiar los colores del reproductor para leer de forma 
+	cómoda :heavy_check_mark:	
 		
-	● Favoritos. El usuario podrá guardar en favoritos aquellos libros que desee.
+	● Favoritos. El usuario podrá guardar en favoritos aquellos libros que desee :heavy_check_mark:	
 		
 	● Sistema de búsqueda. A través de una barra de búsqueda el usuario podrá buscar el 
-	contenido.
+	contenido :heavy_check_mark:	
 		
-	● Responsive. La aplicación estará adaptada a pantallas web y móviles.
+	● Responsive. La aplicación estará adaptada a pantallas web y móviles :heavy_check_mark:
 
 ### TECNOLOGÍA
 

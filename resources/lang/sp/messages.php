@@ -11,8 +11,11 @@ return [
     'authors' => 'Autores',
     'bookshelf' => 'Estantería',
     'manage' => 'Ajustes',
-    'read_now' => 'Comenzar a Leer',
+    'read_now' => 'Leer',
     'sign_in' => 'Iniciar sesión',
     'create_account' => 'Crear cuenta',
     'error_message' => 'Oops! Algo ha ido mal',
+    'search_book' => 'Buscar un libro...',
+    'credit_card_info' => 'Tu tarjeta de crédito es ',
+    'next_pay' => 'Siguiente pago: ',
 ];

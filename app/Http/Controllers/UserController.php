@@ -27,6 +27,23 @@ class UserController extends Controller
         return redirect('/');
     }
 
+    public function userUpdate(Request $request) {
+
+        $user = Auth::user();
+
+        $request->validate([
+            'firstName' => ['required', 'string'],
+            'lastName' => ['required', 'string']
+        ]);
+
+        $user->firstName = $request['firstName'];
+        $user->lastName = $request['lastName'];
+
+        $user->save();
+
+        return redirect('/dashboard');
+    }
+
     public function payment() {
 
         return view('auth.payment-details');

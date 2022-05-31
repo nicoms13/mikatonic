@@ -74,6 +74,12 @@ El usuario puede cambiar la información de su perfil, incluido la información 
 deberá confirmar su contraseña (en ningún momento se muestra la información completa de la tarjeta, tan sólo los
 últimos dígitos del número de la tarjeta).
 
+La tabla de usuarios ha sido actualizada. Ahora podrá ver desde su perfil cuando es su próximo pago, teniendo en cuenta
+si es mensual o anual.
+
+Ha sido añadida una nueva tabla para que el administrador pueda seleccionar los libros que aparecen en el slider
+principal.
+
 ### TO DO:
 
 	- Revisión de bugs y correcciones

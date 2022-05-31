@@ -33,10 +33,21 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        if(Auth::user()->created_at < now()->subMonth()) {
-            Auth::user()->subscribedMonths += 1;
-            Auth::user()->save();
+        if(Auth::user()->paymentType == 'month') {
+            if(Auth::user()->created_at < now()->subMonth()) {
+                Auth::user()->subscribedMonths += 1;
+                Auth::user()->save();
+            }  
         }
+
+        else {
+            if(Auth::user()->created_at < now()->subYear()) {
+                Auth::user()->subscribedMonths += 1;
+                Auth::user()->save();
+            }  
+        }
+
+
 
         if (Auth::user()->hasRole('Admin')) {
            return redirect('admin'); 

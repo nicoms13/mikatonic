@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
             'firstName' => ['required', 'string'],
             'lastName' => ['required', 'string'],
             'cardNumber' => ['required', 'numeric'],
-            'cardExpirity' => ['required', 'date_format'],
+            'cardExpirity' => ['required'],
             'cvc' => ['required', 'numeric'],
             'paymentType' => ['required']
         ]);

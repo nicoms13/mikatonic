@@ -56,8 +56,14 @@ class HomeController extends Controller
     public function dashboard() {
 
         $cardNumber = substr((Auth::user()->cardNumber), -3);
-        $date = Auth::user()->created_at->addMonth(Auth::user()->subscribedMonths);
 
+        if(Auth::user()->paymentType == 'month') {
+            $date = Auth::user()->created_at->addMonth(Auth::user()->subscribedMonths);
+        }
+
+        else {
+           $date = Auth::user()->created_at->addYear(Auth::user()->subscribedMonths);
+        }
         $dateFormat = Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('d-m-Y');
 
         return view('dashboard', ['cardNumber' => $cardNumber, 'date' => $dateFormat]);

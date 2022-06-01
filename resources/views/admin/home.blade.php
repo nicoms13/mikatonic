@@ -1,9 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-
-<!-- Popular section -->
-<section style="margin-top: 6rem;">
+<section class="admin-home-section home-explore">
 
 	<form method="POST" action="/bookSlider">
 	@csrf

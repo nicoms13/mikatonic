@@ -29,11 +29,12 @@
     <p style="margin-top: 5px; margin-bottom: 15px; font-size: 15px">{{ __('messages.next_pay') }}<strong>{{ $date }}</strong></p>
     <button style="margin-bottom: 25px;" class="admin-button" onclick="location.href='/confirmPassword'">Change payment details</button>
 
-    <form method="POST" action="/deleteUser">
-    @csrf
-        <button type="submit" class="admin-button delete-btn">Delete account <i class="fa-solid fa-triangle-exclamation"></i></button>
-    </form>
-
+    @if(!@Auth::user()->hasRole('Admin'))
+        <form method="POST" action="/deleteUser">
+        @csrf
+            <button type="submit" class="admin-button delete-btn">Delete account <i class="fa-solid fa-triangle-exclamation"></i></button>
+        </form>
+    @endif
 </section>
 
 @endsection

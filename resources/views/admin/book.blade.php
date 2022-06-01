@@ -2,7 +2,6 @@
 
 @section('content')
 
-<!-- Popular section -->
 <section class="admin-container">
 	<div class="home-heading admin-heading">
 		<h2 class="fs-400 ff-main">Manage the books</h2>

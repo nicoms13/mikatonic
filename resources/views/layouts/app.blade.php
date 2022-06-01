@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <title>Miskatonic</title>
+    <link rel="icon" type="image/x-icon" href="/images/brand/twitter.png">
 </head>
 <body>
     <nav>

@@ -11,14 +11,7 @@
 
 <section id="books-container" class="default-container">
 
-	@foreach($books as $book)
-	<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
-		<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
-		<div class="book-box-txt">
-			<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
-		</div>
-	</div>
-	@endforeach
+	@include('layouts.data')
 
 </section>
 
@@ -27,6 +20,32 @@
 </section>
 
 <script>
+
+	function loadMoreData(page) {
+		$.ajax({
+			url:'?page='+ page,
+			type: 'get',
+		})
+		.done(function(data){
+			if(data.html == " ") {
+				$('.ajax').html("No more books found");
+				return;
+			}
+			$('#books-container').append(data.html);
+		})
+		.fail(function(jqXHR,ajaxOptions,thrownError){
+			alert("Server not responding...");
+		});
+	}
+
+	var page = 1;
+	$(window).scroll(function(){
+		if($(window).scrollTop() + $(window).height() >= $(document).height()) {
+			page++;
+			loadMoreData(page);
+		}
+	})
+
 	$('#search-explore').on('keyup', function(){
 
 		$value = $(this).val();

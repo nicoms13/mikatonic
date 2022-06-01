@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Livewire\WithFileUploads;
 
 use App\Models\TemporaryFile;
 use App\Models\User;
@@ -15,6 +17,8 @@ use App\Models\Bookmark;
 
 class BookController extends Controller
 {
+
+    use WithFileUploads;
 
     public function index() {
 
@@ -144,11 +148,16 @@ class BookController extends Controller
         return view('home.bookInfo', ['book' => $book]);
     }
 
-    public function bookSection() {
+    public function bookSection(Request $req) {
 
-        $books = Book::all();
+        $books = Book::paginate(8);
 
-        return view('home.bookSection', ['books' => $books]);
+        if($req->ajax()) {
+            $view = view('layouts.data', compact('books'))->render();
+            return response()->json(['html' => $view]);
+        }
+
+        return view('home.bookSection',compact('books'));
     }
 
     public function read(Book $book) {

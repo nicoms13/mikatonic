@@ -86,6 +86,11 @@
 					<div class="book-box-txt">
 						<h2 class="book-title fs-400 ff-main">{{ $popularBook->title }}</h2>
 						<div>
+							@foreach($popularBook->genres()->get() as $genre)
+								<span class="book-genre fs-200 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>
+							@endforeach
+						</div>
+						<div>
 						</div>
 					</div>
 				</div>
@@ -155,7 +160,7 @@
 					<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
 						<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
 						<div class="book-box-txt">
-							<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+							<h2 class="book-title fs-500 ff-main">{{ $book->title }}</h2>
 							<p class="	fs-200 ff-main home-pages">
 								@foreach($book->authors()->get() as $author)
 									@if ($loop->first)
@@ -227,12 +232,12 @@
 	<div class="swiper dream-swiper">
 		<div class="swiper-wrapper">
 			@forelse($books as $book)
-				@if(strpos($book->genresNames(), 'Dream cycle') !== false)
+				@if(strpos($book->genresNames(), 'Dream Cycle') !== false)
 				<div class="swiper-slide">
 					<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
 						<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
 						<div class="book-box-txt">
-							<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+							<h2 class="book-title fs-500 ff-main">{{ $book->title }}</h2>
 							<p class="	fs-200 ff-main home-pages">
 								@foreach($book->authors()->get() as $author)
 									@if ($loop->first)
@@ -308,7 +313,7 @@
 					<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
 						<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
 						<div class="book-box-txt">
-							<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+							<h2 class="book-title fs-500 ff-main">{{ $book->title }}</h2>
 							<p class="	fs-200 ff-main home-pages">
 								@foreach($book->authors()->get() as $author)
 									@if ($loop->first)

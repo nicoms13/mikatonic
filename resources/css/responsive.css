@@ -122,6 +122,7 @@
 	.book-genre {
 		font-size: 0.9rem;
 	}
+
 }
 
 @media(max-width: 440px) {
@@ -178,6 +179,10 @@
 
 	.home-bookshelf-bookshelf {
 		margin-top: 10rem !important;
+	}
+
+	.admin-container {
+		margin-top: 12rem !important;
 	}
 
 }

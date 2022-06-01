@@ -1075,6 +1075,10 @@ input[type=search]::-webkit-search-results-decoration {
   .home-bookshelf-bookshelf {
     margin-top: 10rem !important;
   }
+
+  .admin-container {
+    margin-top: 12rem !important;
+  }
 }
 @media (max-width: 370px) {
   .book-box {
@@ -1089,7 +1093,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: relative;
   align-items: center;
   border-radius: 0.5rem;
-  margin-top: 6rem !important;
+  margin-top: 7rem !important;
 }
 
 .admin-heading i {

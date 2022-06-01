@@ -83,7 +83,18 @@ class HomeController extends Controller
 
         if(Auth::user()->hasRole('Admin')) {
 
+
+
             $books = Book::all();
+
+            $NoSliderBooks = collect();
+            foreach($books as $book) {
+                $sliderBook = SliderBooks::where('isbn', '=', $book->isbn)->first();
+
+                if ($sliderBook === null) {
+                    $NoSliderBooks->push($book); 
+                }
+            }
 
             $sliderISBNs = SliderBooks::all();
 
@@ -92,7 +103,7 @@ class HomeController extends Controller
                 $sliderBooks->push(Book::find($sliderISBN->isbn));             
             }
 
-            return view('admin.home', ['books' => $books, 'sliderBooks' => $sliderBooks]); 
+            return view('admin.home', ['books' => $NoSliderBooks, 'sliderBooks' => $sliderBooks]); 
         }
 
         else return redirect('/home');

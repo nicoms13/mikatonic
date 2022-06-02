@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
+use App\Http\Requests\CardVerificationRequest;
+use LVR\CreditCard\CardCvc;
+use LVR\CreditCard\CardNumber;
+use LVR\CreditCard\CardExpirationDate;
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -38,9 +43,9 @@ class RegisteredUserController extends Controller
             'password' => ['required', Rules\Password::defaults()],
             'firstName' => ['required', 'string'],
             'lastName' => ['required', 'string'],
-            'cardNumber' => ['required', 'numeric'],
+            'cardNumber' => ['required', new CardNumber],
             'cardExpirity' => ['required'],
-            'cvc' => ['required', 'numeric'],
+            'cvc' => ['required', new CardCvc($request->get('cardNumber'))],
             'paymentType' => ['required']
         ]);
 

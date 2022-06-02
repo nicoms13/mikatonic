@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedInteger('isbn');
             $table->unsignedBigInteger('idUser');
             $table->integer('pageTotal');
-            $table->integer('pageCurrent');
+            $table->integer('pageCurrent')->default(1);
         });
         Schema::table('bookmark', function (Blueprint $table) {
             $table->foreign('isbn')->constrained()->references('isbn')->on('book')->onUpdate("cascade")->onDelete('cascade');

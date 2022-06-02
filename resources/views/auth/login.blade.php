@@ -39,6 +39,7 @@
                      </div>
                      <input type="password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
                   </div>
+                  <a href="{{ route('password.request') }}">Reset password</a>
                   <div class="field btns">
                      <button class="back"><a href="/">Back</a></button>
                      <button class="submit">Sign in</button>

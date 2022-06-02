@@ -20,7 +20,7 @@
 <section id="books-container" class="default-container">
 	@foreach($sliderBooks as $book)
 	<div class="book-box book-box-remove" onclick="location.href='/removeBookSlider/{{ $book->isbn }}'">
-		<img class="book-box-img" src="{{ $book->getFirstMediaUrl('cover') }}">
+		<img class="book-box-img" src="{{ $book->getFirstMediaUrl('wallpaper') }}">
 		<div class="book-box-txt">
 			<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
 		</div>

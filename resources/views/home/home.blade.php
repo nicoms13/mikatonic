@@ -9,7 +9,7 @@
 
 			@foreach($sliderBooks as $sliderBook)
 			<div class="swiper-slide swiper-main flex">
-				<img src="{{ $sliderBook->getFirstMediaUrl('cover') }}" class="home-img">
+				<img src="{{ $sliderBook->getFirstMediaUrl('wallpaper') }}" class="home-img">
 
 				<div class="home-txt">
 					<h1 class="home-title ff-main fs-600">{{ $sliderBook->title }}</h1>
@@ -29,7 +29,7 @@
 							<span class="author-genre fs-400 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>
 						@endforeach
 					</div>
-					<a href="/read/{{ $sliderBook->isbn }}" class="read-btn flex">
+					<a href="/book/{{ $sliderBook->isbn }}" class="read-btn flex">
 						<div class="flex">
 							<i class="fa-solid fa-play"></i>
 							<span>{{ __('messages.read_now') }}</span>
@@ -64,6 +64,7 @@
   		  },
   		  loop: true,
 		});
+
 	</script>
 </section>
 
@@ -84,7 +85,7 @@
 				<div class="book-box">
 					<img class="book-box-img" src="{{ $popularBook->getFirstMediaUrl('cover') }}">
 					<div class="book-box-txt">
-						<h2 class="book-title fs-400 ff-main">{{ $popularBook->title }}</h2>
+						<h2 class="book-title fs-500 ff-main">{{ $popularBook->title }}</h2>
 						<div>
 							@foreach($popularBook->genres()->get() as $genre)
 								<span class="book-genre fs-200 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>

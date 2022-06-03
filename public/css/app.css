@@ -283,11 +283,6 @@ a {
 /**
  * Components
 ************/
-.is-invalid {
-  background-color: red !important;
-  border: 5px solid red !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -362,6 +357,10 @@ body::-webkit-scrollbar-thumb {
 
 .book-genre:hover {
   text-decoration: underline;
+}
+
+.genre-nohover:hover {
+  text-decoration: none !important;
 }
 
 .read-btn {
@@ -1285,6 +1284,10 @@ table th {
 
 .alert-danger h3 {
   font-size: 15px;
+}
+
+.is-invalid {
+  border: 5px solid red !important;
 }
 
 .alert-danger ul {

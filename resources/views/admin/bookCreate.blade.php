@@ -28,7 +28,7 @@
 		        <label for="title">Title</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="title" name="title" required>
+		        <input type="text" class="@error('title') is-invalid @enderror" id="title" name="title" required>
 		    </div>
 
 		    <div class="row-admin">
@@ -60,7 +60,7 @@
 		        <label for="pages">Pages</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="number" id="pages" name="pages" required>
+		        <input type="number" class="@error('pages') is-invalid @enderror" id="pages" name="pages" required>
 		    </div>
 
 		    <div class="row-admin">

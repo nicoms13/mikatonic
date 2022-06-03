@@ -30,7 +30,7 @@
 		        <label for="name">Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="name" name="name" value="{{ $genre->name }}" required>
+		        <input type="text" id="name" class="@error('name') is-invalid @enderror" name="name" value="{{ $genre->name }}" required>
 		    </div>
 
 		    <div class="row-admin">

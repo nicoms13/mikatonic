@@ -9,8 +9,9 @@
 	<footer>
 		<ul>
 			<li>
-			<button id="closePDF">
-				<i class="fa-solid fa-circle-xmark"></i>
+			<button>
+				<i class="fa-solid fa-circle-xmark" id="closePDF"></i>
+				<i class="fa-solid fa-circle-half-stroke" id="colorChange"></i>
 			</button>
 
 			</li>
@@ -22,7 +23,6 @@
 			</li>
 
 			<li class="zoom-container">
-				<i class="fa-solid fa-circle-half-stroke" id="colorChange"></i>
 				<span id="zoomValue">150%</span>
 				<input type="range" id="zoom" name="cowbell" min="100" max="300" value="150" step="50">
 			</li>
@@ -39,7 +39,7 @@ var backgroundColor = 'rgba(255, 255, 255, 1.0)';
 const zoomButton = document.getElementById('zoom');
 const currentPage = document.getElementById('current_page');
 const viewer = document.querySelector('.pdf-viewer');
-let currentPDF = {}
+let currentPDF = {};
 
 function resetCurrentPDF() {
 	currentPDF = {

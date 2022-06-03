@@ -48,13 +48,11 @@
 		  pagination: {
 		    el: '.swiper-pagination',
 		  },
-
 		  
 		  navigation: {
 		    nextEl: '.swiper-button-next',
 		    prevEl: '.swiper-button-prev',
 		  },
-
 		  
 		  scrollbar: {
 		    el: '.swiper-scrollbar',
@@ -64,7 +62,6 @@
   		  },
   		  loop: true,
 		});
-
 	</script>
 </section>
 
@@ -88,7 +85,7 @@
 						<h2 class="book-title fs-500 ff-main">{{ $popularBook->title }}</h2>
 						<div>
 							@foreach($popularBook->genres()->get() as $genre)
-								<span class="book-genre fs-200 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>
+								<span class="book-genre genre-nohover fs-200 ff-main" onclick="location.href='/genre/{{ $genre->idGen }}'">{{ $genre->name }}</span>
 							@endforeach
 						</div>
 						<div>

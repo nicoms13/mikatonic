@@ -41,8 +41,8 @@ class RegisteredUserController extends Controller
         $request->validate([
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', Rules\Password::defaults()],
-            'firstName' => ['required', 'string'],
-            'lastName' => ['required', 'string'],
+            'firstName' => ['required', 'string', 'min:3', 'max:255'],
+            'lastName' => ['required', 'string', 'min:3', 'max:255'],
             'cardNumber' => ['required', new CardNumber],
             'cardExpirity' => ['required'],
             'cvc' => ['required', new CardCvc($request->get('cardNumber'))],

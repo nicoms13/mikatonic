@@ -236,8 +236,3 @@ a {
 /**
  * Components
 ************/
-
-.is-invalid {
-  background-color: red !important;
-  border: 5px solid red !important;
-}

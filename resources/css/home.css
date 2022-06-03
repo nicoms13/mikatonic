@@ -73,6 +73,10 @@ body::-webkit-scrollbar-thumb { background: #fff; }
 	text-decoration: underline;
 }
 
+.genre-nohover:hover {
+	text-decoration: none !important;
+}
+
 .read-btn {
 	align-items: center;
 	column-gap: 0.8rem;

@@ -191,6 +191,10 @@ table th {
   font-size: 15px;
 }
 
+.is-invalid {
+  border: 5px solid red !important;
+}
+
 .alert-danger ul {
   padding: 10px;
   font-size: 13px;

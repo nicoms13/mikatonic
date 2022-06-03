@@ -30,7 +30,7 @@
 		        <label for="title">Title</label>
 		    	</div>
 		    <div class="col-75-admin">
-		        <input type="text" id="title" name="title" value="{{ $book->title }}" required>
+		        <input type="text" class="@error('title') is-invalid @enderror" id="title" name="title" value="{{ $book->title }}" required>
 		    </div>
 
 		    <div class="row-admin">
@@ -46,7 +46,7 @@
 		        <label for="pages">Pages</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="number" id="pages" name="pages" value="{{ $book->pages }}" required>
+		        <input type="number" id="pages" class="@error('pages') is-invalid @enderror" name="pages" value="{{ $book->pages }}" required>
 		    </div>
 			
 		    <div class="row-admin">

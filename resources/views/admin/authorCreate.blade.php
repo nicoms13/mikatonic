@@ -28,7 +28,7 @@
 		        <label for="firstName">First Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="firstName" name="firstName">
+		        <input type="text" id="firstName" class="@error('firstName') is-invalid @enderror" name="firstName">
 		    </div>
 
 		    <div class="row-admin">
@@ -36,7 +36,7 @@
 		        <label for="firstName">Last Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="lastName" name="lastName">
+		        <input type="text" id="lastName" class="@error('lastName') is-invalid @enderror" name="lastName">
 		    </div>
 
 		    <div class="row-admin">

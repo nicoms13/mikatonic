@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.is-invalid {
+  border-color: red !important;
+}
+
 body{
   display: flex;
   align-items: center;
@@ -68,6 +72,7 @@ a:hover {
   width: 330px;
   height: 35px;
   margin: 45px 0;
+  margin-bottom: 20px !important;
   display: flex;
   position: relative;
 }

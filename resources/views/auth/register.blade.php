@@ -69,13 +69,13 @@
                      <div class="label">
                         First Name
                      </div>
-                     <input id="firstName" type="text" class="form-control @error('name') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}">
+                     <input id="firstName" type="text" class="form-control @error('firstName') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}">
                   </div>
                   <div class="field">
                      <div class="label">
                         Last Name
                      </div>
-                     <input id="lastName" type="text" class="form-control @error('name') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}">
+                     <input id="lastName" type="text" class="form-control @error('lastName') is-invalid @enderror" name="lastName" value="{{ old('lastName') }}">
                   </div>
                   <div class="field">
                      <button class="firstNext next">Next</button>
@@ -107,10 +107,10 @@
                      <div class="label">
                         Credit Card
                      </div>
-                     <input id="cardNumber" type="text" class="form-control @error('cardNumber') is-invalid @enderror" name="cardNumber" placeholder="XXXX XXXX XXXX">
+                     <input id="cardNumber" type="text" class="form-control @error('cardNumber') is-invalid @enderror" name="cardNumber" value="{{ old('cardNumber') }}" placeholder="XXXX XXXX XXXX">
                   </div>
                   <div class="field">
-                     <input style="margin-right: 10px;" id="cardExpirity" type="text" class="form-control @error('cardExpirity') is-invalid @enderror" name="cardExpirity" placeholder="** / **">
+                     <input style="margin-right: 10px;" id="cardExpirity" type="text" class="form-control @error('cardExpirity') is-invalid @enderror" name="cardExpirity" value="{{ old('cardExpirity') }}"  placeholder="** / **">
                      <input style="margin-left: 10px;" id="cvc" type="text" class="form-control @error('cvc') is-invalid @enderror" name="cvc" placeholder="CVC">
                   </div>
 
@@ -124,7 +124,7 @@
                      <div class="label">
                         Username
                      </div>
-                     <input id="username" type="text" class="form-control @error('name') is-invalid @enderror" name="username" value="{{ old('username') }}">
+                     <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}">
                   </div>
                   <div class="field">
                      <div class="label">

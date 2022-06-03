@@ -27,7 +27,6 @@ body {
 	color: #fcfeff;
 	width: 100%;
 	height: 100vh;
-	overflow-x: hidden;
 }
 
 main {
@@ -54,7 +53,7 @@ main {
 }
 
 footer {
-	position: sticky;
+	position: fixed;
 	bottom: 0;
 	height: 10vh;
 	width: 100%;
@@ -63,7 +62,6 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	overflow: hidden;
 }
 
 .pagination-container {
@@ -143,8 +141,109 @@ input[type="range"]::-webkit-slider-thumb {
 	font-size: 2rem;
 	color:#eee;
 	transition: all .5s ease;
+	margin-left: 5px;
+}
+
+#colorChange {
+	font-size: 2rem;
+	color:#eee;
+	transition: all .5s ease;
+	margin-left: 10px;
+	cursor: pointer;
 }
 
 #closePDF:hover {
 	color: #991111;
+}
+
+@media(max-width: 940px) {
+	main {
+		height: 100vh;
+		overflow: scroll !important;
+	}
+	.zoom-container {
+		display: ;
+	}
+	#pdf-render {
+		width: ;
+	}
+	footer {
+		position: sticky;
+		top: 90vh !important;
+	}
+	main {
+		position: relative;
+	}
+	#colorChange {
+		margin-left: 0px;
+	}
+}
+
+@media(max-width: 480px) {
+	#closePDF {
+		font-size: 1.5rem;
+	}
+	#colorChange {
+		font-size: 1.5rem;
+	}
+	#current_page {
+		font-size: 0.8rem;
+	}
+	.pagination-container button {
+		height: 25px;
+		width: 25px;
+	}
+	#previous {
+		font-size: 1.2rem !important;
+	}
+	#next {
+		font-size: 1.2rem !important;
+	}
+}
+
+@media(max-width: 425px) {
+	.zoom-container {
+		display: none;
+	}
+	.pagination-container button {
+		height: 30px;
+		width: 30px;
+	}
+	#previous {
+		font-size: 1.5rem !important;
+	}
+	#next {
+		font-size: 1.5rem !important;
+	}
+	#closePDF {
+		font-size: 2rem;
+	}
+	#colorChange {
+		font-size: 2rem;
+	}
+	#current_page {
+		font-size: 1.3rem;
+	}
+}
+
+@media(max-width: 280px) {
+	#closePDF {
+		font-size: 1rem !important;
+	}
+	#colorChange {
+		font-size: 1rem;
+	}
+	#current_page {
+		font-size: 1rem;
+	}
+	.pagination-container button {
+		height: 20px;
+		width: 20px;
+	}
+	#previous {
+		font-size: 1.1rem !important;
+	}
+	#next {
+		font-size: 1.1rem !important;
+	}
 }

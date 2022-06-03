@@ -28,7 +28,7 @@
 		        <label for="name">Name</label>
 		    </div>
 		    <div class="col-75-admin">
-		        <input type="text" id="name" name="name">
+		        <input type="text" id="name" class="@error('name') is-invalid @enderror" name="name">
 		    </div>
 
 		    <div class="row-admin">

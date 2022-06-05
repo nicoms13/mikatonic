@@ -11,7 +11,6 @@
 		<table>
 		  <thead>
 		    <tr>
-		      <th class="ff-title fs-400" scope="col">ISBN</th>
 		      <th class="ff-title fs-400" scope="col">Title</th>
 		      <th class="ff-title fs-400" scope="col">Pages</th>
 		      <th class="ff-title fs-400" scope="col">Author</th>
@@ -20,12 +19,16 @@
 		  <tbody>
 		  	@foreach($books as $book)
 		    <tr>
-		      <td class="ff-light" data-label="ID">{{ $book->isbn }}</td>
-		      <td class="ff-light" data-label="First Name">{{ $book->title }}</td>
+		      <td class="ff-light book-name" data-label="First Name" onclick="location.href='/admin/book/{{ $book->isbn }}'">{{ $book->title }}</td>
 		      <td class="ff-light" data-label="Last Name">{{ $book->pages }}</td>
-		      <td class="ff-light" data-label="Last Name">{{ $book->pages }}</td>
-		      <td class="ff-light" data-label="Action">
-		      	<button onclick="location.href='/admin/book/{{ $book->isbn }}'" class="admin-button">Edit {{ $book->isbn }}</button>
+		      <td class="ff-light" data-label="Last Name">
+		      			@foreach($book->authors()->get() as $author)
+							@if ($loop->first)
+								{{ $author->firstName }} {{ $author->lastName }}
+							@else
+								& {{ $author->firstName }} {{ $author->lastName }}
+							@endif
+						@endforeach
 		      </td>
 		    </tr>
 		    @endforeach

@@ -6,15 +6,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Genre;
+use App\Models\Book;
 
 class GenreController extends Controller
 {
     public function index() {
 
         $genre = Genre::all();
+        $books = Book::all();
 
         if(Auth::user()->hasRole('Admin')) {
-           return view('admin.genre', ['genres' => $genre]); 
+           return view('admin.genre', ['genres' => $genre, 'books' => $books]); 
         }
 
         else return redirect('/home');

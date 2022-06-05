@@ -1248,6 +1248,15 @@ table th {
   margin-bottom: 10px;
 }
 
+.book-name {
+  background-color: #2d2e37;
+  cursor: pointer;
+}
+
+.book-name:hover {
+  text-decoration: underline;
+}
+
 .book-select {
   overflow-y: auto;
   display: flex;

@@ -20,7 +20,7 @@
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. We will email you a password reset link that will allow you to choose a new one.') }}
+            {{ __('Forgot your password? We will email you a password reset link that will allow you to choose a new one.') }}
         </div>
 
         <!-- Session Status -->
@@ -34,15 +34,16 @@
             @csrf
             <div class="page slide-page">
             <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+            <div class="field">
+                <x-label for="email" class="label" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
-
-                <x-button>
+                <div class="field btns">
+                <x-button class="submit">
                     {{ __('Email Password Reset Link') }}
                 </x-button>
+                </div>
         </div>
         </form>
     </div>

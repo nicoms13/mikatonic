@@ -12,22 +12,100 @@
 		<table>
 		  <thead>
 		    <tr>
-		      <th class="ff-title fs-400" scope="col">ID</th>
-		      <th class="ff-title fs-400" scope="col">Name</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		  	@foreach($genres as $genre)
 		    <tr>
-		      <td class="ff-light" data-label="ID">#{{ $genre->idGen }}</td>
-		      <td class="ff-light" data-label="First Name">{{ $genre->name }}</td>
-		      <td class="ff-light" data-label="Action">
-		      	<button onclick="location.href='/admin/genre/{{ $genre->idGen }}'" class="admin-button">Edit {{ $genre->name }}</button>
-		      </td>
+		      <td class="ff-light book-name" data-label="First Name" onclick="location.href='/admin/genre/{{ $genre->idGen }}'">{{ $genre->name }}</td>
 		    </tr>
 		    @endforeach
 		  </tbody>
 		</table>
 	</div>
+</section>
+
+<section>
+<h2 class="book-title fs-600 ff-main">Cthulu Mythos</h2>
+</section>
+
+<section id="books-container" class="default-container">
+
+	@foreach($books as $book)
+		@if(strpos($book->genresNames(), 'Cthulu Mythos') !== false)
+		<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+			<img class="book-box-img" src="{{ $book->getFirstMediaUrl('wallpaper') }}">
+			<div class="book-box-txt">
+				<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+				<p class="	fs-200 ff-main home-pages">
+					@foreach($book->authors()->get() as $author)
+						@if ($loop->first)
+							{{ $author->firstName }} {{ $author->lastName }}
+						@else
+							& {{ $author->firstName }} {{ $author->lastName }}
+						@endif
+					@endforeach
+				</p>
+			</div>
+		</div>
+		@endif
+	@endforeach
+
+</section>
+
+<section>
+<h2 class="book-title fs-600 ff-main">Dream Cycle</h2>
+</section>
+
+<section id="books-container" class="default-container">
+
+	@foreach($books as $book)
+		@if(strpos($book->genresNames(), 'Dream Cycle') !== false)
+		<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+			<img class="book-box-img" src="{{ $book->getFirstMediaUrl('wallpaper') }}">
+			<div class="book-box-txt">
+				<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+				<p class="	fs-200 ff-main home-pages">
+					@foreach($book->authors()->get() as $author)
+						@if ($loop->first)
+							{{ $author->firstName }} {{ $author->lastName }}
+						@else
+							& {{ $author->firstName }} {{ $author->lastName }}
+						@endif
+					@endforeach
+				</p>
+			</div>
+		</div>
+		@endif
+	@endforeach
+
+</section>
+
+<section>
+<h2 class="book-title fs-600 ff-main">Weird Tales</h2>
+</section>
+
+<section id="books-container" class="default-container">
+
+	@foreach($books as $book)
+		@if(strpos($book->genresNames(), 'Weird Tales') !== false)
+		<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+			<img class="book-box-img" src="{{ $book->getFirstMediaUrl('wallpaper') }}">
+			<div class="book-box-txt">
+				<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+				<p class="	fs-200 ff-main home-pages">
+					@foreach($book->authors()->get() as $author)
+						@if ($loop->first)
+							{{ $author->firstName }} {{ $author->lastName }}
+						@else
+							& {{ $author->firstName }} {{ $author->lastName }}
+						@endif
+					@endforeach
+				</p>
+			</div>
+		</div>
+		@endif
+	@endforeach
+
 </section>
 @endsection

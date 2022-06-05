@@ -10,7 +10,7 @@
 
 	<section class="home">
 		<div class="content">
-			<h1>Everything You Love. All in One Place.</h1>
+			<h1>Everything You Love. All in One Place</h1>
 			<p>The biggest blockbusters, the boldest stories and the unforgettable classics that made us who we are. Enjoy it whenever and wherever you want. All on Miskatonic.</p>
 			<a href="{{ route('register') }}" class="signup">SIGN UP NOW <i class="fas fa-chevron-right btn-icon"></i></a>
 			<a href="{{ route('login') }}" class="signin">I already have an account</a>

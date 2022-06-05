@@ -86,6 +86,34 @@
 	</div>
 </section>
 
+<section>
+<h2 class="book-title fs-500 ff-main">Books by {{ $author->lastName }}</h2>
+</section>
+
+<section id="books-container" class="default-container">
+
+	@foreach($author->books as $book)
+		@if(strpos($book->genresNames(), 'Weird Tales') !== false)
+		<div class="book-box" onclick="location.href='/book/{{ $book->isbn }}'">
+			<img class="book-box-img" src="{{ $book->getFirstMediaUrl('wallpaper') }}">
+			<div class="book-box-txt">
+				<h2 class="book-title fs-400 ff-main">{{ $book->title }}</h2>
+				<p class="	fs-200 ff-main home-pages">
+					@foreach($book->authors()->get() as $author)
+						@if ($loop->first)
+							{{ $author->firstName }} {{ $author->lastName }}
+						@else
+							& {{ $author->firstName }} {{ $author->lastName }}
+						@endif
+					@endforeach
+				</p>
+			</div>
+		</div>
+		@endif
+	@endforeach
+
+</section>
+
 <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 <script>
 	const inputElement = document.querySelector('input[id="wallpaper"]');

@@ -1,6 +1,9 @@
 # Miskatonic
 
 https://miskatonic.hopto.org/
+Vídeo demostrativo: https://www.youtube.com/watch?v=-mLOWvsmbsA
+
+Para crear tarjetas de crédito para el registro recomiendo usar: https://www.creditcardvalidator.org/generator
 
 > Nicolás Moreno Sánchez
 ![Imagen presentacion](https://user-images.githubusercontent.com/91120049/161498683-57323a1b-316b-4078-8ec0-7c7caa3ee5ed.png)

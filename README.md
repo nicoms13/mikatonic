@@ -2,10 +2,16 @@
 
 https://miskatonic.hopto.org/
 
+
+Código (desplegado): https://bitbucket.org/hegodamask/miskatonic/src/master/ *
+
 Vídeo demostrativo: https://www.youtube.com/watch?v=-mLOWvsmbsA
 
+*El código desplegado tiene algunos cambios que no eran necesarios en local, además de
+algunos cambios de estilo
 
-Para crear tarjetas de crédito para el registro recomiendo usar: https://www.creditcardvalidator.org/generator
+
+###### Para crear tarjetas de crédito para el registro recomiendo usar: https://www.creditcardvalidator.org/generator
 
 > Nicolás Moreno Sánchez
 ![Imagen presentacion](https://user-images.githubusercontent.com/91120049/161498683-57323a1b-316b-4078-8ec0-7c7caa3ee5ed.png)
